@@ -1,0 +1,114 @@
+---
+import Page from "../components/Page.astro";
+import { Image } from "astro:assets";
+import avatar from "../assets/brad-azevedo.jpg";
+---
+
+<Page
+  pageTitle="About me | Brad Azevedo"
+  pageDescription="A bit about Brad Azevedo, a front-end web developer from San Francisco powered by dachshunds and espresso."
+>
+  <header class="header">
+    <h1>About me</h1>
+
+    <Image
+      src={avatar}
+      alt="Brad Azevedo against a blue background"
+      height={300}
+      width={300}
+      decoding="async"
+      loading="lazy"
+      class="avatar"
+    />
+  </header>
+
+  <hr />
+
+  <h2>Work things</h2>
+
+  <p>
+    I’m a self-taught front-end developer from San Francisco and have been
+    pushing pixels since 2006—the era of IE6, floats, and clearfixes.
+  </p>
+
+  <p>
+    The "front-end" has grown substantially over the years and has allowed me to
+    dip my toes into a lot of different aspects of web development, but I keep
+    coming back to my core interest: <strong
+      >building thoughtful, playful web experiences without gimmicks</strong
+    >.
+  </p>
+
+  <p>
+    Am I a "design engineer," a "design systems engineer," a "UI engineer," or
+    just a "front-end developer"? They're all valid and certainly sound fancy,
+    but ultimately my sweet spot is in the front of the front-end.
+  </p>
+
+  <p>
+    I love partnering with designers and other engineers to plan killer UX and
+    UI architecture. I have a mind for design systems and build them into even
+    the silliest of projects (like this one!).
+  </p>
+
+  <p>
+    My design sensibility favors simplicity, performance, and accessibility over
+    bells and whistles (read: parallax, scroll jacking, gratuitous animations).
+    My coding sensibility, perhaps unsurprisingly, also favors simplicity and
+    readability over cleverness.
+  </p>
+
+  <p>
+    All evidence to the contrary, I love writing and great prose. I approach
+    coding as an exercise in prose. I accidentally ended up owning the
+    documentation site for the Design Systems team at Gusto, which gave me an
+    opportunity to do a lot of technical writing and project management, both of
+    which I genuinely enjoyed.
+  </p>
+
+  <h2>Personal things</h2>
+
+  <p>
+    I grew up in a small farming community in Northern California and relocated
+    to San Francisco when I quickly discovered—as a child—that farm life was not
+    for me. I'm the first person in my family to graduate college.
+  </p>
+
+  <p>
+    I've lived here for more than 20 years and have now seen three boom-bust
+    cycles.
+  </p>
+
+  <p>
+    I work on the web, but I'm not much of an "online" person. I don't maintain
+    a presence on or follow social media. I prefer to spend my spare time
+    enjoying life off the screen.
+  </p>
+
+  <p>
+    I'm passionate about travel and have been fortunate to visit more than 25
+    countries. I try hard to remember that the world is a big place and America
+    is not the center of the universe.
+  </p>
+
+  <p>
+    I'm a very active person. You'll typically find me at CrossFit, running,
+    cycling, hiking, or scuba diving.
+  </p>
+
+  <p>
+    I'm a major aviation geek and am an instrument-rated private pilot
+    and—oddly—a certificated ground instructor.
+  </p>
+
+  <p>
+    In direct contrast to the previous statement, I love the planet and do
+    everything I can to live with a minimal footprint.
+  </p>
+</Page>
+
+<style>
+  .avatar {
+    border-radius: var(--radius-s);
+  }
+</style>

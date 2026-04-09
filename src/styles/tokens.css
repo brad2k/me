@@ -1,0 +1,59 @@
+:root {
+  /* Theme - light by default; will follow the UA preference */
+  color-scheme: light dark;
+
+  /* Token definitions */
+
+  --color-bg: var(--color-neutral-100);
+  --color-surface: var(--color-neutral-200);
+  --color-border: var(--color-neutral-300);
+  --color-muted: var(--color-taupe-100);
+  --color-text-body: var(--color-taupe-200);
+  --color-text: var(--color-charcoal-100);
+  --color-accent: var(--color-clay-200);
+  --color-accent-on-dark: var(--color-clay-100);
+
+  @media (prefers-color-scheme: dark) {
+    /* --color-bg: #120c09;
+    --color-surface: #1e1510;
+    --color-border: #2e2018;
+    --color-muted: #7a6a60;
+    --color-text-body: #c0a898;
+    --color-text: #f0e8e0;
+    --color-accent: #d06e56; */
+  }
+
+  /* Color */
+
+  /* Structural */
+
+  --gutter: var(--space-m);
+
+  --nav-padding: var(--gutter);
+  --footer-padding: var(--gutter);
+
+  --color-footer-bg: var(--color-charcoal-200);
+  --color-footer-text: var(--color-neutral-100);
+
+  /* Typography */
+  --font-display: var(--font-Fraunces);
+  --font-body: var(--font-Epilogue);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --font-size-subtle: var(--size-step-0);
+  --font-size-base: var(--size-step-1);
+  --font-size-h1: var(--size-step-6);
+  --font-size-h2: var(--size-step-4);
+  --font-size-h3: var(--size-step-4);
+  --font-size-h4: var(--size-step-3);
+  --font-size-h5: var(--size-step-2);
+  --font-size-h6: var(--size-step-1);
+
+  /* Cards */
+  --card-border-color: var(--border-color);
+}

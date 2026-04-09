@@ -1,0 +1,61 @@
+<header class="primary-header content-grid">
+  <div class="nav-wrapper">
+    <a href="/" class="logo-mark">Brad<span class="dot">.</span></a>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="/about/">About</a></li>
+        <li><a href="/now/">Now</a></li>
+        <!-- <li><a href="/someday/">Someday</a></li> -->
+        <li><a href="/collections/">Collections</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .primary-header {
+    padding-block: var(--gutter);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    font-size: var(--font-size-subtle);
+  }
+
+  .logo-mark {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.02em;
+    line-height: var(--leading-flat);
+    font-variation-settings:
+      "SOFT" 0,
+      "WONK" 0;
+
+    &:hover {
+      color: var(--color-accent);
+
+      .dot {
+        color: var(--color-text);
+      }
+    }
+  }
+
+  .dot {
+    transition: color var(--transition-base);
+    color: var(--color-accent);
+  }
+</style>
