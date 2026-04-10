@@ -23,7 +23,7 @@
   */
 
   :where(.flow > * + *) {
-    margin-top: var(--flow-space, 1em);
+    margin-block-start: var(--flow-space, 1em);
   }
 
   /* Prose */
@@ -42,7 +42,7 @@
     }
 
     :is(p, li, dl, figcaption, blockquote) {
-      max-width: 70ch;
+      max-width: var(--prose-width, var(--prose-max-width));
     }
   }
 

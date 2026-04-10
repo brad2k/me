@@ -13,17 +13,15 @@
   --color-accent: var(--color-clay-200);
   --color-accent-on-dark: var(--color-clay-100);
 
-  @media (prefers-color-scheme: dark) {
-    /* --color-bg: #120c09;
+  /* @media (prefers-color-scheme: dark) {
+    --color-bg: #120c09;
     --color-surface: #1e1510;
     --color-border: #2e2018;
     --color-muted: #7a6a60;
     --color-text-body: #c0a898;
     --color-text: #f0e8e0;
-    --color-accent: #d06e56; */
-  }
-
-  /* Color */
+    --color-accent: #d06e56;
+  } */
 
   /* Structural */
 
@@ -31,7 +29,13 @@
 
   --nav-padding: var(--gutter);
   --footer-padding: var(--gutter);
+  --prose-max-width: 70ch;
 
+  /* Colors */
+  --focus-color: var(--color-accent);
+  --selection-text-color: var(--color-neutral-100);
+  --selection-background: var(--color-charcoal-100);
+  --color-link-active: var(--color-accent);
   --color-footer-bg: var(--color-charcoal-200);
   --color-footer-text: var(--color-neutral-100);
 
@@ -53,7 +57,4 @@
   --font-size-h4: var(--size-step-3);
   --font-size-h5: var(--size-step-2);
   --font-size-h6: var(--size-step-1);
-
-  /* Cards */
-  --card-border-color: var(--border-color);
 }

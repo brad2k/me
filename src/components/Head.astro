@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import OgImage from "../assets/brad-azevedo-og.jpg";
 
 interface Props {
   pageDescription: string;
@@ -21,9 +22,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, "/"), Astro.site);
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <Font cssVariable="--font-Lora" />
   <Font cssVariable="--font-Fraunces" />
-  <Font cssVariable="--font-DM" />
   <Font cssVariable="--font-Epilogue" />
 
   <title>{pageTitle}</title>
@@ -32,44 +31,41 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, "/"), Astro.site);
 
   <meta property="og:title" content={pageTitle} />
   <meta property="og:description" content={pageDescription} />
-  <!-- <meta property="og:image" content={socialImage.src} /> -->
-  <!-- <meta
-    property="og:image:alt"
-    content="James Button holding his Marigaux 920A oboe in the lobby of Davies Symphony Hall"
-  /> -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.bradazevedo.com/" />
+  <meta property="og:url" content={canonical} />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content={OgImage.src} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:type" content="image/png" />
 
   <link rel="sitemap" href="/sitemap-index.xml" />
-
-  <!-- TODO -->
-  <!-- 
 
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "James Button",
-      "jobTitle": "Oboist",
-      "url": "https://jamesbuttonoboe.com",
+      "name": "Brad Azevedo",
+      "jobTitle": "Front-End Developer",
+      "url": "https://www.bradazevedo.com/",
+      "description": "Self-taught front-end developer based in San Francisco specializing in UI architecture, design systems, and accessible web experiences.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "San Francisco",
         "addressRegion": "CA"
       },
-      "sameAs": [
-        "https://www.instagram.com/buttonjamss/",
-        "https://www.sfsymphony.org/Data/Event-Data/Artists/B/James-Button"
+      "knowsAbout": [
+        "Front-end development",
+        "Design systems",
+        "UI architecture",
+        "Web accessibility",
+        "Web performance"
       ],
-      "offers": {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Woodwind Audition Coaching",
-          "description": "Professional woodwind audition coaching."
-        }
-      }
+      "sameAs": [
+        "https://www.instagram.com/bradazevedo/",
+        "https://github.com/brad2k/",
+        "https://www.linkedin.com/in/bradazevedo/"
+      ]
     }
-  </script> -->
+  </script>
 </head>

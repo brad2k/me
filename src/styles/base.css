@@ -26,12 +26,13 @@
   a {
     color: var(--color-text);
     text-decoration: underline;
+    text-underline-offset: 0.2em;
     transition:
       color var(--transition-base),
       text-shadow var(--transition-base);
 
     &:hover {
-      color: var(--color-accent);
+      color: var(--color-link-active);
       text-shadow:
         0.4px 0 0 currentColor,
         -0.1px 0 0 currentColor;

@@ -1,13 +1,26 @@
+---
+const { pathname } = Astro.url;
+---
+
 <header class="primary-header content-grid">
   <div class="nav-wrapper">
     <a href="/" class="logo-mark">Brad<span class="dot">.</span></a>
 
     <nav>
       <ul class="nav-list">
-        <li><a href="/about/">About</a></li>
-        <li><a href="/now/">Now</a></li>
-        <!-- <li><a href="/someday/">Someday</a></li> -->
-        <li><a href="/collections/">Collections</a></li>
+        <li>
+          <a
+            href="/about/"
+            class:list={[{ active: pathname.includes("/about/") }]}>About</a
+          >
+        </li>
+        <li>
+          <a class="not-yet" title="Coming soon!" aria-disabled="true">Now</a>
+        </li>
+        <li>
+          <a class="not-yet" title="Coming soon!" aria-disabled="true"
+            >Collections</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -26,6 +39,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-m);
   }
 
   .nav-list {
@@ -41,6 +56,7 @@
     font-weight: var(--font-weight-bold);
     letter-spacing: -0.02em;
     line-height: var(--leading-flat);
+    white-space: nowrap;
     font-variation-settings:
       "SOFT" 0,
       "WONK" 0;
@@ -57,5 +73,15 @@
   .dot {
     transition: color var(--transition-base);
     color: var(--color-accent);
+  }
+
+  .not-yet {
+    all: revert;
+    cursor: not-allowed;
+    opacity: 50%;
+  }
+
+  .active {
+    color: var(--color-link-active);
   }
 </style>

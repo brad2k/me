@@ -1,12 +1,14 @@
 ---
 import Head from "../components/Head.astro";
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/imports.css";
 
 export interface Props {
   class?: string;
   pageTitle: string;
   pageDescription: string;
+  [key: string]: any;
 }
 
 const { class: className, pageTitle, pageDescription, ...rest } = Astro.props;
@@ -20,27 +22,6 @@ const { class: className, pageTitle, pageDescription, ...rest } = Astro.props;
     <main class:list={["content-grid", className]} {...rest}>
       <slot />
     </main>
-    <footer class="footer content-grid">
-      <strong class="footer-logo">Brad Azevedo<span class="dot">.</span></strong
-      >
-      <p class="text">
-        Bravely hand-coded in San Francisco without Javascript.
-      </p>
-    </footer>
+    <Footer />
   </body>
 </html>
-
-<style>
-  .footer {
-    font-size: var(--size-step-00);
-    background-color: var(--color-footer-bg);
-    color: var(--color-footer-text);
-    padding-block: var(--footer-padding);
-  }
-
-  .footer-logo {
-    font-family: var(--font-display);
-    font-size: var(--font-size-base);
-    color: var(--color-accent-on-dark);
-  }
-</style>

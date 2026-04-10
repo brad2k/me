@@ -7,19 +7,23 @@ import avatar from "../assets/brad-azevedo.jpg";
 <Page
   pageTitle="About me | Brad Azevedo"
   pageDescription="A bit about Brad Azevedo, a front-end web developer from San Francisco powered by dachshunds and espresso."
+  class="about"
 >
   <header class="header">
     <h1>About me</h1>
 
-    <Image
-      src={avatar}
-      alt="Brad Azevedo against a blue background"
-      height={300}
-      width={300}
-      decoding="async"
-      loading="lazy"
-      class="avatar"
-    />
+    <figure class="figure">
+      <Image
+        src={avatar}
+        alt="Brad Azevedo against a blue background"
+        height={300}
+        width={300}
+        decoding="async"
+        loading="lazy"
+        class="avatar"
+      />
+      <figcaption class="caption">Beaming in blue</figcaption>
+    </figure>
   </header>
 
   <hr />
@@ -32,38 +36,35 @@ import avatar from "../assets/brad-azevedo.jpg";
   </p>
 
   <p>
-    The "front-end" has grown substantially over the years and has allowed me to
-    dip my toes into a lot of different aspects of web development, but I keep
-    coming back to my core interest: <strong
+    The “front-end” has annexed much of the development ecosystem. I’ve wandered
+    much of it, but I keep coming back to my core interest: <strong
       >building thoughtful, playful web experiences without gimmicks</strong
     >.
   </p>
 
   <p>
-    Am I a "design engineer," a "design systems engineer," a "UI engineer," or
-    just a "front-end developer"? They're all valid and certainly sound fancy,
-    but ultimately my sweet spot is in the front of the front-end.
+    Am I a “design engineer,” a “design systems engineer,” a “UI engineer,” or
+    just a “front-end developer?” Yes. Whatever we call it, my sweet spot is in
+    the front of the front-end.
   </p>
 
   <p>
-    I love partnering with designers and other engineers to plan killer UX and
-    UI architecture. I have a mind for design systems and build them into even
-    the silliest of projects (like this one!).
+    I love partnering with designers and engineers to think through UX and UI
+    architecture. I can’t help but think in design systems and will build one
+    into even the silliest of projects (like this one).
   </p>
 
   <p>
     My design sensibility favors simplicity, performance, and accessibility over
     bells and whistles (read: parallax, scroll jacking, gratuitous animations).
-    My coding sensibility, perhaps unsurprisingly, also favors simplicity and
-    readability over cleverness.
+    My coding sensibility is no different, favoring readability over cleverness.
   </p>
 
   <p>
-    All evidence to the contrary, I love writing and great prose. I approach
-    coding as an exercise in prose. I accidentally ended up owning the
-    documentation site for the Design Systems team at Gusto, which gave me an
-    opportunity to do a lot of technical writing and project management, both of
-    which I genuinely enjoyed.
+    All evidence to the contrary, I love writing. I approach coding as an
+    exercise in prose. I accidentally ended up owning the documentation site for
+    Gusto’s Design Systems team, which turned into a surprising amount of
+    technical writing and project management. Turns out I'm into both.
   </p>
 
   <h2>Personal things</h2>
@@ -71,33 +72,35 @@ import avatar from "../assets/brad-azevedo.jpg";
   <p>
     I grew up in a small farming community in Northern California and relocated
     to San Francisco when I quickly discovered—as a child—that farm life was not
-    for me. I'm the first person in my family to graduate college.
+    for me. I’m the first person in my family to graduate college.
   </p>
 
   <p>
-    I've lived here for more than 20 years and have now seen three boom-bust
+    I’ve lived here for more than 20 years and have now seen three boom-bust
     cycles.
   </p>
 
   <p>
-    I work on the web, but I'm not much of an "online" person. I don't maintain
-    a presence on or follow social media. I prefer to spend my spare time
-    enjoying life off the screen.
+    I work on the web, but I’m not much of an “online” person. I don’t maintain
+    a presence on or follow social media. I prefer to spend my spare time living
+    life off the screen.
   </p>
 
   <p>
-    I'm passionate about travel and have been fortunate to visit more than 25
-    countries. I try hard to remember that the world is a big place and America
-    is not the center of the universe.
+    I’m passionate about travel and observing other ways of life. I have been
+    fortunate to visit more than 25 countries, to study abroad in Paris, and to
+    spend a couple of years living in Melbourne, Australia. My experiences
+    abroad have informed the way I live my life and taught me that America is
+    not the center of the universe.
   </p>
 
   <p>
-    I'm a very active person. You'll typically find me at CrossFit, running,
-    cycling, hiking, or scuba diving.
+    You’ll typically find me at CrossFit, running, cycling, hiking, or scuba
+    diving. You probably won’t find me on the couch if the sun is shining.
   </p>
 
   <p>
-    I'm a major aviation geek and am an instrument-rated private pilot
+    I’m a major aviation geek and am an instrument-rated private pilot
     and—oddly—a certificated ground instructor.
   </p>
 
@@ -108,7 +111,69 @@ import avatar from "../assets/brad-azevedo.jpg";
 </Page>
 
 <style>
+  .header {
+    position: relative;
+  }
+
+  .figure {
+    background: var(--color-surface);
+    padding: var(--space-xs);
+    border-radius: var(--radius-s);
+    margin-block-start: var(--gutter);
+
+    @media (width >= 40rem) {
+      position: absolute;
+      right: 2rem;
+      top: -2rem;
+      transform: rotate(3deg);
+      margin-block-start: 0;
+    }
+  }
+
+  .about {
+    @media (width >= 72rem) {
+      --prose-width: 60%;
+    }
+
+    @media (width >= 84rem) {
+      --prose-width: var(--prose-max-width);
+    }
+  }
+
+  .caption {
+    font-size: var(--size-step-00);
+    margin-top: var(--space-xs);
+    text-align: center;
+
+    @media (width >= 40rem) {
+      display: none;
+    }
+
+    @media (width >= 84rem) {
+      display: block;
+    }
+  }
+
   .avatar {
     border-radius: var(--radius-s);
+    aspect-ratio: 1;
+    transition:
+      width var(--transition-base),
+      height var(--transition-base);
+
+    @media (width >= 40rem) {
+      height: 150px;
+      width: 150px;
+    }
+
+    @media (width >= 72rem) {
+      height: 300px;
+      width: 300px;
+    }
+
+    @media (width >= 84rem) {
+      height: 300px;
+      width: 300px;
+    }
   }
 </style>
