@@ -48,17 +48,26 @@
   }
 
   /*
-    Lists with role="list" will be treated as a normal list;
-    Lists with classes (and not role="list") will be considered custom
+    Lists with classes will be considered custom and reset
   */
 
-  :where(ul[class]:not([role="list"]), ol[class]:not([role="list"])) {
+  :where(ul[class], ol[class]) {
     padding: 0;
     list-style: none;
   }
 
-  :where(ul[role="list"], ol[role="list"]) {
-    list-style: inside;
+  :where(ul, ol):not([class]) > li + li {
+    margin-top: 0.75em;
+  }
+
+  /*
+    A sensible bit of spacing
+    Verbose, but it says "target all <li> elements that follow another <li>
+    (i.e. not the first) whose parent <ul> or <ol> don't have a class".
+  */
+
+  :where(ul, ol):not([class]) > li + li {
+    margin-top: 0.75em;
   }
 
   /* Set shorter line heights on headings and interactive elements */

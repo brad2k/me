@@ -26,24 +26,15 @@
   a {
     color: var(--color-text);
     text-decoration: underline;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.15em;
     transition:
       color var(--transition-base),
-      text-shadow var(--transition-base);
+      text-underline-offset var(--transition-base);
 
     &:hover {
       color: var(--color-link-active);
-      text-shadow:
-        0.4px 0 0 currentColor,
-        -0.1px 0 0 currentColor;
+      text-underline-offset: 0.2em;
     }
-  }
-
-  ul[class],
-  ol[class] {
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 
   hr {
