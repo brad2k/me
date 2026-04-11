@@ -46,6 +46,10 @@
     }
   }
 
+  .subtle {
+    font-size: var(--font-size-subtle);
+  }
+
   /* 
     Visually hidden
     https://piccalil.li/blog/visually-hidden/

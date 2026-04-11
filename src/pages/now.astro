@@ -1,0 +1,90 @@
+---
+import Page from "../components/Page.astro";
+
+const buildDate = new Date().toLocaleString("en-US", {
+  dateStyle: "long",
+});
+---
+
+<Page
+  pageTitle="Now | Brad Azevedo"
+  pageDescription="What’s Brad Azevedo up to these days?"
+>
+  <h1>Now</h1>
+
+  <p class="subtle">
+    Inspired by the “<a
+      href="https://nownownow.com/about"
+      rel="external nofollow">now page</a
+    >” movement, these are some highlights of recent projects, accomplishments,
+    and whatever else I might be working on.
+  </p>
+
+  <p class="subtle">Last updated {buildDate}</p>
+
+  <hr />
+
+  <h2>2026</h2>
+
+  <ol reversed>
+    <li>
+      Re-launched <a href="https://www.bradazevedo.com/" rel="external noopener"
+        >www.bradazevedo.com</a
+      > — this website! (I actually forgot I had one). The old one was mainly a hidden
+      space for my CV and was written with Gatsby, but I rebuilt it with Astro and
+      an intention to turn it into something more.
+    </li>
+    <li>
+      Launched <a href="https://thebeeline.bike/" rel="external noopener"
+        >The Beeline</a
+      > — a website highlighting bike routes in San Francisco. As an avid cyclist,
+      I thought this would be a fun way to share my knowledge and play with some newer
+      web tech.
+    </li>
+    <li>
+      Officially took partial ownership of a cutting-edge 1981 Cessna T182.
+    </li>
+    <li>
+      Passed my Advanced Ground Instructor knowledge exam! Now, onto the
+      Instrument Ground Instructor exam…
+    </li>
+    <li>
+      Launched <a href="https://jamesbuttonoboe.com/" rel="external noopener"
+        >jamesbuttonoboe.com</a
+      > — a website for my partner and brilliant oboist, James Button.
+    </li>
+  </ol>
+
+  <h2>2025</h2>
+
+  <ol reversed>
+    <li>
+      Diving into all the latest and greatest in CSS. Fluid type scales,
+      powerful new selectors, layout options with container queries, theme
+      support, OKLCH, and more. Whew, I‘m exhausted.
+    </li>
+    <li>
+      Flew James and myself to Portland, OR (KTTD) — my longest flight yet! This
+      flight fulfilled the requirement for my “long cross-country” flight for
+      the commercial certificate.
+    </li>
+    <li>
+      Passed my Fundamentals of Instruction exam — a prerequisite for any FAA
+      instruction certificates.
+    </li>
+    <li>
+      Passed my Commercial Pilot knowledge exam. Now, onto the flight portion…
+    </li>
+    <li>
+      Had my first experience eating a whole lobster in Maine — from being
+      alive, then tossed in a pot, then disassembling it with a variety of
+      tools. Messy, but entertaining.
+    </li>
+  </ol>
+</Page>
+
+<style>
+  ol {
+    list-style-type: disc;
+  }
+</style>

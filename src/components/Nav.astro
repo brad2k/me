@@ -1,5 +1,5 @@
 ---
-const { pathname } = Astro.url;
+import NavLink from "./NavLink.astro";
 ---
 
 <header class="primary-header content-grid">
@@ -9,17 +9,18 @@ const { pathname } = Astro.url;
     <nav>
       <ul class="nav-list">
         <li>
-          <a
-            href="/about/"
-            class:list={[{ active: pathname.includes("/about/") }]}>About</a
-          >
+          <NavLink to="/about/" label="About" />
         </li>
         <li>
-          <a class="not-yet" title="Coming soon!" aria-disabled="true">Now</a>
+          <NavLink to="/now/" label="Now" />
         </li>
         <li>
-          <a class="not-yet" title="Coming soon!" aria-disabled="true"
-            >Collections</a>
+          <NavLink
+            class="not-yet"
+            title="Coming soon!"
+            aria-disabled="true"
+            label="Collections"
+          />
         </li>
       </ul>
     </nav>
@@ -79,9 +80,5 @@ const { pathname } = Astro.url;
     all: revert;
     cursor: not-allowed;
     opacity: 50%;
-  }
-
-  .active {
-    color: var(--color-link-active);
   }
 </style>
