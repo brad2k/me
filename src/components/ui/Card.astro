@@ -1,0 +1,20 @@
+---
+const { class: className, ...rest } = Astro.props;
+
+export interface Props {
+  class?: string;
+  [key: string]: any;
+}
+---
+
+<div class:list={["card", className]} {...rest}>
+  <slot />
+</div>
+
+<style>
+  .card {
+    background-color: var(--card-bg, var(--color-surface));
+    padding: var(--space-m);
+    border-radius: var(--radius-s);
+  }
+</style>

@@ -15,7 +15,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, "/"), Astro.site);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
+  <!-- <meta name="color-scheme" content="light dark" /> -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="canonical" href={canonical} />
   <meta name="generator" content={Astro.generator} />
@@ -24,6 +24,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, "/"), Astro.site);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <Font cssVariable="--font-Fraunces" />
   <Font cssVariable="--font-Epilogue" />
+  <slot name="head" />
 
   <title>{pageTitle}</title>
 
@@ -59,7 +60,8 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, "/"), Astro.site);
         "Design systems",
         "UI architecture",
         "Web accessibility",
-        "Web performance"
+        "Web performance",
+        "Web standards"
       ],
       "sameAs": [
         "https://www.instagram.com/bradazevedo/",

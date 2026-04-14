@@ -26,6 +26,15 @@ export default defineConfig({
       subsets: ["latin"],
       fallbacks: ["sans-serif"],
     },
+    {
+      name: "Fira Mono",
+      cssVariable: "--font-Fira",
+      provider: fontProviders.google(),
+      weights: [400, 500, 700],
+      styles: ["normal"],
+      subsets: ["latin"],
+      fallbacks: ["monospace"],
+    },
   ],
 
   integrations: [sitemap()],

@@ -7,26 +7,44 @@
         Bravely hand-coded in San Francisco without JavaScript.
       </p>
     </div>
-    <ul class="socials flow">
-      <li>
-        <a href="mailto:brad2k@gmail.com" rel="external noopener">Email</a>
-      </li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/bradazevedo/"
-          rel="external noopener">LinkedIn</a
-        >
-      </li>
-      <li>
-        <a href="https://github.com/brad2k/" rel="external noopener">GitHub</a>
-      </li>
-    </ul>
+
+    <nav class="nav">
+      <h3 class="heading">Browse</h3>
+      <ul class="links flow">
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/colophon/">Colophon</a>
+        </li>
+        <li>
+          <a href="/resume/">Resum&eacute;</a>
+        </li>
+      </ul>
+
+      <h3 class="heading">Connect</h3>
+      <ul class="links flow">
+        <li>
+          <a href="mailto:brad2k@gmail.com" rel="external noopener">Email</a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/bradazevedo/"
+            rel="external noopener">LinkedIn</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/brad2k/" rel="external noopener">GitHub</a
+          >
+        </li>
+      </ul>
+    </nav>
   </div>
 </footer>
 
 <style>
   .footer {
-    font-size: var(--size-step-00);
+    font-size: var(--font-size-small);
     background-color: var(--color-footer-bg);
     color: var(--color-footer-text);
     padding-block: var(--footer-padding);
@@ -37,14 +55,10 @@
     }
   }
 
-  .socials {
-    --flow-space: var(--space-xs);
-  }
-
   .footer-wrap {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: var(--gutter);
   }
@@ -53,5 +67,23 @@
     font-family: var(--font-display);
     font-size: var(--font-size-base);
     color: var(--color-accent-on-dark);
+  }
+
+  .nav {
+    display: grid;
+    column-gap: var(--space-l);
+    row-gap: var(--space-s);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heading {
+    font-size: var(--font-size-subtle);
+    grid-row: 1 / 2;
+    color: var(--color-accent-on-dark);
+    font-weight: 600;
+  }
+
+  .links {
+    --flow-space: var(--space-xs);
   }
 </style>

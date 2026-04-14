@@ -1,0 +1,331 @@
+---
+import { ChevronDown, Mail, Printer } from "@lucide/astro";
+import { Font } from "astro:assets";
+import GitHub from "../assets/github-logo.svg";
+import LinkedIn from "../assets/linkedin-logo.svg";
+import Page from "../components/Page.astro";
+import resume from "../data/resume.json";
+
+const year = new Date().getFullYear();
+const timespan = year - 2006;
+---
+
+<Page
+  pageTitle="Resumé | Brad Azevedo"
+  pageDescription="What’s Brad Azevedo up to these days?"
+  class="resume"
+>
+  <Font cssVariable="--font-Fira" slot="head" />
+
+  <header class="flow">
+    <h1><span class="visually-hidden">Resum&eacute; of </span> Brad Azevedo</h1>
+
+    <section>
+      <h2 class="visually-hidden">Connect with me</h2>
+      <ul class="contacts">
+        <li>
+          <Mail />
+          <a
+            href="mailto:brad2k@gmail.com?subject=Howdy!"
+            rel="external noopener">Email</a
+          >
+        </li>
+        <li>
+          <LinkedIn />
+          <a
+            href="https://www.linkedin.com/in/bradazevedo/"
+            rel="external noopener">LinkedIn</a
+          >
+        </li>
+        <li>
+          <GitHub />
+          <a href="https://github.com/brad2k/" rel="external noopener">GitHub</a
+          >
+        </li>
+        <li>
+          <Printer />
+          <button id="print">Print/Save as a PDF</button>
+        </li>
+      </ul>
+    </section>
+
+    <p class="summary">
+      Front-end engineer of {timespan} years on a journey spanning from IE6 to AI-assisted
+      development. Specializing in the front of the front-end. Think: responsive UI
+      development, design systems, and generally <em>snazzy</em> UX. Also: I’m an
+      instrument-rated private pilot.
+    </p>
+  </header>
+
+  <section class="resume-section">
+    <h2><span class="visually-hidden">Experience </span>Timeline</h2>
+
+    {
+      resume.timeline.map((job) => {
+        return (
+          <article class="job flow">
+            <dl class="highlight">
+              <div class="dt-block">
+                <dt>{job.company}</dt>
+                <dd>
+                  <time datetime={job.dates.replace("—", "/")}>
+                    {job.dates}
+                  </time>
+                </dd>
+                {job.title && <dd>{job.title}</dd>}
+                {job.city && <dd>{job.city}</dd>}
+              </div>
+            </dl>
+
+            <ul class="bullets">
+              {job.bullets.map((thing) => (
+                <li>{thing}</li>
+              ))}
+            </ul>
+
+            <details class="editorial">
+              <summary>
+                <ChevronDown />
+                <span>Behind the bullet points</span>
+              </summary>
+
+              <Fragment set:html={job.editorial} />
+            </details>
+          </article>
+        );
+      })
+    }
+  </section>
+
+  <section class="resume-section">
+    <h2>Education</h2>
+
+    <dl class="highlight">
+      {
+        resume.education.map((knowledge) => {
+          return (
+            <div class="dt-block">
+              <dt>{knowledge.highlight}</dt>
+              <dd>
+                <time datetime={knowledge.year.replace("—", "/")}>
+                  {knowledge.year}
+                </time>
+              </dd>
+              {knowledge.certification && <dd>{knowledge.certification}</dd>}
+              {knowledge.city && <dd>{knowledge.city}</dd>}
+            </div>
+          );
+        })
+      }
+    </dl>
+  </section>
+
+  <section class="resume-section skills">
+    <h2>Skills</h2>
+
+    <dl class="skill-list">
+      <dt>Core</dt>
+      {resume.skills.core.map((skill) => <dd>{skill}</dd>)}
+    </dl>
+
+    <dl class="skill-list">
+      <dt>Growing</dt>
+      {resume.skills.growing.map((skill) => <dd>{skill}</dd>)}
+    </dl>
+
+    <dl class="skill-list">
+      <dt>Also</dt>
+      {resume.skills.also.map((skill) => <dd>{skill}</dd>)}
+    </dl>
+  </section>
+
+  <section class="resume-section">
+    <h2>Outside of work</h2>
+
+    <p class="subtle">
+      Summaries of academic and professional achievements are one piece of the
+      picture, but our identities and professional value as humans are informed
+      by the experiences and knowledge from our personal life. Head on over to
+      the <a href="/about/">About Me</a> page to learn more about what makes me tick.
+    </p>
+  </section>
+</Page>
+
+<style>
+  .resume {
+    font-family: var(--font-Fira);
+  }
+
+  .summary {
+    --flow-space: var(--space-l);
+    border-inline-start: 5px solid var(--color-accent);
+    padding-inline-start: var(--gutter);
+  }
+
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--space-l);
+    row-gap: var(--space-s);
+    align-items: center;
+    font-size: var(--font-size-subtle);
+    line-height: var(--leading-flat);
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      white-space: nowrap;
+    }
+
+    svg {
+      height: 1em;
+      width: 1em;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .dt-block {
+    display: grid;
+    gap: 0.25em; /* based on the root font size so it aligns with the "summary" paragraph */
+    grid-template-columns: 1fr auto;
+  }
+
+  .highlight {
+    display: grid;
+    gap: var(--space-m);
+    text-wrap: balance;
+    line-height: var(--leading-fine);
+
+    dt {
+      font-weight: 700;
+      font-size: var(--font-size-subtle);
+    }
+
+    dd {
+      font-size: var(--font-size-small);
+
+      &:nth-child(even) {
+        place-self: end;
+      }
+    }
+  }
+
+  .job {
+    --flow-space: var(--space-s);
+  }
+
+  .bullets {
+    padding-inline-start: var(--space-s);
+    list-style-type: disc;
+    font-size: var(--font-size-small);
+  }
+
+  .resume-section {
+    --flow-space: var(--space-xl);
+
+    display: grid;
+    gap: var(--space-l);
+
+    h2 {
+      padding-block-end: var(--space-xs);
+      border-bottom: 1px solid var(--color-surface);
+    }
+  }
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    font-size: var(--font-size-small);
+
+    dt {
+      flex-basis: 100%;
+      font-family: var(--font-Fira);
+      font-size: var(--font-size-base);
+    }
+
+    dd {
+      padding: var(--space-xs);
+      background-color: var(--color-surface);
+      border-radius: var(--radius-s);
+      line-height: var(--leading-flat);
+    }
+  }
+
+  .editorial {
+    font-size: var(--font-size-small);
+
+    ::marker {
+      content: "";
+    }
+
+    &::details-content {
+      overflow: hidden;
+      transition:
+        block-size var(--transition-base),
+        content-visibility var(--transition-base) allow-discrete;
+      block-size: 0;
+    }
+
+    .lucide {
+      height: 1.5em;
+      width: 1.5em;
+      transition: transform var(--transition-base);
+    }
+
+    summary {
+      list-style-position: outside;
+      line-height: var(--leading-flat);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      color: var(--color-accent);
+      cursor: pointer;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+
+    p {
+      padding-inline-start: var(--space-m);
+      margin-block-start: var(--space-s);
+    }
+
+    &[open] {
+      &::details-content {
+        block-size: auto;
+      }
+
+      .lucide {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  @media print {
+    :global(.primary-header, .footer) {
+      display: none;
+    }
+
+    .editorial {
+      &::details-content {
+        block-size: auto;
+        content-visibility: visible;
+      }
+
+      summary {
+        font-weight: 600;
+      }
+    }
+  }
+</style>
+
+<script>
+  const printTrigger = document.getElementById("print");
+  printTrigger?.addEventListener("click", () => window.print());
+</script>
