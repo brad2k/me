@@ -43,13 +43,9 @@
 
   --transition-base: 200ms ease-in-out;
   --transition-fade: 500ms ease-in-out;
+  --transition-snappy: 150ms linear;
 
   --radius-s: 0.2rem;
   --radius-m: 0.75rem;
   --radius-l: 2.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
 }

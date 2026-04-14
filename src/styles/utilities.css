@@ -22,7 +22,7 @@
     https://piccalil.li/blog/flow-utility/
   */
 
-  :where(.flow > * + *) {
+  :where(.flow > * + *):not(hr) {
     margin-block-start: var(--flow-space, 1em);
   }
 

@@ -56,18 +56,21 @@
     list-style: none;
   }
 
-  :where(ul, ol):not([class]) > li + li {
-    margin-top: 0.75em;
-  }
-
   /*
     A sensible bit of spacing
     Verbose, but it says "target all <li> elements that follow another <li>
     (i.e. not the first) whose parent <ul> or <ol> don't have a class".
   */
 
-  :where(ul, ol):not([class]) > li + li {
-    margin-top: 0.75em;
+  :where(ul, ol):not([class]) {
+    & ul,
+    & ol {
+      margin-top: 0.75em;
+    }
+
+    & > li + li {
+      margin-top: 0.5em;
+    }
   }
 
   /* Set shorter line heights on headings and interactive elements */

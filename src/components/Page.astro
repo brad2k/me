@@ -8,6 +8,7 @@ const { class: className, ...rest } = Astro.props;
 ---
 
 <Layout class={`flow prose ` + className} {...rest}>
+  <slot name="head" slot="head" />
   <slot />
 </Layout>
 

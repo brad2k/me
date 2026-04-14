@@ -1,0 +1,157 @@
+---
+import Page from "../components/Page.astro";
+import Card from "../components/ui/Card.astro";
+---
+
+<Page
+  pageTitle="Colophon | Brad Azevedo"
+  pageDescription="A bit about how this website is built."
+  class="colophon"
+>
+  <h1>Colophon</h1>
+
+  <hr />
+
+  <p>
+    This site was written by me (a human). My apologies to all the bots whose
+    jobs I have taken.
+  </p>
+
+  <p>
+    The footer proudly states—in a tongue-in-cheek manner—that this site was
+    built without JavaScript. I call this out because it follows my ethos to <em
+      >use the right tool for the job</em
+    >. I don’t eat yogurt with a shovel, so I don’t see any reason to force
+    users to download a bunch of JavaScript for a static site.
+  </p>
+
+  <p>
+    Plus, native web APIs have come a long way over the years. You should try
+    them sometime; they’re fun to use.
+  </p>
+
+  <p>
+    This site was built with some degree of haste and is not exactly perfect,
+    but then again, perfection is boring.
+  </p>
+
+  <h2>The toolkit</h2>
+
+  <Card>
+    <ul>
+      <li>Developed with Astro</li>
+      <li>Written in VS Code</li>
+      <li>
+        CSS modules (Astro does this natively and it’s <em>mostly</em> beautiful)
+      </li>
+      <li>
+        CSS variables are used profusely in a very rudimentary design system of
+        primitives &amp; tokens
+      </li>
+      <li>Hosted on Netlify</li>
+      <li>Free of analytics!</li>
+      <li>Kind to trees</li>
+      <li>
+        Typography graciously provided by Google Fonts
+        <ul class="typography">
+          <li>Fraunces</li>
+          <li>Epilogue</li>
+          <li>Fira Mono</li>
+        </ul>
+      </li>
+    </ul>
+  </Card>
+
+  <h2>The people</h2>
+
+  <p>
+    The construction of this website is very much inspired by the work of a lot
+    of talented people who deserve a mention. The web is a better place because
+    of them. This is not an exhaustive list.
+  </p>
+
+  <ul class="people">
+    <li>
+      <a href="https://nerdy.dev/" rel="external noopener">Adam Argyle</a>
+    </li>
+    <li>
+      <a href="https://chriscoyier.net/" rel="external noopener">Chris Coyier</a
+      >
+    </li>
+    <li>
+      <a href="https://daverupert.com/" rel="external noopener">Dave Rupert</a>
+    </li>
+    <li>
+      <a href="https://www.joshwcomeau.com/" rel="external noopener"
+        >Josh Comeau</a
+      >
+    </li>
+    <li>
+      <a href="https://www.kevinpowell.co/" rel="external noopener"
+        >Kevin Powell</a
+      >
+    </li>
+    <li>
+      <a href="https://courses.webdevsimplified.com/" rel="external noopener"
+        >Kyle Cook</a
+      >
+    </li>
+    <li>
+      <a href="https://verou.me/" rel="external noopener">Lea Verous</a>
+    </li>
+    <li>
+      <a href="https://www.oddbird.net/authors/miriam/" rel="external noopener"
+        >Miriam Suzanne</a
+      >
+    </li>
+    <li>
+      <a href="https://piccalil.li/" rel="external noopener">Piccalilli</a>
+    </li>
+    <li>
+      <a href="https://ryanmulligan.dev/" rel="external noopener"
+        >Ryan Mulligan</a
+      >
+    </li>
+    <li>
+      <a href="https://www.sarasoueidan.com/" rel="external noopener"
+        >Sara Soueidan</a
+      >
+    </li>
+    <li>
+      <a href="https://wesbos.com/" rel="external noopener">Wes Bos</a>
+    </li>
+    <li>
+      <a href="https://www.zachleat.com/" rel="external noopener"
+        >Zach Leatherman</a
+      >
+    </li>
+  </ul>
+
+  <p>I hope you’ve enjoyed your stay.</p>
+</Page>
+
+<style>
+  .colophon {
+    --flow-space: var(--space-l);
+  }
+
+  .people {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+
+    li {
+      padding: var(--space-xs) var(--space-s);
+      background-color: var(--color-surface);
+      border-radius: var(--radius-s);
+      line-height: var(--leading-flat);
+    }
+  }
+
+  .typography {
+    li {
+      display: inline list-item;
+      list-style-type: circle;
+    }
+  }
+</style>
