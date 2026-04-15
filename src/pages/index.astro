@@ -20,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
   </p>
 
   <aside class="an-aside flow">
-    <strong class="subhead">Powered by</strong>
+    <strong class="subhead">Powered by:</strong>
 
     <ul class="powered-by">
       <li>Oxford commas</li>
@@ -43,16 +43,25 @@ import Layout from "../layouts/Layout.astro";
     --flow-space: var(--space-xs);
   }
 
+  @keyframes helloReveal {
+    from {
+      font-weight: var(--font-weight-semi-bold);
+      font-size: var(--font-size-base);
+    }
+    to {
+      font-weight: var(--font-weight-bold);
+      font-size: 2.5em;
+    }
+  }
+
   .hello {
     @media (prefers-reduced-motion: no-preference) {
+      animation: helloReveal var(--transition-base) forwards;
+      animation-play-state: paused;
       cursor: pointer;
-      transition:
-        font-weight var(--transition-base),
-        font-size var(--transition-base);
 
       &:hover {
-        font-size: 2.5em;
-        font-weight: var(--font-weight-bold);
+        animation-play-state: running;
       }
     }
   }

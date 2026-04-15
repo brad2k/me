@@ -42,9 +42,10 @@
       "company": "Sabbatical",
       "dates": "2022—2025",
       "bullets": [
-        "Earned my pilot license.",
-        "Lived life.",
-        "Recharged my batteries."
+        "Earned my private pilot certificate with an instrument rating as well as FAA ground instructor certification; commercial certificate in progress.",
+        "Rode my bike from SF > LA; hiked the Dolomites; did a lot of thinking; lived life.",
+        "Built freelance projects in Astro, Next.js, React, and Sanity CMS to stay current with the stack.",
+        "Exploring AI-assisted development."
       ],
       "editorial": "<p>In 2022, I hit a wall. The accumulation of an extended stressful period at work left me depleted and battered. It was time to do something I had never done in a meaningful way: take a break. I had a birthday coming up, so I decided to take some time off with the intention of celebrating my 40th and doing something indulgent—like learning to surf—but it turned into much more.</p>\n<p>It occurred to me on a bike ride from San Francisco to Los Angeles that I could use this time to pursue a lifelong dream: learning to fly. This was the perfect opportunity to clear my mind and pursue a passion.</p>\n<p>Earning a pilot certificate is no small feat; it’s difficult, requires a lot of focus, and is <em>incredibly</em> time consuming. Before I knew it, six months had passed and the aviation bug had really set in. Why not pursue my instrument rating as well? And so it goes in aviation: one certificate inexorably leads into another, driven by the common trait among pilots to continually do better and expand our skill set. I’m now in pursuit of my commercial and ground instructor certificates.</p>\n<p>As time went on, so did life—some good, some bad. I suffered the devastating loss of my two dogs, but I found new love and life in the form of a partner and a new dog. I hiked the Dolomites, went diving in the Great Barrier Reef, flew myself to Portland, and ate lobster in Maine. Life was starting anew.</p>\n<p>A funny thing happens when you aren’t gainfully employed: you lose your sense of purpose and identity. I did a lot of digging to evaluate where I’ve been, what matters to me, and where I want to go. To some degree I said goodbye to an old life during this period and opened the door to a new one. I love my new life and I feel grateful for it every day. As the dust settled and I felt stable again, I knew it was time to get back to work.</p>\n<p>I returned to the wild world of the web in 2025, playing with the new toys that have popped up over the past few years. I was inspired by the new tech and what people were doing with it. Pushing pixels has always been a fun challenge to me because it was a puzzle of trying to achieve something with a limited toolset, but that toolset has become much more expansive over the years and has made UI development much more fun and enjoyable. I began building some personal projects—including this one—to put those skills to the test. I’ve experimented with AI-assisted development and, to borrow a metaphor from aviation, I’ve landed on using it as my copilot, but I don’t use it as an autopilot.</p>\n<p>It’s nice to be back at it with a clear mind and inspired by the creativity of the craft. I’m returning with a refreshed stack, a lot of hard-won perspective, and, frankly, more energy than I had when I left. It’s time to roll up my sleeves and get dirty.</p>"
     },
@@ -54,9 +55,9 @@
       "dates": "2019—2022",
       "city": "San Francisco",
       "bullets": [
-        "First engineer on a new Design Systems team—initially joined to tackle a rebrand.",
-        "Co-founded Workbench: Gusto’s company-wide design system, including components, tokens, typography, patterns, iconography, etc.—supporting ~100 engineers and designers.",
-        "Owned the documentation site: did most of the technical writing, information architecture design, and project management."
+        "Founding engineer on a new Design Systems team and the first dedicated front-end engineer in an otherwise full-stack culture.",
+        "Co-founded Workbench: Gusto’s company-wide design system — components, tokens, typography, patterns, SVG iconography, etc. — supporting ~100 engineers and designers.",
+        "Owned the documentation site end to end: technical writing, architecture, and project management."
       ],
       "editorial": "<p>Gusto is an HR platform for small businesses, providing payroll tools, HR management, time tracking, and a platform to sell health benefits and retirement plans.</p\n<p>I joined Gusto as the founding engineer for a brand-new Design Systems team, and the first dedicated front-end engineer in an otherwise full-stack engineering culture. The immediate mandate was a company-wide rebrand across a codebase that had grown organically for years, relying on a Bootstrap-style CSS utility class library that had led to significant fragmentation throughout the product. A significant amount of early effort went into reining in disparate UIs, clearing out deprecated CSS, and aligning design assets across the board.</p>\n<p>As the team grew, we began building Workbench from scratch: a full design system written in React & TypeScript encompassing foundational brand assets, components, patterns, and an SVG illustration & icon library—packaged as an internal NPM module, versioned with semantic versioning, and deployed via BuildKite. I eventually took ownership of the documentation site, which went well beyond Storybook to provide a proper editorial for each component: usage examples, accessibility notes, and testing guidance. I did the vast majority of the technical writing, designed much of the page-level layout, and built the site itself in Gatsby, React, CSS Modules, and TypeScript. I also wrote the Design Systems Newsletter to keep the broader organization informed.</p>\n<p>At its peak the team was about six people supporting roughly 400 employees across engineering and design.</p>"
     },
@@ -66,7 +67,7 @@
       "dates": "2018—2019",
       "city": "San Francisco",
       "bullets": [
-        "Half of a two-person team building a data-driven web dashboard for wearable device data from scratch using React, Gatsby, Styled Components & Redux."
+        "One of two people building a data-driven web dashboard for wearable device data as one of two front-end engineers (React, Gatsby, Styled Components, Redux)."
       ],
       "editorial": "<p>Jawbone changed its name to Jawbone Health when the company shifted focus from audio products to activity trackers, but it was for all intents and purposes the same company and people as before.</p>\n<p>The company was developing wearable bands capable of tracking various metrics, from heart rate to steps to sleep. The engineering team was building out the dashboard infrastructure to display and manage all this data, and I was one of two people building out the front-end. We built prototypes using Gatsby and custom implementations of React via Webpack. We leveraged the latest features of ES6, used Styled Components for styling, and Redux for state management.</p>\n<p>Sadly, the market for such devices was saturated and finances became an issue, so the product(s) were never truly realized.</p>"
     },
@@ -76,7 +77,8 @@
       "dates": "2012—2018",
       "city": "San Francisco",
       "bullets": [
-        "Primary maintainer of the marketing site where I spearheaded responsive, mobile-first design, introduced SCSS, and built an in-house CSS framework from scratch."
+        "Primary front-end engineer for jawbone.com; spearheaded the move to responsive, mobile-first design.",
+        "Introduced SCSS and built an in-house CSS framework — my first real step toward what we now call “design systems”."
       ],
       "editorial": "<p>Jawbone earned its reputation as an innovator in the Bluetooth space, beginning with some of the first Bluetooth headsets on the market and eventually launched the popular Jambox portable Bluetooth speaker (and others). The company’s final act was a move into the wearable space with an activity tracker called UP.</p>\n<p>I began as one of three front-end engineers building various aspects of the website, from marketing, to support pages, to ecommerce. I eventually came to own most of the marketing pages as I enjoyed the challenge of building out the user interfaces.</p>\n<p>I spearheaded the move to responsive design and learned a ton about web fonts, image optimization, SEO, and building flexible, performant, mobile-first UIs. Over time, I realized that we were reinventing the wheel far more than necessary and I began extrapolating the common patterns and suggesting new patterns to the design team that would promote more stable UIs across browsers and devices (remember: this was an era of severe device fragmentation). This was to be my entry into what we now call &ldquo;design systems&rdquo;.</p>\n<p>As a product-based company, it was important to structure pages with strong semantic meaning and metadata, not just for humans, but for the bots that would ultimately aid with product discovery (read: Googlebot, Twitter, and Facebook). SEO was just becoming a focus in the industry, so I led the project to ensure SEO standards were met. Experiments were run with Optimizely to test effectiveness.</p>"
     },
@@ -86,7 +88,8 @@
       "dates": "2006—2012",
       "city": "San Francisco",
       "bullets": [
-        "Front-end work on editorial content for GameSpot, TV.com, Giant Bomb, and GameFaqs; led front-end on the GameSpot mobile site."
+        "Front-end engineer working on GameSpot, Metacritic, Giant Bomb, and GameFAQs — building templates fed by a CMS at editorial scale.",
+        "Led front-end on GameSpot’s mobile site, built in the pre-responsive “m-dot” era."
       ],
       "editorial": "<p>CBS Interactive was my first job out of college. Prior to being acquired by CBS, the company was known as CNET. I worked in the “entertainment” division, whose brands included GameSpot, TV.com, GameFAQs, Metacritic, and eventually Giant Bomb.</p>\n<p>My role began with entry-level production work to publish content produced by the editorial. Over time, my role matured into general front-end work on all the properties. Each site featured an enormous amount of written content, photos, and videos, so I gained a lot of experience building out templates that would be fed by a CMS.</p>\n<p>At the time, the stack was based on PHP using Zend templating and MooTools for JavaScript. This was the era of IE6 and also the era in which Firefox and Firebug were released. Firebug would forever change the way we developed the front-end.</p>\n<p>I worked with a backend engineer to develop the entertainment division’s first mobile site for GameSpot. This was the “m-dot” era—before Ethan Marcotte coined the term responsive design—when mobile development was still very much in its infancy. It was built using PHP, Zend, jQuery, and Mustache JS.</p>"
     }
@@ -97,6 +100,7 @@
       "CSS",
       "JavaScript",
       "React",
+      "JSX/TSX",
       "NextJS",
       "Astro",
       "Web standards"

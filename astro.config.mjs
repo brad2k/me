@@ -12,7 +12,7 @@ export default defineConfig({
       name: "Fraunces",
       cssVariable: "--font-Fraunces",
       provider: fontProviders.google(),
-      weights: [400, 600, 700],
+      weights: [400, 700],
       styles: ["normal", "italic"],
       subsets: ["latin"],
       fallbacks: ["serif"],

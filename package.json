@@ -14,7 +14,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
     "@lucide/astro": "^1.8.0",
-    "astro": "^6.1.6"
+    "astro": "^6.1.7"
   },
   "devDependencies": {
     "prettier-plugin-astro": "0.14.1"
