@@ -1,43 +1,73 @@
 :root {
-  /* Theme - light by default; will follow the UA preference */
+  /*
+    Theme setup
+
+    - Light by default; will follow system preference
+    - Initializing a theme variable for future use with style queries
+    - Set theme variable based on theme overrides (in the future)
+  */
   color-scheme: light dark;
+
+  --theme: light;
+
+  @media (prefers-color-scheme: dark) {
+    --theme: dark;
+  }
+
+  /* Have data-theme use the variable */
+  &[data-theme] {
+    color-scheme: var(--theme);
+  }
+
+  &[data-theme="light"] {
+    --theme: light;
+  }
+
+  &[data-theme="dark"] {
+    --theme: dark;
+  }
 
   /* Token definitions */
 
-  --color-bg: var(--color-neutral-100);
-  --color-surface: var(--color-neutral-200);
-  --color-border: var(--color-neutral-300);
-  --color-muted: var(--color-taupe-100);
-  --color-text-body: var(--color-taupe-200);
-  --color-text: var(--color-charcoal-100);
-  --color-accent: var(--color-clay-200);
-  --color-accent-on-dark: var(--color-clay-100);
-
-  /* @media (prefers-color-scheme: dark) {
-    --color-bg: #120c09;
-    --color-surface: #1e1510;
-    --color-border: #2e2018;
-    --color-muted: #7a6a60;
-    --color-text-body: #c0a898;
-    --color-text: #f0e8e0;
-    --color-accent: #d06e56;
-  } */
-
-  /* Structural */
+  /* Structural spacing & measurements */
 
   --gutter: var(--space-m);
-
   --nav-padding: var(--gutter);
   --footer-padding: var(--gutter);
   --prose-max-width: 70ch;
 
   /* Colors */
-  --focus-color: var(--color-accent);
-  --selection-text-color: var(--color-neutral-100);
-  --selection-background: var(--color-charcoal-100);
+
+  --color-accent: light-dark(var(--color-clay-500), var(--color-clay-400));
+  --color-accent-on-dark: var(--color-clay-400);
+
+  --color-bg: light-dark(var(--color-neutral-50), var(--color-charcoal-950));
+  --color-surface: light-dark(
+    var(--color-neutral-100),
+    var(--color-neutral-900)
+  );
+  --color-border: light-dark(
+    var(--color-neutral-300),
+    var(--color-charcoal-700)
+  );
+  --color-footer-bg: var(--color-charcoal-950);
+
+  /* Typography colors */
+
+  --color-text: light-dark(var(--color-charcoal-900), var(--color-neutral-300));
   --color-link-active: var(--color-accent);
-  --color-footer-bg: var(--color-charcoal-200);
-  --color-footer-text: var(--color-neutral-100);
+  --color-footer-text: var(--color-neutral-50);
+
+  /* Interaction colors */
+  --focus-color: var(--color-accent);
+  --selection-text-color: light-dark(
+    var(--color-charcoal-50),
+    var(--color-charcoal-900)
+  );
+  --selection-background: light-dark(
+    var(--color-charcoal-900),
+    var(--color-charcoal-100)
+  );
 
   /* Typography */
   --font-display: var(--font-Fraunces);

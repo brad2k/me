@@ -1,14 +1,52 @@
 :root {
   /* Colors */
-  --color-neutral-100: #faf8f5;
-  --color-neutral-200: #efe8e0;
-  --color-neutral-300: #e0d8ce;
-  --color-taupe-100: #9e8e84;
-  --color-taupe-200: #5a4840;
-  --color-charcoal-100: #221814;
-  --color-charcoal-200: #120c09;
-  --color-clay-100: #d06e56;
-  --color-clay-200: #c4614a;
+
+  /* Neutrals */
+  --color-neutral-50: oklch(0.977 0.004 84);
+  --color-neutral-100: oklch(0.944 0.009 79);
+  --color-neutral-200: oklch(0.905 0.013 77);
+  --color-neutral-300: oklch(0.869 0.016 75);
+  --color-neutral-500: oklch(0.765 0.019 73);
+  --color-neutral-700: oklch(0.603 0.018 71);
+  --color-neutral-800: oklch(0.477 0.015 69);
+  --color-neutral-900: oklch(0.328 0.012 64);
+  --color-neutral-950: oklch(0.195 0.008 56);
+
+  /* Taupe */
+  --color-taupe-50: oklch(0.942 0.008 61);
+  --color-taupe-100: oklch(0.893 0.013 59);
+  --color-taupe-200: oklch(0.835 0.019 57);
+  --color-taupe-300: oklch(0.76 0.024 56);
+  --color-taupe-500: oklch(0.613 0.026 54);
+  --color-taupe-700: oklch(0.473 0.029 52);
+  --color-taupe-800: oklch(0.378 0.03 50);
+  --color-taupe-900: oklch(0.275 0.025 48);
+  --color-taupe-950: oklch(0.178 0.019 45);
+
+  /* Charcoal */
+
+  --color-charcoal-50: oklch(0.962 0.005 46);
+  --color-charcoal-100: oklch(0.915 0.01 44);
+  --color-charcoal-200: oklch(0.851 0.015 43);
+  --color-charcoal-300: oklch(0.763 0.019 43);
+  --color-charcoal-500: oklch(0.569 0.022 42);
+  --color-charcoal-700: oklch(0.384 0.024 41);
+  --color-charcoal-800: oklch(0.264 0.022 41);
+  --color-charcoal-900: oklch(0.162 0.021 40);
+  --color-charcoal-950: oklch(0.096 0.017 40);
+
+  /* Clay */
+  --color-clay-50: oklch(0.959 0.018 36);
+  --color-clay-100: oklch(0.91 0.036 35);
+  --color-clay-200: oklch(0.843 0.066 33);
+  --color-clay-300: oklch(0.762 0.1 32);
+  --color-clay-400: oklch(0.685 0.13 31);
+  --color-clay-500: oklch(0.608 0.135 31);
+  --color-clay-600: oklch(0.531 0.14 30);
+  --color-clay-700: oklch(0.454 0.149 29);
+  --color-clay-800: oklch(0.386 0.142 29);
+  --color-clay-900: oklch(0.309 0.116 28);
+  --color-clay-950: oklch(0.23 0.077 27);
 
   /* Typography  */
 
@@ -16,16 +54,6 @@
   --leading-fine: 1.2;
   --leading-standard: 1.4;
   --leading-loose: 1.7;
-
-  --space-xs: clamp(0.4375rem, 0.41rem + 0.11vw, 0.5rem);
-  --space-s: clamp(0.875rem, 0.83rem + 0.22vw, 1rem);
-  --space-m: clamp(1.3125rem, 1.24rem + 0.33vw, 1.5rem);
-  --space-l: clamp(2.1875rem, 2.07rem + 0.56vw, 2.5rem);
-  --space-xl: clamp(3.0625rem, 2.9rem + 0.78vw, 3.5rem);
-  --space-2xl: clamp(3.5rem, 3.32rem + 0.89vw, 4rem);
-  --space-3xl: clamp(4.375rem, 4.15rem + 1.11vw, 5rem);
-  --space-4xl: clamp(6.5625rem, 6.22rem + 1.67vw, 7.5rem);
-  --space-5xl: clamp(8.75rem, 8.29rem + 2.22vw, 10rem);
 
   --size-step-000: clamp(0.740625rem, 0.73rem + 0.07vw, 0.78125rem);
   --size-step-00: clamp(0.833125rem, 0.79rem + 0.19vw, 0.9375rem);
@@ -41,10 +69,24 @@
   --size-step-9: clamp(2.70625rem, 1.57rem + 5.51vw, 5.805rem);
   --size-step-10: clamp(3.044375rem, 1.61rem + 6.97vw, 6.965625rem);
 
+  /* Spacing  */
+
+  --space-xs: clamp(0.4375rem, 0.41rem + 0.11vw, 0.5rem);
+  --space-s: clamp(0.875rem, 0.83rem + 0.22vw, 1rem);
+  --space-m: clamp(1.3125rem, 1.24rem + 0.33vw, 1.5rem);
+  --space-l: clamp(2.1875rem, 2.07rem + 0.56vw, 2.5rem);
+  --space-xl: clamp(3.0625rem, 2.9rem + 0.78vw, 3.5rem);
+  --space-2xl: clamp(3.5rem, 3.32rem + 0.89vw, 4rem);
+  --space-3xl: clamp(4.375rem, 4.15rem + 1.11vw, 5rem);
+  --space-4xl: clamp(6.5625rem, 6.22rem + 1.67vw, 7.5rem);
+  --space-5xl: clamp(8.75rem, 8.29rem + 2.22vw, 10rem);
+
+  /* Animations */
   --transition-base: 200ms ease-in-out;
   --transition-fade: 500ms ease-in-out;
   --transition-snappy: 150ms linear;
 
+  /* Border radius */
   --radius-s: 0.2rem;
   --radius-m: 0.75rem;
   --radius-l: 2.5rem;

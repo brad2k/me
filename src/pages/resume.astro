@@ -27,22 +27,30 @@ const timespan = year - 2006;
           <Mail />
           <a
             href="mailto:brad2k@gmail.com?subject=Howdy!"
-            rel="external noopener">Email</a
+            rel="external noopener"
           >
+            <span class="contact--label">Email</span>
+            <span class="contact--content">brad2k@gmail.com</span>
+          </a>
         </li>
         <li>
           <LinkedIn />
           <a
-            href="https://www.linkedin.com/in/bradazevedo/"
-            rel="external noopener">LinkedIn</a
+            href="https://www.linkedin.com/in/bradazevedo"
+            rel="external noopener"
           >
+            <span class="contact--label">LinkedIn</span>
+            <span class="contact--content">/in/bradazevedo</span>
+          </a>
         </li>
         <li>
           <GitHub />
-          <a href="https://github.com/brad2k/" rel="external noopener">GitHub</a
-          >
+          <a href="https://github.com/brad2k" rel="external noopener">
+            <span class="contact--label">GitHub</span>
+            <span class="contact--content">/brad2k</span>
+          </a>
         </li>
-        <li>
+        <li class="contact--print">
           <Printer />
           <button id="print">Print/Save as a PDF</button>
         </li>
@@ -188,6 +196,16 @@ const timespan = year - 2006;
     }
   }
 
+  .contact--content {
+    display: none;
+  }
+
+  #print {
+    &:hover {
+      color: var(--color-link-active);
+    }
+  }
+
   .dt-block {
     display: grid;
     gap: 0.25em; /* based on the root font size so it aligns with the "summary" paragraph */
@@ -321,6 +339,22 @@ const timespan = year - 2006;
       summary {
         font-weight: 500;
       }
+    }
+
+    .contact--content {
+      display: block;
+    }
+
+    .contact--label {
+      display: none;
+    }
+
+    .contact--print {
+      display: none;
+    }
+
+    .contact--print {
+      display: none !important;
     }
   }
 </style>
