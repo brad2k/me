@@ -59,7 +59,7 @@
         "Co-founded Workbench: Gusto’s company-wide design system — components, tokens, typography, patterns, SVG iconography, etc. — supporting ~100 engineers and designers.",
         "Owned the documentation site end to end: technical writing, architecture, and project management."
       ],
-      "editorial": "<p>Gusto is an HR platform for small businesses, providing payroll tools, HR management, time tracking, and a platform to sell health benefits and retirement plans.</p\n<p>I joined Gusto as the founding engineer for a brand-new Design Systems team, and the first dedicated front-end engineer in an otherwise full-stack engineering culture. The immediate mandate was a company-wide rebrand across a codebase that had grown organically for years, relying on a Bootstrap-style CSS utility class library that had led to significant fragmentation throughout the product. A significant amount of early effort went into reining in disparate UIs, clearing out deprecated CSS, and aligning design assets across the board.</p>\n<p>As the team grew, we began building Workbench from scratch: a full design system written in React & TypeScript encompassing foundational brand assets, components, patterns, and an SVG illustration & icon library—packaged as an internal NPM module, versioned with semantic versioning, and deployed via BuildKite. I eventually took ownership of the documentation site, which went well beyond Storybook to provide a proper editorial for each component: usage examples, accessibility notes, and testing guidance. I did the vast majority of the technical writing, designed much of the page-level layout, and built the site itself in Gatsby, React, CSS Modules, and TypeScript. I also wrote the Design Systems Newsletter to keep the broader organization informed.</p>\n<p>At its peak the team was about six people supporting roughly 400 employees across engineering and design.</p>"
+      "editorial": "<p>Gusto is an HR platform for small businesses, providing payroll tools, HR management, time tracking, and a platform to sell health benefits and retirement plans.</p>\n<p>I joined Gusto as the founding engineer for a brand-new Design Systems team, and the first dedicated front-end engineer in an otherwise full-stack engineering culture. The immediate mandate was a company-wide rebrand across a codebase that had grown organically for years, relying on a Bootstrap-style CSS utility class library that had led to significant fragmentation throughout the product. A significant amount of early effort went into reining in disparate UIs, clearing out deprecated CSS, and aligning design assets across the board.</p>\n<p>As the team grew, we began building Workbench from scratch: a full design system written in React & TypeScript encompassing foundational brand assets, components, patterns, and an SVG illustration & icon library—packaged as an internal NPM module, versioned with semantic versioning, and deployed via BuildKite. I eventually took ownership of the documentation site, which went well beyond Storybook to provide a proper editorial for each component: usage examples, accessibility notes, and testing guidance. I did the vast majority of the technical writing, designed much of the page-level layout, and built the site itself in Gatsby, React, CSS Modules, and TypeScript. I also wrote the Design Systems Newsletter to keep the broader organization informed.</p>\n<p>At its peak the team was about six people supporting roughly 400 employees across engineering and design.</p>"
     },
     {
       "company": "Jawbone Health",
@@ -98,18 +98,25 @@
     "core": [
       "HTML",
       "CSS",
-      "JavaScript",
-      "React",
+      "JavaScript (ES6)",
+      "React 16+",
       "JSX/TSX",
       "NextJS",
       "Astro",
       "Web standards"
     ],
-    "growing": ["TypeScript", "Netlify", "Sanity CMS"],
+    "growing": [
+      "TypeScript",
+      "AI-assisted development",
+      "Netlify",
+      "Sanity CMS",
+      "Tailwind"
+    ],
     "also": [
       "Technical writing",
       "Design system architecture",
-      "Accessibility",
+      "UX planning",
+      "Accessibility (A11y)",
       "Project management"
     ]
   }

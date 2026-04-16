@@ -54,7 +54,18 @@ import Layout from "../layouts/Layout.astro";
     }
   }
 
+  .subhead {
+    line-height: var(--leading-flat);
+    color: var(--color-accent);
+    font-weight: var(--font-weight-semi-bold);
+    display: block;
+  }
+
   .hello {
+    display: inline-block;
+    font-family: var(--font-Fraunces);
+    letter-spacing: -0.025em;
+
     @media (prefers-reduced-motion: no-preference) {
       animation: helloReveal var(--transition-base) forwards;
       animation-play-state: paused;
@@ -64,14 +75,6 @@ import Layout from "../layouts/Layout.astro";
         animation-play-state: running;
       }
     }
-  }
-
-  .subhead {
-    line-height: var(--leading-flat);
-    color: var(--color-accent);
-    font-family: var(--font-Epilogue);
-    font-weight: var(--font-weight-semi-bold);
-    display: block;
   }
 
   .class-emphasis {

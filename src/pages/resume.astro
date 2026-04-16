@@ -1,9 +1,13 @@
 ---
 import { ChevronDown, Mail, Printer } from "@lucide/astro";
-import { Font } from "astro:assets";
+import { Font, Image } from "astro:assets";
+import BradAzevedoScreen from "../assets/bradazevedo.com.png";
 import GitHub from "../assets/github-logo.svg";
+import JamesButtonScreen from "../assets/jamesbuttonoboe.com.png";
 import LinkedIn from "../assets/linkedin-logo.svg";
+import BeelineScreen from "../assets/thebeeline.bike.png";
 import Page from "../components/Page.astro";
+import Badge from "../components/ui/Badge.astro";
 import resume from "../data/resume.json";
 
 const year = new Date().getFullYear();
@@ -12,7 +16,7 @@ const timespan = year - 2006;
 
 <Page
   pageTitle="Resumé | Brad Azevedo"
-  pageDescription="What’s Brad Azevedo up to these days?"
+  pageDescription={`Resumé for Brad Azevedo, front-end engineer and UI architect for more than ${timespan} years.`}
   class="resume"
 >
   <Font cssVariable="--font-Fira" slot="head" />
@@ -60,8 +64,9 @@ const timespan = year - 2006;
     <p class="summary">
       Front-end engineer of {timespan} years on a journey spanning from IE6 to AI-assisted
       development. Specializing in the front of the front-end. Think: responsive UI
-      development, design systems, and generally <em>snazzy</em> UX. Also: I’m an
-      instrument-rated private pilot.
+      architecture &amp; development, design systems, and generally <em
+        >snazzy</em
+      > UX. Also: I’m an instrument-rated private pilot.
     </p>
   </header>
 
@@ -133,18 +138,77 @@ const timespan = year - 2006;
 
     <dl class="skill-list">
       <dt>Core</dt>
-      {resume.skills.core.map((skill) => <dd>{skill}</dd>)}
+      {resume.skills.core.map((skill) => <Badge as="dd">{skill}</Badge>)}
     </dl>
 
     <dl class="skill-list">
       <dt>Growing</dt>
-      {resume.skills.growing.map((skill) => <dd>{skill}</dd>)}
+      {resume.skills.growing.map((skill) => <Badge as="dd">{skill}</Badge>)}
     </dl>
 
     <dl class="skill-list">
       <dt>Also</dt>
-      {resume.skills.also.map((skill) => <dd>{skill}</dd>)}
+      {resume.skills.also.map((skill) => <Badge as="dd">{skill}</Badge>)}
     </dl>
+  </section>
+
+  <section class="resume-section">
+    <h2>Projects</h2>
+
+    <p class="subtle">These are some projects I’ve worked on recently.</p>
+
+    <ul class="grid project-grid">
+      <li>
+        <figure>
+          <a href="https://thebeeline.bike/" rel="external noopener">
+            <Image
+              src={BeelineScreen}
+              alt="Screenshot of the homepage of thebeeline.bike"
+              layout="constrained"
+            />
+          </a>
+          <figcaption>
+            <p>
+              The Beeline: a showcase of road biking routes in San Francisco.
+            </p>
+            <div><Badge>NextJS</Badge> <Badge>React</Badge></div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <a href="https://jamesbuttonoboe.com/" rel="external noopener">
+            <Image
+              src={JamesButtonScreen}
+              alt="Screenshot of the homepage of jamesbuttonoboe.com"
+              layout="constrained"
+            />
+          </a>
+          <figcaption>
+            <p>
+              James Button Oboe: a personal website for classical oboe musician
+              James Button.
+            </p>
+            <div><Badge>Astro</Badge> <Badge>Sanity CMS</Badge></div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <a href="/">
+            <Image
+              src={BradAzevedoScreen}
+              alt="Screenshot of the homepage of this website, bradazevedo.com"
+              layout="constrained"
+            />
+          </a>
+          <figcaption>
+            <p>Brad Azevedo: a brand-new personal website for myself.</p>
+            <div><Badge>Astro</Badge></div>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
   </section>
 
   <section class="resume-section">
@@ -258,7 +322,6 @@ const timespan = year - 2006;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-s);
-    font-size: var(--font-size-small);
 
     dt {
       flex-basis: 100%;
@@ -267,10 +330,7 @@ const timespan = year - 2006;
     }
 
     dd {
-      padding: var(--space-xs);
-      background-color: var(--color-surface);
-      border-radius: var(--radius-s);
-      line-height: var(--leading-flat);
+      font-size: var(--font-size-small);
     }
   }
 
@@ -325,6 +385,40 @@ const timespan = year - 2006;
     }
   }
 
+  .project-grid {
+    --flow-space: var(--space-s);
+    font-size: var(--font-size-small);
+
+    img {
+      border-radius: var(--radius-s);
+      aspect-ratio: 4 / 3;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      display: grid;
+      grid-template-rows: subgrid;
+      row-gap: var(--space-xs);
+      grid-row: span 2; /* Two rows: one for the img, one for the caption */
+    }
+
+    figure {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 2;
+    }
+
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--space-xs);
+    }
+  }
+
   @media print {
     :global(.primary-header, .footer) {
       display: none;
@@ -346,10 +440,6 @@ const timespan = year - 2006;
     }
 
     .contact--label {
-      display: none;
-    }
-
-    .contact--print {
       display: none;
     }
 
