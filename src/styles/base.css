@@ -25,7 +25,7 @@
 
   a {
     color: currentColor;
-    text-decoration: none;
+    text-decoration: var(--anchor-text-decoration, none);
     text-decoration-thickness: 1px;
     transition:
       color var(--transition-base),
@@ -33,11 +33,11 @@
 
     &:hover {
       color: var(--color-link-active);
-      text-decoration-thickness: 1px;
+      text-decoration-thickness: 2px;
     }
 
     main & {
-      text-decoration: underline;
+      text-decoration: var(--anchor-text-decoration);
       text-underline-offset: 0.15em;
       transition: text-underline-offset var(--transition-base);
 
@@ -47,9 +47,13 @@
     }
   }
 
+  main {
+    --anchor-text-decoration: underline;
+  }
+
   hr {
     height: 0;
-    margin-block: var(--space-s);
+    margin-block: var(--hr-space, var(--space-s));
     border-width: 0;
     border-top: 1px solid var(--color-border);
   }
@@ -98,7 +102,7 @@
   :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
     font-family: var(--font-display);
     font-weight: var(--font-weight-bold);
-    letter-spacing: -0.02em;
+    letter-spacing: var(--heading-letter-spacing, -0.02em);
   }
 
   :where(h1, .h1) {
@@ -119,5 +123,11 @@
 
   :where(h5, .h5, h6, .h6) {
     font-size: var(--font-size-h5, var(--size-step-2));
+  }
+
+  s {
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--strikethrough-color, var(--color-link-active));
+    color: color-mix(in srgb, currentColor, transparent 30%);
   }
 }

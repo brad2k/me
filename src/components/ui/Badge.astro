@@ -1,16 +1,17 @@
 ---
-import type { HTMLAttributes } from "astro/types";
+import type { HTMLTag, Polymorphic } from "astro/types";
 
-interface Props extends HTMLAttributes<"span"> {
-  as?: any;
-}
+type Props<Component extends HTMLTag> = Polymorphic<{
+  as: Component;
+  children: any;
+}>;
 
-const { as: Element = "span", class: className, ...rest } = Astro.props;
+const { as: Component = "div", class: className, ...rest } = Astro.props;
 ---
 
-<Element class:list={["badge", className]} {...rest}>
+<Component class:list={["badge", className]} {...rest}>
   <slot />
-</Element>
+</Component>
 
 <style>
   .badge {

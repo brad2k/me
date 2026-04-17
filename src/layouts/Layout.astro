@@ -1,14 +1,13 @@
 ---
+import type { HTMLAttributes } from "astro/types";
+import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
 import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/imports.css";
 
-export interface Props {
-  class?: string;
+export interface Props extends HTMLAttributes<"main"> {
   pageTitle: string;
   pageDescription: string;
-  [key: string]: any;
 }
 
 const { class: className, pageTitle, pageDescription, ...rest } = Astro.props;

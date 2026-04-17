@@ -20,4 +20,12 @@ const podcasts = defineCollection({
   }),
 });
 
-export const collections = { podcasts };
+const tv = defineCollection({
+  loader: file("src/data/tv.json"),
+  schema: z.object({
+    image: z.url(),
+    title: z.string(),
+  }),
+});
+
+export const collections = { podcasts, tv };

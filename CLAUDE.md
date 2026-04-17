@@ -30,9 +30,9 @@ Active pages and their routes:
 - `/` — Home (`src/pages/index.astro`)
 - `/about/` — About me (`src/pages/about.astro`)
 - `/now/` — Now page (`src/pages/now.astro`)
-- `/_collections` — In progress, not yet linked
+- `/collections/` — Collections (`src/pages/collections.astro`) — podcasts and TV shows, driven by `src/data/podcasts.json` and `src/data/tv.json` via Astro content collections
 
-Nav currently shows: About, Now, Collections (disabled/`aria-disabled`).
+Nav currently shows: About, Now, Collections (all active).
 
 ### Layout
 
@@ -58,7 +58,7 @@ utilities.css  — .content-grid, .flow, .prose, .visually-hidden, .subtle
 
 **Two-layer token system:** `primitives.css` defines named raw values (`--color-clay-200: #c4614a`). `tokens.css` maps semantic names to primitives (`--color-accent: var(--color-clay-200)`). Always use semantic tokens in component styles; never reference primitives directly.
 
-**Dark mode** is defined in `tokens.css` but is currently commented out. When re-enabled it uses `@media (prefers-color-scheme: dark)` — no JS toggle.
+**Dark mode** is active and uses `@media (prefers-color-scheme: dark)` — no JS toggle. Tokens use the CSS `light-dark()` function so each semantic token automatically resolves to its light or dark value. A `data-theme="dark"` attribute on `:root` can also force dark mode. There is no manual toggle in the UI.
 
 ### Fonts
 
@@ -68,6 +68,15 @@ Fonts are configured in `astro.config.mjs` via Astro's built-in `fontProviders.g
 - **Epilogue** (`var(--font-body)`) — everything else: body copy, nav, labels, captions
 
 Never add manual `<link>` Google Fonts tags — Astro's Font component handles loading and optimization.
+
+### Content collections
+
+Data-driven content is defined in `src/content.config.ts` using Astro's content collections with the `file()` loader. Collections load from JSON files in `src/data/`:
+
+- **`podcasts`** — `src/data/podcasts.json` — schema: `title`, `description`, `image`, `url`, `category`
+- **`tv`** — `src/data/tv.json` — schema: `title`, `image`
+
+Add new entries directly to the JSON files. Adding a new collection type requires a new schema entry in `content.config.ts`.
 
 ### Content grid
 

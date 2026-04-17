@@ -24,11 +24,9 @@ import NavLink from "./NavLink.astro";
 
 <style>
   .primary-header {
-    padding-block: var(--gutter);
+    --anchor-text-decoration: none;
 
-    a {
-      text-decoration: none;
-    }
+    padding-block: var(--gutter);
   }
 
   .nav-wrapper {
@@ -69,11 +67,5 @@ import NavLink from "./NavLink.astro";
   .dot {
     transition: color var(--transition-base);
     color: var(--color-accent);
-  }
-
-  .not-yet {
-    all: revert;
-    cursor: not-allowed;
-    opacity: 50%;
   }
 </style>
