@@ -164,7 +164,6 @@ const timespan = year - 2006;
             <Image
               src={BeelineScreen}
               alt="Screenshot of the homepage of thebeeline.bike"
-              layout="constrained"
             />
           </a>
           <figcaption>
@@ -181,7 +180,6 @@ const timespan = year - 2006;
             <Image
               src={JamesButtonScreen}
               alt="Screenshot of the homepage of jamesbuttonoboe.com"
-              layout="constrained"
             />
           </a>
           <figcaption>
@@ -199,7 +197,6 @@ const timespan = year - 2006;
             <Image
               src={BradAzevedoScreen}
               alt="Screenshot of the homepage of this website, bradazevedo.com"
-              layout="constrained"
             />
           </a>
           <figcaption>
@@ -225,7 +222,7 @@ const timespan = year - 2006;
 
 <style>
   .resume {
-    font-family: var(--font-Fira);
+    font-family: var(--font-code);
   }
 
   .summary {
@@ -235,6 +232,8 @@ const timespan = year - 2006;
   }
 
   .contacts {
+    --anchor-text-decoration: none;
+
     display: flex;
     flex-wrap: wrap;
     column-gap: var(--space-l);
@@ -253,10 +252,6 @@ const timespan = year - 2006;
     svg {
       height: 1em;
       width: 1em;
-    }
-
-    a {
-      text-decoration: none;
     }
   }
 
@@ -283,7 +278,7 @@ const timespan = year - 2006;
     line-height: var(--leading-fine);
 
     dt {
-      font-weight: 700;
+      font-weight: var(--font-weight-bold);
       font-size: var(--font-size-subtle);
     }
 
@@ -325,7 +320,6 @@ const timespan = year - 2006;
 
     dt {
       flex-basis: 100%;
-      font-family: var(--font-Fira);
       font-size: var(--font-size-base);
     }
 
@@ -387,15 +381,13 @@ const timespan = year - 2006;
 
   .project-grid {
     --flow-space: var(--space-s);
+    --anchor-text-decoration: none;
+
     font-size: var(--font-size-small);
 
     img {
       border-radius: var(--radius-s);
       aspect-ratio: 4 / 3;
-    }
-
-    a {
-      text-decoration: none;
     }
 
     li {

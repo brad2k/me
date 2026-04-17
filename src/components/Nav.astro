@@ -15,12 +15,7 @@ import NavLink from "./NavLink.astro";
           <NavLink to="/now/" label="Now" />
         </li>
         <li>
-          <NavLink
-            class="not-yet"
-            title="Coming soon!"
-            aria-disabled="true"
-            label="Collections"
-          />
+          <NavLink to="/collections/" label="Collections" />
         </li>
       </ul>
     </nav>
@@ -29,11 +24,9 @@ import NavLink from "./NavLink.astro";
 
 <style>
   .primary-header {
-    padding-block: var(--gutter);
+    --anchor-text-decoration: none;
 
-    a {
-      text-decoration: none;
-    }
+    padding-block: var(--gutter);
   }
 
   .nav-wrapper {
@@ -74,11 +67,5 @@ import NavLink from "./NavLink.astro";
   .dot {
     transition: color var(--transition-base);
     color: var(--color-accent);
-  }
-
-  .not-yet {
-    all: revert;
-    cursor: not-allowed;
-    opacity: 50%;
   }
 </style>

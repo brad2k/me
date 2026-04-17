@@ -7,6 +7,10 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://www.bradazevedo.com/",
 
+  image: {
+    layout: "constrained",
+  },
+
   fonts: [
     {
       name: "Fraunces",

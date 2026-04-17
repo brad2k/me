@@ -1,20 +1,26 @@
 ---
-const { class: className, ...rest } = Astro.props;
+import type { HTMLTag, Polymorphic } from "astro/types";
 
-interface Props {
-  class?: string;
-  [key: string]: any;
-}
+type Props<Component extends HTMLTag> = Polymorphic<{
+  as: Component;
+  children: any;
+}>;
+
+const { as: Component = "div", class: className, ...rest } = Astro.props;
 ---
 
-<div class:list={["card", className]} {...rest}>
+<Component class:list={["card", className]} {...rest}>
   <slot />
-</div>
+</Component>
 
 <style>
   .card {
     background-color: var(--card-bg, var(--color-surface));
-    padding: var(--space-m);
-    border-radius: var(--radius-s);
+    padding: var(--card-padding, var(--space-m));
+    border-radius: var(--card-border-radius, var(--radius-s));
+  }
+
+  :global(.card-title) {
+    font-size: var(--card-title-font-size, var(--font-size-h3));
   }
 </style>

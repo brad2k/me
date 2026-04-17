@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import type { Props as LayoutProps } from "../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 
 interface Props extends LayoutProps {}
 
 const { class: className, ...rest } = Astro.props;
 ---
 
-<Layout class={`flow prose ` + className} {...rest}>
+<Layout class:list={["flow", "prose", className]} {...rest}>
   <slot name="head" slot="head" />
   <slot />
 </Layout>

@@ -1,0 +1,136 @@
+---
+import { Podcast, Tv } from "@lucide/astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Page from "../components/Page.astro";
+import Card from "../components/ui/Card.astro";
+const podcasts = await getCollection("podcasts");
+const shows = await getCollection("tv");
+---
+
+<Page
+  pageTitle="Collections | Brad Azevedo"
+  pageDescription="A collection of fine things that Brad Azevedo consumes."
+  class="root"
+>
+  <header class="section flow">
+    <h1>Collections</h1>
+
+    <p>We are what we <s>eat</s> watch/listen to.</p>
+  </header>
+
+  <hr />
+
+  <section class="section flow">
+    <h2><Podcast class="media-icon" /> Podcasts</h2>
+
+    <ul class="grid media-list podcasts">
+      {
+        podcasts?.map((pod) => (
+          <li>
+            <Card
+              as="a"
+              href={pod.data.url}
+              rel="external noopener"
+              class="pod"
+            >
+              <Image
+                src={pod.data.image}
+                alt={`${pod.data.title} logo`}
+                width="600"
+                height="600"
+              />
+              <div class="flow">
+                <h3 class="card-title">{pod.data.title}</h3>
+                <p set:html={pod.data.description} />
+              </div>
+            </Card>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section flow">
+    <h2><Tv class="media-icon" /> TV</h2>
+
+    <ul class="grid media-list tv-shows">
+      {
+        shows?.map((show) => (
+          <Card as="li" class="flow">
+            <Image
+              src={show.data.image}
+              alt={`${show.data.title} box art`}
+              width="540"
+              height="540"
+            />
+
+            <h3 class="visually-hidden">{show.data.title}</h3>
+          </Card>
+        ))
+      }
+    </ul>
+  </section>
+</Page>
+
+<style>
+  .root {
+    --flow-space: var(--space-2xl);
+  }
+
+  /* I don't love this solution; need to think about it */
+  .section {
+    & > * + * {
+      --flow-space: var(--space-m);
+    }
+  }
+
+  .media-list {
+    --anchor-text-decoration: none;
+    --card-border-radius: var(--radius-m);
+    --card-title-font-size: var(--font-size-subtle);
+    --card-padding: var(--space-s);
+    --gutter: var(--space-s);
+  }
+
+  .podcasts {
+    --grid-min-item-size: 20rem;
+
+    p {
+      font-size: var(--font-size-small);
+    }
+  }
+
+  .pod {
+    --flow-space: var(--space-xs);
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--space-s);
+    transition-timing-function: var(--transition-base);
+    transition-property: color, box-shadow, transform;
+
+    img {
+      grid-row: span 2;
+      border-radius: var(--radius-s);
+      transition: transform var(--transition-base);
+    }
+
+    &:hover {
+      transform: scale(1.025);
+      box-shadow: var(--shadow-base);
+
+      img {
+        transform: rotate(-5deg);
+      }
+    }
+  }
+
+  .media-icon {
+    color: var(--color-accent);
+  }
+
+  .tv-shows {
+    --grid-min-item-size: 10rem;
+  }
+</style>
