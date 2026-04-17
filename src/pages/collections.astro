@@ -1,0 +1,36 @@
+---
+import Page from "../components/Page.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+const podcasts = await getCollection("podcasts");
+---
+
+<Page
+  pageTitle="Collections | Brad Azevedo"
+  pageDescription="A collection of fine things that Brad Azevedo consumes, from podcasts, to books, to food."
+>
+  <h1>Collections</h1>
+
+  <hr />
+
+  <h2>Podcasts</h2>
+
+  <ul>
+    {
+      podcasts?.map((pod) => (
+        <li>
+          <a href={pod.data.url}>
+            <Image
+              src={pod.data.image}
+              alt={pod.data.title}
+              width="540"
+              height="540"
+            />
+            <h3>{pod.data.title}</h3>
+            <p set:html={pod.data.description} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Page>

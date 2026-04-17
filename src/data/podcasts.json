@@ -1,0 +1,93 @@
+{
+  "marketplace": {
+    "title": "Marketplace Morning Report",
+    "description": "Business and economic headlines",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/4a/e4/d1/4ae4d196-465f-94c7-031c-d472deb5f7ef/mza_18324388047241856890.jpg/600x600bb.webp",
+    "url": "https://www.marketplace.org/",
+    "category": "Business"
+  },
+  "indicator": {
+    "title": "The Indicator",
+    "description": "Bite-sized economic stories.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2f/b7/12/2fb7125f-94d9-5be5-3bc1-9e538c71fdd2/mza_17033922230965684574.jpg/600x600bb.webp",
+    "url": "https://www.npr.org/podcasts/510325/the-indicator-from-planet-money",
+    "category": "Business"
+  },
+  "planetmoney": {
+    "title": "Planet Money",
+    "description": "Economic stories related to real life.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/85/df/53/85df5334-0fae-28a9-2bc4-b97b81061d0e/mza_10839245066228881011.jpg/600x600bb.webp",
+    "url": "https://www.npr.org/podcasts/510289/planet-money",
+    "category": "Business"
+  },
+  "dearchelsea": {
+    "title": "Dear Chelsea",
+    "description": "Advice &amp; comedy show from Chelsea Handler.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/40/72/93/40729316-6367-6d25-7319-df72b3794925/mza_7105560166085411308.jpg/600x600bb.webp",
+    "url": "https://www.chelseahandler.com/podcast",
+    "category": "Entertainment"
+  },
+  "freakonomics": {
+    "title": "Freakonomics Radio",
+    "description": "“The hidden side of everything.”",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/f7/0c/c5/f70cc540-ce36-d96f-b111-c970aad5505c/mza_17703422762227531425.jpg/600x600bb.webp",
+    "url": "https://freakonomics.com",
+    "category": "Business"
+  },
+  "ricksteves": {
+    "title": "Travel with Rick Steves",
+    "description": "A travel show by Rick Steves.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/07/e9/e7/07e9e75b-7ba1-b99e-64bf-7aad2cdda336/mza_18046591300306403493.jpg/600x600bb.webp",
+    "url": "https://www.ricksteves.com/watch-read-listen/audio/podcasts",
+    "category": "Travel"
+  },
+  "milkstreet": {
+    "title": "Milk Street Radio",
+    "description": "Food podcast from Christopher Kimball’s Milk Street.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/98/51/f9/9851f9a4-942a-5f91-0c79-07166b1aeffc/mza_11460671491973033348.jpg/600x600bb.webp",
+    "url": "https://www.177milkstreet.com/radio",
+    "category": "Food"
+  },
+  "smartless": {
+    "title": "Smartless",
+    "description": "Interview podcast from Jason Bateman, Sean Hayes, and Will Arnett.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/b1/93/5f/b1935f9f-35be-9144-e813-626bd8dabfb4/mza_4132654708551836825.jpg/600x600bb.webp",
+    "url": "https://www.smartless.com/",
+    "category": "Entertainment"
+  },
+  "ft": {
+    "title": "FT News Briefing",
+    "description": "Daily economic and business news.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/60/fd/0c/60fd0c79-808e-cc79-e121-27527becbdc6/mza_1413179331890984538.jpeg/600x600bb.webp",
+    "url": "https://www.ft.com/ft-news-briefing",
+    "category": "Business"
+  },
+  "baldbeautiful": {
+    "title": "The Bald and the Beautiful",
+    "description": "Drag show.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/69/e1/33/69e133cc-1261-59c9-86bc-05db91815396/mza_15934659469185667390.jpg/600x600bb.webp",
+    "url": "https://open.spotify.com/show/36SPp0UJlpM9TDacDHMhEC",
+    "category": "Entertainment"
+  },
+  "pilotsdiscretion": {
+    "title": "Pilot's Discretion",
+    "description": "Weekly aviation show.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/79/13/ed/7913ed6f-a953-a5d2-2c4e-7fc0810d64e5/mza_2028843813744646403.jpg/600x600bb.webp",
+    "url": "https://www.sportys.com/podcast",
+    "category": "Aviation"
+  },
+  "francaisfacile": {
+    "title": "Journal en français facile",
+    "description": "The news in “easy” French.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/81/15/23/8115239e-731b-e9eb-aeb4-bcc7bab89aae/mza_92410675554346166.jpg/600x600bb.webp",
+    "url": "https://francaisfacile.rfi.fr/fr/podcasts/journal-en-fran%C3%A7ais-facile/",
+    "category": "News"
+  },
+  "finerpoints": {
+    "title": "The Finer Points",
+    "description": "Educational aviation podcast.",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/00/82/42/008242b6-ec74-cf56-5432-1080a3ecb21a/mza_14518262232332791902.jpg/600x600bb.webp",
+    "url": "https://www.learnthefinerpoints.com/podcast",
+    "category": "Aviation"
+  }
+}

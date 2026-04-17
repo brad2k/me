@@ -169,7 +169,6 @@ Inspiration:
 - No JavaScript unless genuinely necessary for interaction
 - No gradients, drop shadows, or decorative background textures
 - No cards with visible borders as a default layout pattern
-- No TypeScript — plain JavaScript only
 - No manual Google Fonts `<link>` tags — use Astro's `Font` component
 - Don't invent new accent colors — there is one: `var(--color-accent)`
 - Don't hardcode hex values in component styles — always use token variables

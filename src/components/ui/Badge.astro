@@ -1,13 +1,11 @@
 ---
-interface Props {
-  as?: HTMLElement;
-  class?: string;
-  [key: string]: any;
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"span"> {
+  as?: any;
 }
 
-const { as = "span", class: className, ...rest } = Astro.props;
-
-const Element = as;
+const { as: Element = "span", class: className, ...rest } = Astro.props;
 ---
 
 <Element class:list={["badge", className]} {...rest}>
