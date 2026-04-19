@@ -1,11 +1,18 @@
+---
+const buildDate = new Date().toLocaleString("en-US", {
+  dateStyle: "long",
+});
+---
+
 <footer class="footer content-grid">
   <div class="footer-wrap">
-    <div>
+    <div class="flow">
       <strong class="footer-logo">Brad Azevedo<span class="dot">.</span></strong
       >
       <p class="text">
         Bravely hand-coded in San Francisco without JavaScript.
       </p>
+      <p>Last built on {buildDate}.</p>
     </div>
 
     <nav class="nav">

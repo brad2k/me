@@ -3,22 +3,24 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=24"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "npm run build:tokens && astro dev",
+    "build": "npm run build:tokens && astro build",
+    "build:tokens": "node src/build-tokens.ts",
+    "preview": "npm run build:tokens && astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
     "@astrojs/sitemap": "^3.7.2",
     "@lucide/astro": "^1.8.0",
-    "astro": "^6.1.7",
+    "astro": "^6.1.8",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "prettier-plugin-astro": "0.14.1"
+    "prettier-plugin-astro": "0.14.1",
+    "style-dictionary": "^5.4.0"
   }
 }

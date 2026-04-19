@@ -51,9 +51,14 @@ import NavLink from "./NavLink.astro";
     letter-spacing: -0.02em;
     line-height: var(--leading-flat);
     white-space: nowrap;
+    transition: transform var(--transition-base);
     font-variation-settings:
       "SOFT" 0,
       "WONK" 0;
+
+    &:active {
+      transform: scale(0.95);
+    }
 
     &:hover {
       color: var(--color-accent);
