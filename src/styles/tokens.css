@@ -41,32 +41,26 @@
   --color-accent: light-dark(var(--color-clay-500), var(--color-clay-400));
   --color-accent-on-dark: var(--color-clay-400);
 
-  --color-bg: light-dark(var(--color-neutral-50), var(--color-charcoal-950));
-  --color-surface: light-dark(
-    var(--color-neutral-100),
-    var(--color-neutral-900)
-  );
-  --color-border: light-dark(
-    var(--color-neutral-300),
-    var(--color-charcoal-700)
-  );
-  --color-footer-bg: var(--color-charcoal-950);
+  --color-bg: light-dark(var(--color-gray-50), var(--color-gray-950));
+  --color-surface: light-dark(var(--color-gray-200), var(--color-gray-800));
+  --color-border: light-dark(var(--color-gray-400), var(--color-gray-700));
+  --color-footer-bg: var(--color-gray-950);
 
   /* Typography colors */
 
-  --color-text: light-dark(var(--color-charcoal-900), var(--color-neutral-300));
+  --color-text: light-dark(var(--color-gray-900), var(--color-gray-400));
   --color-link-active: var(--color-accent);
-  --color-footer-text: var(--color-neutral-50);
+  --color-footer-text: var(--color-gray-50);
 
   /* Interaction colors */
   --focus-color: var(--color-accent);
   --selection-text-color: light-dark(
-    var(--color-charcoal-50),
-    var(--color-charcoal-900)
+    var(--color-gray-100),
+    var(--color-gray-900)
   );
   --selection-background: light-dark(
-    var(--color-charcoal-900),
-    var(--color-charcoal-100)
+    var(--color-gray-900),
+    var(--color-gray-300)
   );
   --shadow-base: var(--shadow-light);
   --shadow-lifted: var(--shadow-dark);
@@ -82,14 +76,24 @@
   --font-weight-bold: 700;
   --font-weight-black: 900;
 
-  --font-size-extra-small: var(--size-step-000);
-  --font-size-small: var(--size-step-00);
-  --font-size-subtle: var(--size-step-0);
-  --font-size-base: var(--size-step-1);
-  --font-size-h1: var(--size-step-6);
-  --font-size-h2: var(--size-step-4);
-  --font-size-h3: var(--size-step-4);
-  --font-size-h4: var(--size-step-3);
-  --font-size-h5: var(--size-step-2);
-  --font-size-h6: var(--size-step-1);
+  --font-size-extra-small: var(--text-size-step-000);
+  --font-size-small: var(--text-size-step-00);
+  --font-size-subtle: var(--text-size-step-0);
+  --font-size-base: var(--text-size-step-1);
+  --font-size-h1: var(--text-size-step-6);
+  --font-size-h2: var(--text-size-step-4);
+  --font-size-h3: var(--text-size-step-4);
+  --font-size-h4: var(--text-size-step-3);
+  --font-size-h5: var(--text-size-step-2);
+  --font-size-h6: var(--text-size-step-1);
+
+  --leading-flat: var(--text-line-height-flat);
+  --leading-fine: var(--text-line-height-fine);
+  --leading-standard: var(--text-line-height-standard);
+  --leading-loose: var(--text-line-height-loose);
+
+  /* Animations */
+  --transition-base: var(--animation-transition-base);
+  --transition-fade: var(--animation-transition-fade);
+  --transition-snappy: var(--animation-transition-snappy);
 }
