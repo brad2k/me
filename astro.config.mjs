@@ -3,12 +3,19 @@ import { defineConfig, fontProviders } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.bradazevedo.com/",
 
   image: {
     layout: "constrained",
+  },
+
+  // 301 by default
+  redirects: {
+    "/me/": "/",
   },
 
   fonts: [
@@ -42,4 +49,7 @@ export default defineConfig({
   ],
 
   integrations: [sitemap()],
+  adapter: netlify({
+    imageCDN: false,
+  }),
 });
