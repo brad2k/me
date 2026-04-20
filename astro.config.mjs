@@ -49,5 +49,7 @@ export default defineConfig({
   ],
 
   integrations: [sitemap()],
-  adapter: netlify(),
+  adapter: netlify({
+    imageCDN: false,
+  }),
 });
