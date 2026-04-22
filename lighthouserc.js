@@ -9,7 +9,8 @@ export default {
       assertions: {
         "categories:accessibility": ["warn", { minScore: 0.9 }],
         "categories:performance": ["warn", { minScore: 0.9 }],
-        // 3. Turn off the PWA/XSS stuff        'installable-manifest': 'off',
+        // 3. Turn off the PWA/XSS stuff
+        "installable-manifest": "off",
         "uses-rel-preconnect": "off",
         "csp-xss": "off",
       },
