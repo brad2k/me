@@ -20,8 +20,6 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, "/"), Astro.site);
   <link rel="canonical" href={canonical} />
   <meta name="generator" content={Astro.generator} />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <Font cssVariable="--font-Fraunces" />
   <Font cssVariable="--font-Epilogue" />
   <slot name="head" />

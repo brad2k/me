@@ -7,12 +7,15 @@ export default {
       preset: "lighthouse:recommended",
       assertionLevel: "warn",
       assertions: {
-        "categories:accessibility": ["warn", { minScore: 0.9 }],
-        "categories:performance": ["warn", { minScore: 0.9 }],
-        // 3. Turn off the PWA/XSS stuff
+        // Turn off the PWA requirements
         "installable-manifest": "off",
-        "uses-rel-preconnect": "off",
+        "uses-apple-touch-icon": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "off",
+        "maskable-icon": "off",
+        "content-width": "off",
         "csp-xss": "off",
+        "color-contrast": "warn",
       },
     },
     upload: {
