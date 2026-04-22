@@ -2,6 +2,7 @@ export default {
   ci: {
     collect: {
       // Force LHCI to use your specific script
+      staticDistDir: null,
       startServerCommand: "npm run preview",
       // Explicitly point to the port defined in your package.json
       url: [
