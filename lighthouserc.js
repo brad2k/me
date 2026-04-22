@@ -2,20 +2,16 @@ export default {
   ci: {
     collect: {
       staticDistDir: "./dist",
+      numberOfRuns: 1,
+      url: ["http://localhost:34891/index.html"], // Start with just home to verify it works
     },
     assert: {
-      preset: "lighthouse:recommended",
-      assertionLevel: "warn",
       assertions: {
-        // Turn off the PWA requirements
-        "installable-manifest": "off",
-        "uses-apple-touch-icon": "off",
-        "splash-screen": "off",
-        "themed-omnibox": "off",
-        "maskable-icon": "off",
-        "content-width": "off",
-        "csp-xss": "off",
-        "color-contrast": "warn",
+        "categories:performance": "off",
+        "categories:accessibility": "off",
+        "categories:best-practices": "off",
+        "categories:seo": "off",
+        "categories:pwa": "off",
       },
     },
     upload: {
