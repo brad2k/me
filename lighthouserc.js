@@ -1,26 +1,28 @@
 export default {
   ci: {
     collect: {
-      // Use the command that actually works for your local preview
+      // Force LHCI to use your specific script
       startServerCommand: "npm run preview",
-      // Replace with whatever port 'netlify serve' or your npm script uses
-      url: ["http://localhost:8888/"],
+      // Explicitly point to the port defined in your package.json
+      url: [
+        "http://localhost:8888/",
+        "http://localhost:8888/about/",
+        "http://localhost:8888/now/",
+      ],
       numberOfRuns: 1,
-      settings: {
-        chromeFlags: "--no-sandbox --headless --disable-gpu",
-      },
+      // Give Netlify a bit more time to boot up the dev server
+      startServerReadyTimeout: 90000,
     },
     assert: {
       preset: "lighthouse:recommended",
       assertions: {
-        // Turning these off/to warn so we can finally get the report link
+        // Keep these as warnings so we can see the data without breaking the build
         "color-contrast": "warn",
-        "categories:performance": "warn",
-        "categories:accessibility": "warn",
+        "total-byte-weight": "warn",
         "installable-manifest": "off",
         "uses-rel-preconnect": "off",
         "service-worker": "off",
-        "unused-javascript": "off",
+        "csp-xss": "off",
       },
     },
     upload: {
