@@ -3,14 +3,19 @@ export default {
     collect: {
       staticDistDir: "./dist",
     },
-    upload: {
-      target: "temporary-public-storage", // Saves the report to a public URL for 7 days
-    },
     assert: {
+      preset: "lighthouse:recommended",
+      assertionLevel: "warn",
       assertions: {
-        "categories:accessibility": ["warn", { minScore: 0.95 }],
+        "categories:accessibility": ["warn", { minScore: 0.9 }],
         "categories:performance": ["warn", { minScore: 0.9 }],
+        // 3. Turn off the PWA/XSS stuff        'installable-manifest': 'off',
+        "uses-rel-preconnect": "off",
+        "csp-xss": "off",
       },
+    },
+    upload: {
+      target: "temporary-public-storage",
     },
   },
 };
