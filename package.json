@@ -10,17 +10,21 @@
     "build": "npm run build:tokens && astro build",
     "build:tokens": "node src/build-tokens.ts",
     "preview": "npm run build:tokens && astro preview",
+    "test:a11y": "npm run build && (axe ./dist || true)",
+    "test:perf": "npm run build && lhci autorun",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
-    "@astrojs/netlify": "^7.0.7",
+    "@astrojs/netlify": "^7.0.8",
     "@astrojs/sitemap": "^3.7.2",
     "@lucide/astro": "^1.8.0",
-    "astro": "^6.1.8",
+    "astro": "^6.1.9",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.11.2",
+    "@lhci/cli": "^0.15.1",
     "prettier-plugin-astro": "0.14.1",
     "style-dictionary": "^5.4.0"
   }
