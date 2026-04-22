@@ -3,14 +3,23 @@ export default {
     collect: {
       staticDistDir: "./dist",
     },
-    upload: {
-      target: "temporary-public-storage", // Saves the report to a public URL for 7 days
-    },
     assert: {
+      preset: "lighthouse:recommended",
+      assertionLevel: "warn",
       assertions: {
-        "categories:accessibility": ["warn", { minScore: 0.95 }],
-        "categories:performance": ["warn", { minScore: 0.9 }],
+        // Turn off the PWA requirements
+        "installable-manifest": "off",
+        "uses-apple-touch-icon": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "off",
+        "maskable-icon": "off",
+        "content-width": "off",
+        "csp-xss": "off",
+        "color-contrast": "warn",
       },
+    },
+    upload: {
+      target: "temporary-public-storage",
     },
   },
 };
