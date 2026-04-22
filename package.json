@@ -9,7 +9,7 @@
     "dev": "npm run build:tokens && astro dev",
     "build": "npm run build:tokens && astro build",
     "build:tokens": "node src/build-tokens.ts",
-    "preview": "npm run build:tokens && astro preview",
+    "preview": "npm run build:tokens && netlify serve",
     "test:a11y": "npm run build && (axe ./dist || true)",
     "test:perf": "npm run build && lhci autorun",
     "astro": "astro"
