@@ -11,16 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+          # Optional: caching npm dependencies
+          cache: "npm"
 
       - name: Install & Build
         run: |
           npm ci
           npm run build
 
+      - name: Install Lighthouse and Netlify CLI
+        # We install netlify-cli here so 'npm run preview' works later
+        run: npm install -g @lhci/cli netlify-cli
+
       - name: Run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.13.x
-          lhci autorun
+        run: lhci autorun
+        env:
+          # If your build tokens or Astro build require specific env vars,
+          # make sure they are accessible here.
+          NODE_ENV: production
