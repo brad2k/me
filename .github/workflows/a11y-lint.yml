@@ -1,0 +1,23 @@
+name: Accessibility Lint
+on: [pull_request]
+
+jobs:
+  axe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "npm"
+
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Run Axe Scan
+        run: |
+          # Start the server and scan the 'dist' folder
+          # No sandbox is required for GitHub's Ubuntu environment
+          npx axe-core-helper ./dist --serve || true

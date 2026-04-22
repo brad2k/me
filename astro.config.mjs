@@ -9,6 +9,8 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://www.bradazevedo.com/",
 
+  output: "static",
+
   image: {
     layout: "constrained",
   },
