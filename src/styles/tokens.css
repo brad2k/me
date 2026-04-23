@@ -36,6 +36,9 @@
   --footer-padding: var(--gutter);
   --prose-max-width: 70ch;
 
+  --radius-tight: var(--border-radius-s);
+  --radius-base: var(--border-radius-s);
+
   /* Colors */
 
   --color-accent: light-dark(var(--color-clay-500), var(--color-clay-400));

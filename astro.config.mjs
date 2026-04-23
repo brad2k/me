@@ -13,6 +13,7 @@ export default defineConfig({
 
   image: {
     layout: "constrained",
+    domains: ["is1-ssl.mzstatic.com"],
   },
 
   // 301 by default
