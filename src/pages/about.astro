@@ -119,7 +119,7 @@ import Page from "../components/Page.astro";
   .figure {
     background: var(--color-surface);
     padding: var(--space-xs);
-    border-radius: calc(var(--radius-s) + var(--space-xs));
+    border-radius: calc(var(--radius-tight) + var(--space-xs));
     margin-block-start: var(--gutter);
 
     @media (width >= 40rem) {
@@ -156,7 +156,7 @@ import Page from "../components/Page.astro";
   }
 
   .avatar {
-    border-radius: var(--radius-s);
+    border-radius: var(--radius-tight);
     aspect-ratio: 1;
     transition:
       width var(--transition-base),
