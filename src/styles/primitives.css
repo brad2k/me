@@ -12,7 +12,8 @@
   --animation-transition-fade: 500ms ease-in-out 0ms;
   --animation-transition-snappy: 150ms linear 0ms;
   --color-clay-400: oklch(0.685 0.13 31); /** Accent — dark mode */
-  --color-clay-500: oklch(0.608 0.135 31); /** Accent — light mode */
+  --color-clay-500: oklch(0.608 0.135 31); /** Accent — deprecated, use clay-600 for text */
+  --color-clay-600: oklch(0.566 0.135 31); /** Accent — light mode */
   --color-gray-50: oklch(0.977 0.004 76); /** Background - light mode */
   --color-gray-100: oklch(0.958 0.006 73); /** Selection text — light mode */
   --color-gray-200: oklch(0.940 0.008 70); /** Surface — light mode */
