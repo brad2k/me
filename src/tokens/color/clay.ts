@@ -11,6 +11,11 @@ export default {
       500: {
         $value: "oklch(0.608 0.135 31)",
         $type: "color",
+        $description: "Accent — deprecated, use clay-600 for text",
+      },
+      600: {
+        $value: "oklch(0.566 0.135 31)",
+        $type: "color",
         $description: "Accent — light mode",
       },
     },
