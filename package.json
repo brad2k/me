@@ -15,15 +15,15 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/netlify": "^7.0.8",
+    "@astrojs/netlify": "^7.0.10",
     "@astrojs/sitemap": "^3.7.2",
-    "@lucide/astro": "^1.11.0",
-    "astro": "^6.1.10",
-    "typescript": "^5.9.3"
+    "@lucide/astro": "^1.16.0",
+    "astro": "^6.3.4",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.11.2",
+    "@axe-core/cli": "^4.11.3",
     "sharp": "^0.34.5",
-    "style-dictionary": "^5.4.0"
+    "style-dictionary": "^5.4.1"
   }
 }

@@ -1,0 +1,38 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+
+type Props<Component extends HTMLTag> = Polymorphic<{
+  as: Component;
+  value: 1 | 2 | 3;
+}>;
+
+const { as: Component = "div", class: className, value, ...rest } = Astro.props;
+---
+
+<Component class:list={["scale", className]} {...rest} aria-hidden="true">
+  <div class:list={["dot", { filled: value >= 1 }]}></div>
+  <div class:list={["dot", { filled: value >= 2 }]}></div>
+  <div class:list={["dot", { filled: value === 3 }]}></div>
+</Component>
+
+<style>
+  .scale {
+    display: inline-flex;
+    gap: 0.25em;
+  }
+
+  .dot {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+  }
+
+  .filled {
+    background-color: light-dark(
+      var(--color-accent),
+      var(--color-accent-on-dark)
+    );
+    border-color: light-dark(var(--color-accent), var(--color-accent-on-dark));
+  }
+</style>
