@@ -34,5 +34,7 @@ const { as: Component = "div", class: className, value, ...rest } = Astro.props;
       var(--color-accent-on-dark)
     );
     border-color: light-dark(var(--color-accent), var(--color-accent-on-dark));
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 </style>

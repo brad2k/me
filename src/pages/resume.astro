@@ -71,7 +71,7 @@ const timespan = year - 2006;
     </p>
   </header>
 
-  <section class="resume-section">
+  <section class="resume-section" id="experience">
     <h2><span class="visually-hidden">Experience </span>Timeline</h2>
 
     {
@@ -111,7 +111,7 @@ const timespan = year - 2006;
     }
   </section>
 
-  <section class="resume-section">
+  <section class="resume-section" id="education">
     <h2>Education</h2>
 
     <dl class="highlight">
@@ -134,7 +134,7 @@ const timespan = year - 2006;
     </dl>
   </section>
 
-  <section class="resume-section skills">
+  <section class="resume-section" id="skills">
     <h2>Skills</h2>
 
     <div class="grid">
@@ -176,7 +176,7 @@ const timespan = year - 2006;
     </div>
   </section>
 
-  <section class="resume-section">
+  <section class="resume-section" id="projects">
     <h2>Projects</h2>
 
     <p class="subtle">These are some projects I’ve worked on recently.</p>
@@ -232,7 +232,7 @@ const timespan = year - 2006;
     </ul>
   </section>
 
-  <section class="resume-section">
+  <section class="resume-section" id="outside-of-work">
     <h2>Outside of work</h2>
 
     <p class="subtle">
@@ -427,31 +427,23 @@ const timespan = year - 2006;
   }
 
   @media print {
-    :global(.primary-header, .footer) {
+    :global(.primary-header, .footer),
+    .editorial,
+    #outside-of-work,
+    .contact--label {
       display: none;
-    }
-
-    .editorial {
-      &::details-content {
-        block-size: auto;
-        content-visibility: visible;
-      }
-
-      summary {
-        font-weight: 500;
-      }
     }
 
     .contact--content {
       display: block;
     }
 
-    .contact--label {
-      display: none;
-    }
-
     .contact--print {
       display: none !important;
+    }
+
+    .project-grid {
+      --grid-min-item-size: 10rem;
     }
   }
 </style>
