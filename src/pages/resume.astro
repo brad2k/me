@@ -8,6 +8,7 @@ import LinkedIn from "../assets/linkedin-logo.svg";
 import BeelineScreen from "../assets/thebeeline.bike.png";
 import Page from "../components/Page.astro";
 import Badge from "../components/ui/Badge.astro";
+import Scale from "../components/ui/Scale.astro";
 import resume from "../data/resume.json";
 
 const year = new Date().getFullYear();
@@ -136,20 +137,43 @@ const timespan = year - 2006;
   <section class="resume-section skills">
     <h2>Skills</h2>
 
-    <dl class="skill-list">
-      <dt>Core</dt>
-      {resume.skills.core.map((skill) => <Badge as="dd">{skill}</Badge>)}
-    </dl>
+    <div class="grid">
+      <dl class="skill-list">
+        <dt class="visually-hidden">Expert</dt>
+        {
+          resume.skills.expert.map((skill) => (
+            <div class="skill-wrapper">
+              <Scale value={3} />
+              <span set:html={skill} />
+            </div>
+          ))
+        }
+      </dl>
 
-    <dl class="skill-list">
-      <dt>Growing</dt>
-      {resume.skills.growing.map((skill) => <Badge as="dd">{skill}</Badge>)}
-    </dl>
+      <dl class="skill-list">
+        <dt class="visually-hidden">Proficient</dt>
+        {
+          resume.skills.proficient.map((skill) => (
+            <div class="skill-wrapper">
+              <Scale value={2} />
+              <span set:html={skill} />
+            </div>
+          ))
+        }
+      </dl>
 
-    <dl class="skill-list">
-      <dt>Also</dt>
-      {resume.skills.also.map((skill) => <Badge as="dd">{skill}</Badge>)}
-    </dl>
+      <dl class="skill-list">
+        <dt class="visually-hidden">Familiar</dt>
+        {
+          resume.skills.familiar.map((skill) => (
+            <div class="skill-wrapper">
+              <Scale value={1} />
+              <span set:html={skill} />
+            </div>
+          ))
+        }
+      </dl>
+    </div>
   </section>
 
   <section class="resume-section">
@@ -313,19 +337,10 @@ const timespan = year - 2006;
     }
   }
 
-  .skill-list {
+  .skill-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: var(--space-s);
-
-    dt {
-      flex-basis: 100%;
-      font-size: var(--font-size-base);
-    }
-
-    dd {
-      font-size: var(--font-size-small);
-    }
   }
 
   .editorial {
