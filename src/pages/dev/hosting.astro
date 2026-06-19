@@ -1,0 +1,123 @@
+---
+import Page from "../../components/Page.astro";
+---
+
+<Page
+  pageTitle="The anatomy of your website and hosting considerations | Brad Azevedo"
+  pageDescription="Understanding the anatomy of your website: the domain, code, hosting, CMS, and analytics costs and options for modern websites, comparing custom builds with platforms like site builders."
+>
+  <h1>Anatomy of a web site</h1>
+
+  <p class="subtle">
+    Web pages — even small ones — are made up of several moving parts and each
+    part has a potential associated cost and varying complexity.
+  </p>
+
+  <hr />
+
+  <h2>Domain name</h2>
+
+  <p>
+    E.g. www.mylovelywebsite.com. Leased through a domain registry like <a
+      href="https://porkbun.com/"
+      rel="external noopener">Porkbun</a
+    >
+    with annual fees of ~$10–20.
+  </p>
+
+  <h2>The content</h2>
+
+  <p>
+    Text, photos, and any other assets on the site. Content can be baked into
+    the code (“hard coded”) or managed with a
+    <abbr title="Content management system">CMS</abbr>, which allows you to
+    visually edit the content of the website without touching code. A basic CMS
+    can be free, but a more advanced tool may cost ~$10/mo. Adding a CMS is an
+    additional layer of complexity.
+  </p>
+
+  <h2>The code</h2>
+
+  <p>
+    The nuts &amp; bolts of the website. Code is typically stored on <a
+      href="https://www.github.com/"
+      rel="external noopener">GitHub</a
+    > before being deployed to the hosting service. This service is free at this scale.
+  </p>
+
+  <h2>Hosting</h2>
+
+  <p>
+    The service that serves the site to your users. Common examples at this
+    scale are <a href="https://www.netlify.com/" rel="external noopener"
+      >Netlify</a
+    > and <a href="https://www.vercel.com/" rel="external noopener">Vercel</a>.
+    Their starter tiers are typically free at this scale unless additional
+    features are required.
+  </p>
+
+  <h2>Analytics</h2>
+
+  <p>
+    An optional add-on that allows you to analyze site traffic. The choice
+    depends on your personal feelings toward user privacy: <a
+      href="https://developers.google.com/analytics"
+      rel="external noopener">Google Analytics</a
+    > is the canonical free option, but offers very little privacy; privacy-first
+    options like <a href="https://plausible.io/" rel="external noopener"
+      >Plausible</a
+    > and <a href="https://usefathom.com/" rel="external noopener">Fathom</a> run
+    $5–$10/mo. Analytics may also be included on a paid plan through a hosting platform.
+  </p>
+
+  <h2>Custom build or a web platform?</h2>
+
+  <hr />
+
+  <h3>Custom build</h3>
+
+  <p>
+    Apart from domain registration, small personal websites can currently be
+    custom built with no monthly or recurring fees. I would configure each piece
+    of the puzzle listed above and transfer ownership to you once the site is
+    deployed. This maintains 100% modular control of the product by you, me, or
+    anyone else.
+  </p>
+
+  <h3>Web platform</h3>
+
+  <p>
+    Web platforms (or site builders) like <a
+      href="https://webflow.com/"
+      rel="external noopener">Webflow</a
+    > or <a href="https://www.squarespace.com/" rel="external noopener"
+      >Squarespace</a
+    > combine everything above into a single platform, but expect to pay $250–$350
+    annually. I prefer Webflow as it offers the most control and a modern technology
+    stack, but none offer the complete control of a custom build. It is possible to
+    export a site built in these tools if you want to avoid the monthly fees down
+    the road, but doing so requires manual reverse-engineering to break the puzzle
+    back into its component parts.
+  </p>
+
+  <h2>Questions to ask yourself</h2>
+
+  <hr />
+
+  <ul>
+    <li>How often will I update my content?</li>
+    <li>What kind of traffic do I expect?</li>
+    <li>How many photos do I want to include?</li>
+    <li>How hands on do I want to be?</li>
+    <li>Are monthly fees worth the potential value they would add?</li>
+    <li>Does any part of my site need to be interactive?</li>
+  </ul>
+
+  <p>
+    Generally speaking, custom-built static sites are the “set it and forget it”
+    solution whereas web platforms are better suited to those who wish to tinker
+    and update content on a regular basis.
+  </p>
+</Page>
+
+<style></style>

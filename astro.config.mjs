@@ -51,7 +51,11 @@ export default defineConfig({
     },
   ],
 
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => page !== "https://www.bradazevedo.com/dev/hosting/",
+    }),
+  ],
   adapter: netlify({
     imageCDN: false,
   }),

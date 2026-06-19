@@ -62,5 +62,9 @@
   "amazingrace": {
     "title": "The Amazing Race",
     "image": "https://is1-ssl.mzstatic.com/image/thumb/Video211/v4/d8/f3/8b/d8f38b0d-f3dd-7f2a-8b53-e2dd9e173767/AmazingRace_S38_2000x3000.png/540x810CA.TVA23C01.webp"
+  },
+  "theblock": {
+    "title": "The Block",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Bq4u6SGmKac88DHEzknltg/540x776CA.TVA23C01.webp"
   }
 }
