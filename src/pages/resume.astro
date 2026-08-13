@@ -6,6 +6,7 @@ import GitHub from "../assets/github-logo.svg";
 import JamesButtonScreen from "../assets/jamesbuttonoboe.com.png";
 import LinkedIn from "../assets/linkedin-logo.svg";
 import BeelineScreen from "../assets/thebeeline.bike.png";
+import TailsScreen from "../assets/tails.png";
 import Page from "../components/Page.astro";
 import Badge from "../components/ui/Badge.astro";
 import Scale from "../components/ui/Scale.astro";
@@ -194,7 +195,11 @@ const timespan = year - 2006;
             <p>
               The Beeline: a showcase of road biking routes in San Francisco.
             </p>
-            <div><Badge>NextJS</Badge> <Badge>React</Badge></div>
+            <div class="project-badges">
+              <Badge>NextJS</Badge>
+              <Badge>React</Badge>
+              <Badge>Sanity CMS</Badge>
+            </div>
           </figcaption>
         </figure>
       </li>
@@ -211,7 +216,27 @@ const timespan = year - 2006;
               James Button Oboe: a personal website for classical oboe musician
               James Button.
             </p>
-            <div><Badge>Astro</Badge> <Badge>Sanity CMS</Badge></div>
+            <div class="project-badges">
+              <Badge>Astro</Badge>
+              <Badge>Sanity CMS</Badge>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <a href="https://tails.bradazevedo.com/" rel="external noopener">
+            <Image
+              src={TailsScreen}
+              alt="Screenshot of the homepage of Tails, my personal cocktail library"
+            />
+          </a>
+          <figcaption>
+            <p>Tails: a digital library of my personal cocktail collection.</p>
+            <div class="project-badges">
+              <Badge>Astro</Badge>
+              <Badge>Keystatic</Badge>
+            </div>
           </figcaption>
         </figure>
       </li>
@@ -424,6 +449,11 @@ const timespan = year - 2006;
       justify-content: space-between;
       gap: var(--space-xs);
     }
+  }
+
+  .project-badges {
+    display: flex;
+    gap: var(--space-s);
   }
 
   @media print {
