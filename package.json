@@ -14,16 +14,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@astrojs/netlify": "^7.0.13",
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/netlify": "^8.2.1",
     "@astrojs/sitemap": "^3.7.3",
-    "@lucide/astro": "^1.21.0",
-    "astro": "^6.4.8",
+    "@lucide/astro": "^1.31.0",
+    "astro": "^7.2.1",
     "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.11.3",
-    "sharp": "^0.35.1",
-    "style-dictionary": "^5.4.4"
+    "@axe-core/cli": "^4.13.0",
+    "sharp": "^0.35.3",
+    "style-dictionary": "^5.5.1"
   }
 }
