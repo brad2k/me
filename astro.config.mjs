@@ -52,7 +52,7 @@ export default defineConfig({
     pdf({
       pages: {
         "/resume": {
-          path: "resume.pdf",
+          path: "BradAzevedoCV.pdf",
           ensurePath: true,
           screen: false,
 
