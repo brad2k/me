@@ -2,8 +2,7 @@
 import { defineConfig, fontProviders } from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
-
-import netlify from "@astrojs/netlify";
+import pdf from "astro-pdf";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,11 +13,6 @@ export default defineConfig({
   image: {
     layout: "constrained",
     domains: ["is1-ssl.mzstatic.com"],
-  },
-
-  // 301 by default
-  redirects: {
-    "/me/": "/",
   },
 
   fonts: [
@@ -55,8 +49,29 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== "https://www.bradazevedo.com/dev/hosting/",
     }),
+    pdf({
+      pages: {
+        "/resume": {
+          path: "resume.pdf",
+          ensurePath: true,
+          screen: false,
+
+          callback: async (page) => {
+            await page.$$eval("img[loading=lazy]", (imgs) => {
+              imgs.forEach((img) => {
+                img.loading = "eager";
+              });
+            });
+            // wait for all images to load
+            await page.waitForNetworkIdle();
+          },
+
+          pdf: {
+            format: "Letter",
+            printBackground: true,
+          },
+        },
+      },
+    }),
   ],
-  adapter: netlify({
-    imageCDN: false,
-  }),
 });

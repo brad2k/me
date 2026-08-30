@@ -1,5 +1,5 @@
 ---
-import { ChevronDown, Mail, Printer } from "@lucide/astro";
+import { ChevronDown, Download, Mail, Printer } from "@lucide/astro";
 import { Font, Image } from "astro:assets";
 import BradAzevedoScreen from "../assets/bradazevedo.com.png";
 import GitHub from "../assets/github-logo.svg";
@@ -17,14 +17,14 @@ const timespan = year - 2006;
 ---
 
 <Page
-  pageTitle="Resumé | Brad Azevedo"
-  pageDescription={`Resumé for Brad Azevedo, front-end engineer and UI architect for more than ${timespan} years.`}
+  pageTitle="Resume | Brad Azevedo"
+  pageDescription={`Resume for Brad Azevedo, front-end engineer and UI architect for more than ${timespan} years.`}
   class="resume"
 >
   <Font cssVariable="--font-Fira" slot="head" />
 
   <header class="flow">
-    <h1><span class="visually-hidden">Resum&eacute; of </span> Brad Azevedo</h1>
+    <h1><span class="visually-hidden">Resume of </span> Brad Azevedo</h1>
 
     <section>
       <h2 class="visually-hidden">Connect with me</h2>
@@ -56,19 +56,35 @@ const timespan = year - 2006;
             <span class="contact--content">/brad2k</span>
           </a>
         </li>
-        <li class="contact--print">
-          <Printer />
-          <button id="print">Print/Save as a PDF</button>
+        <li class="contact--download">
+          <Download />
+          <button popovertarget="resume-dialog">Download as a PDF</button>
         </li>
       </ul>
+      <dialog
+        id="resume-dialog"
+        class="resume-dialog flow"
+        popover
+        aria-labelledby="resume-dialog-heading"
+      >
+        <h3 class="h5" id="resume-dialog-heading">Download my resume</h3>
+        <p>
+          Choose your format: a <a
+            href="https://docs.google.com/document/d/1hkDlGxA0yBoNzVlyHzfJIruPoFcHOgrlE4PBoy8zrMI/export?format=pdf"
+            rel="external noopener"
+            target="_blank">standard one-page resume</a
+          >, or this <a href="/resume.pdf" target="_blank" download
+            >more informative, styled page</a
+          > as a PDF.
+        </p>
+      </dialog>
     </section>
 
     <p class="summary">
-      Front-end engineer of {timespan} years on a journey spanning from IE6 to AI-assisted
-      development. Specializing in the front of the front-end. Think: responsive UI
-      architecture &amp; development, design systems, and generally <em
-        >snazzy</em
-      > UX. Also: I’m an instrument-rated private pilot.
+      Front-end engineer with {timespan} years of experience on a journey spanning
+      from IE6 to AI-assisted development. Specializing in the front of the front-end.
+      Think: responsive UI architecture &amp; development, design systems, and generally
+      <em>snazzy</em> UX. Also: I’m an instrument-rated private pilot.
     </p>
   </header>
 
@@ -196,7 +212,7 @@ const timespan = year - 2006;
               The Beeline: a showcase of road biking routes in San Francisco.
             </p>
             <div class="project-badges">
-              <Badge>NextJS</Badge>
+              <Badge>Next.js</Badge>
               <Badge>React</Badge>
               <Badge>Sanity CMS</Badge>
             </div>
@@ -213,8 +229,8 @@ const timespan = year - 2006;
           </a>
           <figcaption>
             <p>
-              James Button Oboe: a personal website for classical oboe musician
-              James Button.
+              James Button Oboe: a personal website for a classical oboe
+              musician.
             </p>
             <div class="project-badges">
               <Badge>Astro</Badge>
@@ -249,7 +265,7 @@ const timespan = year - 2006;
             />
           </a>
           <figcaption>
-            <p>Brad Azevedo: a brand-new personal website for myself.</p>
+            <p>Brad Azevedo: a brand-new personal website.</p>
             <div><Badge>Astro</Badge></div>
           </figcaption>
         </figure>
@@ -261,10 +277,11 @@ const timespan = year - 2006;
     <h2>Outside of work</h2>
 
     <p class="subtle">
-      Summaries of academic and professional achievements are one piece of the
-      picture, but our identities and professional value as humans are informed
-      by the experiences and knowledge from our personal life. Head on over to
-      the <a href="/about/">About Me</a> page to learn more about what makes me tick.
+      Summaries of academic and professional achievements are only one piece of
+      the picture; our identities and professional value are equally informed by
+      experiences in our personal lives. Head on over to the <a href="/about/"
+        >About Me</a
+      > page to learn more about what makes me tick.
     </p>
   </section>
 </Page>
@@ -308,8 +325,10 @@ const timespan = year - 2006;
     display: none;
   }
 
-  #print {
-    &:hover {
+  .contact--download {
+    anchor-name: --resume-anchor;
+
+    button:hover {
       color: var(--color-link-active);
     }
   }
@@ -456,6 +475,23 @@ const timespan = year - 2006;
     gap: var(--space-s);
   }
 
+  .resume-dialog {
+    margin: 0;
+    padding: var(--space-s);
+    inset-inline: var(--space-m);
+    top: calc(anchor(bottom) + var(--space-s));
+    justify-self: anchor-center;
+    position-anchor: --resume-anchor;
+    max-height: calc(100dvh - (var(--space-m) * 2));
+    position-try-fallbacks: flip-block;
+    background-color: var(--color-bg);
+    font-size: var(--font-size-small);
+
+    &::backdrop {
+      backdrop-filter: blur(2px);
+    }
+  }
+
   @media print {
     :global(.primary-header, .footer),
     .editorial,
@@ -468,7 +504,7 @@ const timespan = year - 2006;
       display: block;
     }
 
-    .contact--print {
+    .contact--download {
       display: none !important;
     }
 
@@ -477,8 +513,3 @@ const timespan = year - 2006;
     }
   }
 </style>
-
-<script>
-  const printTrigger = document.getElementById("print");
-  printTrigger?.addEventListener("click", () => window.print());
-</script>
