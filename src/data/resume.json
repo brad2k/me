@@ -1,18 +1,4 @@
 {
-  "contact": [
-    {
-      "label": "Email",
-      "url": "mailto:brad2k@gmail.com?subject=Howdy!"
-    },
-    {
-      "label": "GitHub",
-      "url": "https://github.com/brad2k/"
-    },
-    {
-      "label": "linkedin",
-      "url": "https://www.linkedin.com/in/bradazevedo/"
-    }
-  ],
   "education": [
     {
       "highlight": "San Francisco State University",
@@ -62,7 +48,7 @@
         "Co-founded Workbench: Gusto’s company-wide design system — components, tokens, typography, patterns, SVG iconography, etc. — supporting ~500 engineers and designers.",
         "Owned the documentation site end-to-end: technical writing, architecture, and project management."
       ],
-      "editorial": "<p>Gusto is an HR platform for small businesses, providing payroll tools, HR management, time tracking, and a platform to sell health benefits and retirement plans.</p><p>I joined Gusto as the founding engineer for a brand-new Design Systems team and the first dedicated front-end engineer in an otherwise full-stack engineering culture. The immediate mandate was a company-wide rebrand across a codebase that had grown organically for years, relying on a Bootstrap-style CSS utility class library that had led to widespread UI fragmentation. Much of our early effort went into reining in disparate UIs, clearing out deprecated CSS, and aligning design assets across the board.</p><p>As the team grew, we began building Workbench from scratch: a full design system written in React and TypeScript encompassing foundational brand assets, components, patterns, and an SVG illustration &amp; icon library — packaged as an internal NPM module, versioned with semantic versioning, tested with Jest and RTL, and deployed via Buildkite. I eventually took ownership of the documentation site, which went well beyond our primitive Storybook integration to provide proper editorial documentation for each component: usage examples, accessibility notes, and testing guidance. I did the vast majority of the technical writing, designed much of the page-level layout, and built the site itself using Gatsby, React, CSS Modules, and TypeScript. I also wrote the Design Systems Newsletter to keep the broader organization informed.</p><p>At its peak, the team was about eight people supporting roughly 500 employees across engineering and design.</p>"
+      "editorial": "<p>Gusto is an HR platform for small businesses, providing payroll tools, HR management, time tracking, and a platform to sell health benefits and retirement plans.</p><p>I joined Gusto as the founding engineer for a brand-new Design Systems team and the first dedicated front-end engineer in an otherwise full-stack engineering culture. The immediate mandate was a company-wide rebrand across a codebase that had grown organically for years, relying on a Bootstrap-style CSS utility class library that had led to widespread UI fragmentation. Much of our early effort went into reining in disparate UIs, clearing out deprecated CSS, and aligning design assets across the board.</p><p>As the team grew, we began building Workbench from scratch: a full design system written in React and TypeScript encompassing foundational brand assets, components, patterns, and an SVG illustration &amp; icon library — packaged as an internal NPM module, versioned with semantic versioning, tested with Jest and RTL, and deployed via Buildkite. I eventually took ownership of the documentation site, which went well beyond our primitive Storybook integration to provide proper editorial documentation and the source of truth for each component: usage examples, accessibility notes, and testing guidance. I did the vast majority of the technical writing, designed much of the page-level layout, and built the site itself using Gatsby, React, CSS Modules, and TypeScript. I also wrote the Design Systems Newsletter to keep the broader organization informed.</p><p>At its peak, the team was about eight people supporting roughly 500 employees across engineering and design.</p>"
     },
     {
       "company": "Jawbone Health",

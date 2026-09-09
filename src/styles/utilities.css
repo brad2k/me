@@ -93,3 +93,11 @@
     white-space: nowrap;
   }
 }
+
+/*
+  Prevent viewport scrolling
+*/
+
+.modal-open {
+  overflow: hidden;
+}
