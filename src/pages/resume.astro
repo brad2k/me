@@ -104,7 +104,7 @@ const projects = await getCollection("projects");
               <div class="dt-block">
                 <dt>{job.company}</dt>
                 <dd>
-                  <time datetime={job.dates.split("—")[0]}>
+                  <time>
                     {job.dates}
                   </time>
                 </dd>
@@ -143,7 +143,7 @@ const projects = await getCollection("projects");
             <div class="dt-block">
               <dt>{knowledge.highlight}</dt>
               <dd>
-                <time datetime={knowledge.year.split("—")[0]}>
+                <time datetime={knowledge.year.replace("—", "/")}>
                   {knowledge.year}
                 </time>
               </dd>
@@ -264,14 +264,15 @@ const projects = await getCollection("projects");
       projects.map((project) => (
         <template id={`project-${project.id}`}>
           <h3>{project.data.title}</h3>
-          <p>{project.data.details || project.data.summary}</p>
+          {<p>{project.data.details || project.data.summary}</p>}
           <div>
             <ul class="project-badges">
-              {project.data.badges.map((badge) => (
-                <li>
-                  <Badge>{badge}</Badge>
-                </li>
-              ))}
+              {project.data.badges &&
+                project.data.badges.map((badge) => (
+                  <li>
+                    <Badge>{badge}</Badge>
+                  </li>
+                ))}
               {project.data.repo && (
                 <li class="repo-link">
                   <a
@@ -585,8 +586,7 @@ const projects = await getCollection("projects");
     gap: var(--space-l);
 
     figure {
-      border-radius: var(--radius-tight);
-      overflow: hidden;
+border-radius: var(--radius-tight);overflow: hidden;
     }
 
     figcaption {
