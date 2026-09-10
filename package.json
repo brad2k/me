@@ -19,7 +19,7 @@
     "@lucide/astro": "^1.42.0",
     "astro": "^7.3.2",
     "astro-pdf": "^1.10.1",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.13.0",
