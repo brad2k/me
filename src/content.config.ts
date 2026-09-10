@@ -28,4 +28,28 @@ const tv = defineCollection({
   }),
 });
 
-export const collections = { podcasts, tv };
+const projects = defineCollection({
+  loader: file("src/data/projects.json"),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      url: z.string().optional(),
+      badges: z.array(z.string()),
+      summary: z.string(),
+      details: z.string().optional(),
+      repo: z.string().optional(),
+      logo: z.object({
+        image: image(),
+        alt: z.string(),
+      }),
+      images: z.array(
+        z.object({
+          image: image(),
+          alt: z.string(),
+          caption: z.string().optional(),
+        }),
+      ),
+    }),
+});
+
+export const collections = { podcasts, tv, projects };

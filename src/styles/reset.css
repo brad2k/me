@@ -155,6 +155,6 @@
 
   :where(figcaption) {
     contain: inline-size;
-    font-size: 90%;
+    font-size: 100%;
   }
 }

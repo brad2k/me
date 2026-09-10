@@ -1,12 +1,15 @@
 ---
-import { ChevronDown, Download, Mail, Printer } from "@lucide/astro";
+import {
+  ChevronDown,
+  Download,
+  Info,
+  Mail,
+  SquareArrowOutUpRight,
+} from "@lucide/astro";
 import { Font, Image } from "astro:assets";
-import BradAzevedoScreen from "../assets/bradazevedo.com.png";
+import { getCollection } from "astro:content";
 import GitHub from "../assets/github-logo.svg";
-import JamesButtonScreen from "../assets/jamesbuttonoboe.com.png";
 import LinkedIn from "../assets/linkedin-logo.svg";
-import BeelineScreen from "../assets/thebeeline.bike.png";
-import TailsScreen from "../assets/tails.png";
 import Page from "../components/Page.astro";
 import Badge from "../components/ui/Badge.astro";
 import Scale from "../components/ui/Scale.astro";
@@ -14,6 +17,8 @@ import resume from "../data/resume.json";
 
 const year = new Date().getFullYear();
 const timespan = year - 2006;
+
+const projects = await getCollection("projects");
 ---
 
 <Page
@@ -81,7 +86,7 @@ const timespan = year - 2006;
     </section>
 
     <p class="summary">
-      Front-end engineer with {timespan} years of experience on a journey spanning
+      Front-end/design engineer with {timespan} years of experience on a journey spanning
       from IE6 to AI-assisted development. Specializing in the front of the front-end.
       Think: responsive UI architecture &amp; development, design systems, and generally
       <em>snazzy</em> UX. Also: I’m an instrument-rated private pilot.
@@ -99,7 +104,7 @@ const timespan = year - 2006;
               <div class="dt-block">
                 <dt>{job.company}</dt>
                 <dd>
-                  <time datetime={job.dates.replace("—", "/")}>
+                  <time>
                     {job.dates}
                   </time>
                 </dd>
@@ -199,78 +204,135 @@ const timespan = year - 2006;
     <p class="subtle">These are some projects I’ve worked on recently.</p>
 
     <ul class="grid project-grid">
-      <li>
-        <figure>
-          <a href="https://thebeeline.bike/" rel="external noopener">
-            <Image
-              src={BeelineScreen}
-              alt="Screenshot of the homepage of thebeeline.bike"
-            />
-          </a>
-          <figcaption>
-            <p>
-              The Beeline: a showcase of road biking routes in San Francisco.
-            </p>
-            <div class="project-badges">
-              <Badge>Next.js</Badge>
-              <Badge>React</Badge>
-              <Badge>Sanity CMS</Badge>
+      {
+        projects.map((project) => (
+          <li>
+            <figure>
+              <Image
+                src={project.data.logo.image}
+                alt={project.data.logo.alt}
+              />
+
+              <figcaption>
+                <span>{project.data.title}: </span>
+                {project.data.summary}
+              </figcaption>
+            </figure>
+
+            <div>
+              <ul class="project-badges">
+                {project.data.badges.map((badge) => (
+                  <li>
+                    <Badge>{badge}</Badge>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <a href="https://jamesbuttonoboe.com/" rel="external noopener">
-            <Image
-              src={JamesButtonScreen}
-              alt="Screenshot of the homepage of jamesbuttonoboe.com"
-            />
-          </a>
-          <figcaption>
-            <p>
-              James Button Oboe: a personal website for a classical oboe
-              musician.
-            </p>
-            <div class="project-badges">
-              <Badge>Astro</Badge>
-              <Badge>Sanity CMS</Badge>
+
+            <div class="ctas">
+              <span>View:</span>
+              {project.data.url && (
+                <a
+                  href={project.data.url}
+                  target="_blank"
+                  rel="external noopener"
+                >
+                  <SquareArrowOutUpRight />
+                  Project
+                </a>
+                <span>|</span>
+              )}
+              <button
+                type="button"
+                class="project-trigger"
+                data-project={project.id}
+              >
+                <Info />
+                Details
+              </button>
             </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <a href="https://tails.bradazevedo.com/" rel="external noopener">
-            <Image
-              src={TailsScreen}
-              alt="Screenshot of the homepage of Tails, my personal cocktail library"
-            />
-          </a>
-          <figcaption>
-            <p>Tails: a digital library of my personal cocktail collection.</p>
-            <div class="project-badges">
-              <Badge>Astro</Badge>
-              <Badge>Keystatic</Badge>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <a href="/">
-            <Image
-              src={BradAzevedoScreen}
-              alt="Screenshot of the homepage of this website, bradazevedo.com"
-            />
-          </a>
-          <figcaption>
-            <p>Brad Azevedo: a brand-new personal website.</p>
-            <div><Badge>Astro</Badge></div>
-          </figcaption>
-        </figure>
-      </li>
+          </li>
+        ))
+      }
     </ul>
+
+    <dialog id="project-dialog" class="project-dialog">
+      <div id="project-dialog-content" class="flow"></div>
+    </dialog>
+
+    {
+      projects.map((project) => (
+        <template id={`project-${project.id}`}>
+          <h3>{project.data.title}</h3>
+          {<p>{project.data.details || project.data.summary}</p>}
+          <div>
+            <ul class="project-badges">
+              {project.data.badges &&
+                project.data.badges.map((badge) => (
+                  <li>
+                    <Badge>{badge}</Badge>
+                  </li>
+                ))}
+              {project.data.repo && (
+                <li class="repo-link">
+                  <a
+                    href={project.data.repo}
+                    target="_blank"
+                    rel="external noopener"
+                    title="View repo"
+                  >
+                    <GitHub />
+                  </a>
+                </li>
+              )}
+            </ul>
+          </div>
+
+          <hr />
+
+          <h4>Screenshots</h4>
+          <ul class="project-gallery">
+            {project.data.images.map((image) => (
+              <li>
+                <figure>
+                  <Image src={image.image} alt={image.alt} />
+                  {image.caption && <figcaption>{image.caption}</figcaption>}
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </template>
+      ))
+    }
+
+    <script>
+      const dialog =
+        document.querySelector<HTMLDialogElement>("#project-dialog");
+      const dialogContent = document.querySelector("#project-dialog-content");
+
+      document
+        .querySelectorAll<HTMLButtonElement>("[data-project]")
+        .forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            const template = document.querySelector<HTMLTemplateElement>(
+              `#project-${trigger.dataset.project}`,
+            );
+            if (!dialog || !dialogContent || !template) return;
+
+            dialogContent.replaceChildren(template.content.cloneNode(true));
+            dialog.showModal();
+            document.documentElement.classList.add("modal-open");
+          });
+        });
+
+      dialog?.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+
+      dialog?.addEventListener("close", () => {
+        document.documentElement.classList.remove("modal-open");
+      });
+    </script>
   </section>
 
   <section class="resume-section" id="outside-of-work">
@@ -439,40 +501,102 @@ const timespan = year - 2006;
   }
 
   .project-grid {
-    --flow-space: var(--space-s);
     --anchor-text-decoration: none;
 
     font-size: var(--font-size-small);
 
-    img {
-      border-radius: var(--radius-tight);
-      aspect-ratio: 4 / 3;
-    }
-
     li {
       display: grid;
+      grid-row: span 3;
       grid-template-rows: subgrid;
-      row-gap: var(--space-xs);
-      grid-row: span 2; /* Two rows: one for the img, one for the caption */
-    }
-
-    figure {
-      display: grid;
-      grid-template-rows: subgrid;
-      grid-row: span 2;
+      row-gap: var(--space-s);
     }
 
     figcaption {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: var(--space-xs);
+      margin-block-start: var(--space-s);
+    }
+
+    img {
+      border-radius: var(--radius-tight);
+      aspect-ratio: 4 / 3;
     }
   }
 
   .project-badges {
     display: flex;
     gap: var(--space-s);
+    flex-wrap: wrap;
+  }
+
+  .ctas {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+
+    & > * {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  .repo-link {
+    display: grid;
+    align-items: center;
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  .project-trigger {
+    font-size: var(--font-size-small);
+
+    &:hover {
+      color: var(--color-link-active);
+    }
+  }
+
+  .project-dialog {
+    --flow-space: 1em;
+    margin: auto;
+    padding: var(--space-l);
+    max-width: 50rem;
+    max-height: calc(100dvh - (var(--space-m) * 2));
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: var(--font-size-small);
+
+    &::backdrop {
+      backdrop-filter: blur(1px);
+      background-color: rgb(0 0 0 / 25%);
+    }
+  }
+
+  .project-gallery {
+    display: grid;
+    gap: var(--space-l);
+
+    figure {
+border-radius: var(--radius-tight);overflow: hidden;
+    }
+
+    figcaption {
+      --prose-width: 100%;
+      font-size: var(--font-size-small);
+      padding: var(--space-s);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-top-width: 0;
+    }
   }
 
   .resume-dialog {
@@ -488,7 +612,8 @@ const timespan = year - 2006;
     font-size: var(--font-size-small);
 
     &::backdrop {
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(1px);
+      background-color: rgb(0 0 0 / 25%);
     }
   }
 

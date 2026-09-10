@@ -1,0 +1,131 @@
+{
+  "beeline": {
+    "title": "The Beeline",
+    "url": "https://thebeeline.bike/",
+    "badges": ["Next.js", "React", "Sanity CMS"],
+    "summary": "A showcase of road biking routes in San Francisco.",
+    "details": "A showcase of road biking routes in San Francisco. Route data is stored in Sanity CMS.",
+    "repo": "https://github.com/brad2k/beeline",
+    "logo": {
+      "image": "../assets/projects/beeline-logo-600x450.png",
+      "alt": "The Beeline logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/beeline-home.png",
+        "alt": "Screenshot of the homepage of thebeeline.bike",
+        "caption": "The homepage contains a list of routes filterable by region."
+      },
+      {
+        "image": "../assets/projects/beeline-primer.png",
+        "alt": "Screenshot showing the primer guide to cycling in SF on The Beeline",
+        "caption": "A primer guide introduces San Francisco’s cycling culture to the uninitiated."
+      },
+      {
+        "image": "../assets/projects/beeline-route.png",
+        "alt": "Screenshot showing the detailed view for the Butterlap route on The Beeline",
+        "caption": "Detailed route views show more information, though it is currently limited. I plan to add photos and points of interest when time allows."
+      }
+    ]
+  },
+  "james-button": {
+    "title": "James Button Oboe",
+    "url": "https://jamesbuttonoboe.com/",
+    "badges": ["Astro", "Sanity CMS"],
+    "summary": "A personal website for a classical oboe musician.",
+    "repo": "https://github.com/brad2k/buttonjams",
+    "logo": {
+      "image": "../assets/projects/jamesbutton-logo-600x450.png",
+      "alt": "James Button Oboe logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/jamesbutton-home.png",
+        "alt": "Screenshot of the homepage of jamesbuttonoboe.com",
+        "caption": "Homepage"
+      },
+      {
+        "image": "../assets/projects/jamesbutton-about.png",
+        "alt": "Screenshot of James Button Oboe about page",
+        "caption": "About page"
+      },
+      {
+        "image": "../assets/projects/jamesbutton-audio.png",
+        "alt": "Screenshot of James Button Oboe audio clips page",
+        "caption": "A lightweight custom audio player is used to play audio excerpts."
+      },
+      {
+        "image": "../assets/projects/jamesbutton-events.png",
+        "alt": "Screenshot of James Button Oboe events page",
+        "caption": "An events page lists out special concerts, powered by Sanity CMS."
+      }
+    ]
+  },
+  "tails": {
+    "title": "Tails",
+    "url": "https://tails.bradazevedo.com/",
+    "badges": ["Astro", "Keystatic"],
+    "summary": "A digital library of my personal cocktail collection.",
+    "details": "A digital library of my personal cocktail collection. The site is intended to be viewed on a mobile device. Recipes are managed using Keystatic CMS.",
+    "repo": "https://github.com/brad2k/tails",
+    "logo": {
+      "image": "../assets/projects/tails-logo-600x450.png",
+      "alt": "Tails logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/tails-home.png",
+        "alt": "Screenshot of the homepage of tails.bradazevedo.com",
+        "caption": "The homepage contains a list of recipes filterable by the base liquor."
+      },
+      {
+        "image": "../assets/projects/tails-drink.png",
+        "alt": "Screenshot of the 'Bubbles & Blooms' recipe page on Tails",
+        "caption": "Recipe pages show ingredients and method."
+      }
+    ]
+  },
+  "workbench": {
+    "title": "Workbench",
+    "badges": ["React", "TypeScript", "Storybook"],
+    "summary": "Gusto’s internal design system.",
+    "details": "Workbench is Gusto’s internal design system, which includes React components, colors, typography, and all visual assets common to Gusto’s brand. I built and owned the documentation site, which was formerly public but is now only accessible internally. It served as the source of truth and contained extensive documentation for designers and engineers to adopt the system.",
+    "logo": {
+      "image": "../assets/projects/workbench-logo-600x450.png",
+      "alt": "Workbench logo",
+      "caption": "Logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/workbench-getting-started.png",
+        "alt": "Screenshot of the Workbench getting started page for designers",
+        "caption": "“Getting Started” pages introduce users to the system, tailored to either designers (Figma-based) or engineers (code-based), aided by Loom videos."
+      },
+      {
+        "image": "../assets/projects/workbench-components.png",
+        "alt": "Screenshot of the Workbench components landing page",
+        "caption": "An extensive collection of React components was available, all thoroughly considered by both design and engineering to ensure they were fit for purpose, accessible, responsive, and performant."
+      },
+      {
+        "image": "../assets/projects/workbench-anatomy.png",
+        "alt": "Screenshot showing the anatomy of some Workbench form components",
+        "caption": "Documentation for each component — in this case, a collection of form components — included an anatomy graphic to help designers and engineers speak the same language."
+      },
+      {
+        "image": "../assets/projects/workbench-accessibility.png",
+        "alt": "Screenshot of accessibility notes written for the Workbench Timeline component",
+        "caption": "Each component went through extensive consideration for accessibility; those decisions were thoroughly explained in documentation to educate designers and engineers on the thought process behind the decisions and instructions on how to properly implement the component."
+      },
+      {
+        "image": "../assets/projects/workbench-timeline.png",
+        "alt": "Screenshot of the Workbench Timeline component documentation page",
+        "caption": "Each component has a tabbed interface aimed at different purposes: the “Usage” tab explained the “why/what” behind the component and the “Implementation” tab explained how to use it, including code samples, prop tables, and testing suggestions."
+      },
+      {
+        "image": "../assets/projects/workbench-components.webp",
+        "alt": "A collage showcasing various Workbench components",
+        "caption": "A collage showcasing various components."
+      }
+    ]
+  }
+}
