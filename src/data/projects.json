@@ -61,27 +61,36 @@
       }
     ]
   },
-  "tails": {
-    "title": "Tails",
-    "url": "https://tails.bradazevedo.com/",
+  "lindsay-flowers": {
+    "title": "Lindsay Flowers Oboe",
+    "url": "https://www.lindsayflowersoboe.com/",
     "badges": ["Astro", "Keystatic"],
-    "summary": "A digital library of my personal cocktail collection.",
-    "details": "A digital library of my personal cocktail collection. The site is intended to be viewed on a mobile device. Recipes are managed using Keystatic CMS.",
-    "repo": "https://github.com/brad2k/tails",
+    "summary": "A personal website for oboe musician Lindsay Flowers.",
+    "details": "Lindsay Flowers, an oboe instructor at the University of Wisconsin–Madison, is interested in building a web presence for student recruitment and professional services. The Figma design is largely complete, and development is underway as she finalizes the site content.",
     "logo": {
-      "image": "../assets/projects/tails-logo-600x450.png",
-      "alt": "Tails logo"
+      "image": "../assets/projects/lindsay-flowers-logo-600x450.png",
+      "alt": "Lindsay Flowers logo"
     },
     "images": [
       {
-        "image": "../assets/projects/tails-home.png",
-        "alt": "Screenshot of the homepage of tails.bradazevedo.com",
-        "caption": "The homepage contains a list of recipes filterable by the base liquor."
+        "image": "../assets/projects/lindsay-flowers-home.png",
+        "alt": "Screenshot of the design for the homepage of lindsayflowersoboe.com/",
+        "caption": "The homepage introduces Lindsay and will feature a few cards highlighting key content."
       },
       {
-        "image": "../assets/projects/tails-drink.png",
-        "alt": "Screenshot of the 'Bubbles & Blooms' recipe page on Tails",
-        "caption": "Recipe pages show ingredients and method."
+        "image": "../assets/projects/lindsay-flowers-bio.png",
+        "alt": "Screenshot of a design for Lindsay Flowers's biography page",
+        "caption": "Biography page."
+      },
+      {
+        "image": "../assets/projects/lindsay-flowers-coaching.png",
+        "alt": "Screenshot of the design of Lindsay Flowers's teaching and coaching page",
+        "caption": "Lindsay offers a variety of coaching and teaching services."
+      },
+      {
+        "image": "../assets/projects/lindsay-flowers-media.png",
+        "alt": "Screenshot of the design of Lindsay Flowers's media page",
+        "caption": "The media page lists out the various media on which she has been featured."
       }
     ]
   },
@@ -119,12 +128,36 @@
       {
         "image": "../assets/projects/workbench-timeline.png",
         "alt": "Screenshot of the Workbench Timeline component documentation page",
-        "caption": "Each component has a tabbed interface aimed at different purposes: the “Usage” tab explained the “why/what” behind the component and the “Implementation” tab explained how to use it, including code samples, prop tables, and testing suggestions."
+        "caption": "Each component has a tabbed interface aimed at different purposes: the “Usage” tab explains the why/what/how behind the component, and the “Implementation” tab explains how to use it, including code samples, prop tables, accessibility guidelines, and testing suggestions."
       },
       {
         "image": "../assets/projects/workbench-components.webp",
         "alt": "A collage showcasing various Workbench components",
         "caption": "A collage showcasing various components."
+      }
+    ]
+  },
+  "tails": {
+    "title": "Tails",
+    "url": "https://tails.bradazevedo.com/",
+    "badges": ["Astro", "Keystatic"],
+    "summary": "A digital library of my personal cocktail collection.",
+    "details": "A digital library of my personal cocktail collection. The site is intended to be viewed on a mobile device. Recipes are managed using Keystatic CMS.",
+    "repo": "https://github.com/brad2k/tails",
+    "logo": {
+      "image": "../assets/projects/tails-logo-600x450.png",
+      "alt": "Tails logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/tails-home.png",
+        "alt": "Screenshot of the homepage of tails.bradazevedo.com",
+        "caption": "The homepage contains a list of recipes filterable by the base liquor."
+      },
+      {
+        "image": "../assets/projects/tails-drink.png",
+        "alt": "Screenshot of the 'Bubbles & Blooms' recipe page on Tails",
+        "caption": "Recipe pages show ingredients and method."
       }
     ]
   }
