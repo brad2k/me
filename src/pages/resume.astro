@@ -31,7 +31,7 @@ const projects = await getCollection("projects");
   <header class="flow">
     <h1><span class="visually-hidden">Resume of </span> Brad Azevedo</h1>
 
-    <section>
+    <section id="connect">
       <h2 class="visually-hidden">Connect with me</h2>
       <ul class="contacts">
         <li>
@@ -133,71 +133,6 @@ const projects = await getCollection("projects");
     }
   </section>
 
-  <section class="resume-section" id="education">
-    <h2>Education</h2>
-
-    <dl class="highlight">
-      {
-        resume.education.map((knowledge) => {
-          return (
-            <div class="dt-block">
-              <dt>{knowledge.highlight}</dt>
-              <dd>
-                <time datetime={knowledge.year.replace("—", "/")}>
-                  {knowledge.year}
-                </time>
-              </dd>
-              {knowledge.certification && <dd>{knowledge.certification}</dd>}
-              {knowledge.city && <dd>{knowledge.city}</dd>}
-            </div>
-          );
-        })
-      }
-    </dl>
-  </section>
-
-  <section class="resume-section" id="skills">
-    <h2>Skills</h2>
-
-    <div class="grid">
-      <dl class="skill-list">
-        <dt class="visually-hidden">Expert</dt>
-        {
-          resume.skills.expert.map((skill) => (
-            <div class="skill-wrapper">
-              <Scale value={3} />
-              <span set:html={skill} />
-            </div>
-          ))
-        }
-      </dl>
-
-      <dl class="skill-list">
-        <dt class="visually-hidden">Proficient</dt>
-        {
-          resume.skills.proficient.map((skill) => (
-            <div class="skill-wrapper">
-              <Scale value={2} />
-              <span set:html={skill} />
-            </div>
-          ))
-        }
-      </dl>
-
-      <dl class="skill-list">
-        <dt class="visually-hidden">Familiar</dt>
-        {
-          resume.skills.familiar.map((skill) => (
-            <div class="skill-wrapper">
-              <Scale value={1} />
-              <span set:html={skill} />
-            </div>
-          ))
-        }
-      </dl>
-    </div>
-  </section>
-
   <section class="resume-section" id="projects">
     <h2>Projects</h2>
 
@@ -207,6 +142,7 @@ const projects = await getCollection("projects");
       {
         projects.map((project) => (
           <li>
+            <h3 class="visually-hidden">{project.data.title}</h3>
             <figure>
               <Image
                 src={project.data.logo.image}
@@ -240,8 +176,9 @@ const projects = await getCollection("projects");
                   >
                     <SquareArrowOutUpRight />
                     Project
+                    <span class="visually-hidden">, opens in new tab</span>
                   </a>
-                  <span>|</span>
+                  <span aria-hidden="true">|</span>
                 </>
               )}
               <button
@@ -258,14 +195,18 @@ const projects = await getCollection("projects");
       }
     </ul>
 
-    <dialog id="project-dialog" class="project-dialog">
+    <dialog
+      id="project-dialog"
+      class="project-dialog"
+      aria-labelledby="project-dialog-heading"
+    >
       <div id="project-dialog-content" class="flow"></div>
     </dialog>
 
     {
       projects.map((project) => (
         <template id={`project-${project.id}`}>
-          <h3>{project.data.title}</h3>
+          <h3 id="project-dialog-heading">{project.data.title}</h3>
           <div>
             <ul class="project-badges">
               {project.data.badges &&
@@ -350,6 +291,71 @@ const projects = await getCollection("projects");
         document.documentElement.classList.remove("modal-open");
       });
     </script>
+  </section>
+
+  <section class="resume-section" id="skills">
+    <h2>Skills</h2>
+
+    <div class="grid">
+      <dl class="skill-list">
+        <dt class="visually-hidden">Expert</dt>
+        {
+          resume.skills.expert.map((skill) => (
+            <dd class="skill-wrapper">
+              <Scale value={3} />
+              <span set:html={skill} />
+            </dd>
+          ))
+        }
+      </dl>
+
+      <dl class="skill-list">
+        <dt class="visually-hidden">Proficient</dt>
+        {
+          resume.skills.proficient.map((skill) => (
+            <dd class="skill-wrapper">
+              <Scale value={2} />
+              <span set:html={skill} />
+            </dd>
+          ))
+        }
+      </dl>
+
+      <dl class="skill-list">
+        <dt class="visually-hidden">Familiar</dt>
+        {
+          resume.skills.familiar.map((skill) => (
+            <dd class="skill-wrapper">
+              <Scale value={1} />
+              <span set:html={skill} />
+            </dd>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+
+  <section class="resume-section" id="education">
+    <h2>Education</h2>
+
+    <dl class="highlight">
+      {
+        resume.education.map((knowledge) => {
+          return (
+            <div class="dt-block">
+              <dt>{knowledge.highlight}</dt>
+              <dd>
+                <time datetime={knowledge.year.replace("—", "/")}>
+                  {knowledge.year}
+                </time>
+              </dd>
+              {knowledge.certification && <dd>{knowledge.certification}</dd>}
+              {knowledge.city && <dd>{knowledge.city}</dd>}
+            </div>
+          );
+        })
+      }
+    </dl>
   </section>
 
   <section class="resume-section" id="outside-of-work">
