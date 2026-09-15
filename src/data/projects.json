@@ -1,104 +1,11 @@
 {
-  "beeline": {
-    "title": "The Beeline",
-    "url": "https://thebeeline.bike/",
-    "badges": ["Next.js", "React", "Sanity CMS"],
-    "summary": "A showcase of road biking routes in San Francisco.",
-    "details": "A showcase of road biking routes in San Francisco. Route data is stored in Sanity CMS.",
-    "repo": "https://github.com/brad2k/beeline",
-    "logo": {
-      "image": "../assets/projects/beeline-logo-600x450.png",
-      "alt": "The Beeline logo"
-    },
-    "images": [
-      {
-        "image": "../assets/projects/beeline-home.png",
-        "alt": "Screenshot of the homepage of thebeeline.bike",
-        "caption": "The homepage contains a list of routes filterable by region."
-      },
-      {
-        "image": "../assets/projects/beeline-primer.png",
-        "alt": "Screenshot showing the primer guide to cycling in SF on The Beeline",
-        "caption": "A primer guide introduces San Francisco’s cycling culture to the uninitiated."
-      },
-      {
-        "image": "../assets/projects/beeline-route.png",
-        "alt": "Screenshot showing the detailed view for the Butterlap route on The Beeline",
-        "caption": "Detailed route views show more information, though it is currently limited. I plan to add photos and points of interest when time allows."
-      }
-    ]
-  },
-  "james-button": {
-    "title": "James Button Oboe",
-    "url": "https://jamesbuttonoboe.com/",
-    "badges": ["Astro", "Sanity CMS"],
-    "summary": "A personal website for a classical oboe musician.",
-    "repo": "https://github.com/brad2k/buttonjams",
-    "logo": {
-      "image": "../assets/projects/jamesbutton-logo-600x450.png",
-      "alt": "James Button Oboe logo"
-    },
-    "images": [
-      {
-        "image": "../assets/projects/jamesbutton-home.png",
-        "alt": "Screenshot of the homepage of jamesbuttonoboe.com",
-        "caption": "Homepage"
-      },
-      {
-        "image": "../assets/projects/jamesbutton-about.png",
-        "alt": "Screenshot of James Button Oboe about page",
-        "caption": "About page"
-      },
-      {
-        "image": "../assets/projects/jamesbutton-audio.png",
-        "alt": "Screenshot of James Button Oboe audio clips page",
-        "caption": "A lightweight custom audio player is used to play audio excerpts."
-      },
-      {
-        "image": "../assets/projects/jamesbutton-events.png",
-        "alt": "Screenshot of James Button Oboe events page",
-        "caption": "An events page lists out special concerts, powered by Sanity CMS."
-      }
-    ]
-  },
-  "lindsay-flowers": {
-    "title": "Lindsay Flowers Oboe",
-    "url": "https://www.lindsayflowersoboe.com/",
-    "badges": ["Astro", "Keystatic"],
-    "summary": "A personal website for oboe musician Lindsay Flowers.",
-    "details": "Lindsay Flowers, an oboe instructor at the University of Wisconsin–Madison, is interested in building a web presence for student recruitment and professional services. The Figma design is largely complete, and development is underway as she finalizes the site content.",
-    "logo": {
-      "image": "../assets/projects/lindsay-flowers-logo-600x450.png",
-      "alt": "Lindsay Flowers logo"
-    },
-    "images": [
-      {
-        "image": "../assets/projects/lindsay-flowers-home.png",
-        "alt": "Screenshot of the design for the homepage of lindsayflowersoboe.com/",
-        "caption": "The homepage introduces Lindsay and will feature a few cards highlighting key content."
-      },
-      {
-        "image": "../assets/projects/lindsay-flowers-bio.png",
-        "alt": "Screenshot of a design for Lindsay Flowers's biography page",
-        "caption": "Biography page."
-      },
-      {
-        "image": "../assets/projects/lindsay-flowers-coaching.png",
-        "alt": "Screenshot of the design of Lindsay Flowers's teaching and coaching page",
-        "caption": "Lindsay offers a variety of coaching and teaching services."
-      },
-      {
-        "image": "../assets/projects/lindsay-flowers-media.png",
-        "alt": "Screenshot of the design of Lindsay Flowers's media page",
-        "caption": "The media page lists out the various media on which she has been featured."
-      }
-    ]
-  },
   "workbench": {
     "title": "Workbench",
     "badges": ["React", "TypeScript", "Storybook"],
     "summary": "Gusto’s internal design system.",
-    "details": "Workbench is Gusto’s internal design system, which includes React components, colors, typography, and all visual assets common to Gusto’s brand. I built and owned the documentation site, which was formerly public but is now only accessible internally. It served as the source of truth and contained extensive documentation for designers and engineers to adopt the system.",
+    "brief": "Workbench is Gusto’s internal design system — React components, colors, typography, patterns, and all the visual assets common to Gusto’s brand. I was part of the team of designers and engineers who planned and built it from scratch. I built and owned the documentation site itself — which was formerly public, though it’s now internal-only — as the source of truth for the system, with extensive documentation for Gusto’s ~500 designers and engineers, including a monthly newsletter.",
+    "scope": "System work: research > API design > accessibility > build. Documentation site: most of the design > content writing > build > deploy.",
+    "status": "Live (internal only)",
     "logo": {
       "image": "../assets/projects/workbench-logo-600x450.png",
       "alt": "Workbench logo",
@@ -137,12 +44,118 @@
       }
     ]
   },
+  "james-button": {
+    "title": "James Button Oboe",
+    "url": "https://jamesbuttonoboe.com/",
+    "badges": ["Astro", "Sanity CMS"],
+    "summary": "A personal website for a classical oboe musician.",
+    "brief": "A web presence for San Francisco Symphony’s Associate Principal Oboist to establish a brand and to promote audition coaching and guest performance work. The color palette is largely drawn from sampling the hero image and features high-legibility typography, an integrated event calendar, and a custom audio player for his excerpts.",
+    "scope": "Full scope: Design, UX, content strategy, technical SEO → build → launch.",
+    "status": "Live and actively driving client referrals.",
+    "repo": "https://github.com/brad2k/buttonjams",
+    "logo": {
+      "image": "../assets/projects/jamesbutton-logo-600x450.png",
+      "alt": "James Button Oboe logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/jamesbutton-home.png",
+        "alt": "Screenshot of the homepage of jamesbuttonoboe.com",
+        "caption": "Homepage"
+      },
+      {
+        "image": "../assets/projects/jamesbutton-about.png",
+        "alt": "Screenshot of James Button Oboe about page",
+        "caption": "About page"
+      },
+      {
+        "image": "../assets/projects/jamesbutton-audio.png",
+        "alt": "Screenshot of James Button Oboe audio clips page",
+        "caption": "A lightweight custom audio player is used to play audio excerpts."
+      },
+      {
+        "image": "../assets/projects/jamesbutton-events.png",
+        "alt": "Screenshot of James Button Oboe events page",
+        "caption": "An events page lists out special concerts, powered by Sanity CMS."
+      }
+    ]
+  },
+
+  "beeline": {
+    "title": "The Beeline",
+    "url": "https://thebeeline.bike/",
+    "badges": ["Next.js", "React", "Sanity CMS"],
+    "summary": "A showcase of road biking routes in San Francisco.",
+    "brief": "A streamlined, app-style cycling dashboard built for SF-based riders to filter and explore favorite routes without marketing clutter or unnecessary link-drilling. The name Beeline was inspired by the winding trail a bee leaves looping through the air — similar to the way bike routes weave around the Bay Area. The bold, playful design references the colors of a bee.",
+    "scope": "Full scope: Design, content → build → launch.",
+    "status": "v1 is live. Next phase: re-riding routes to catalog explicit points of interest like water stops, lunch spots, and viewpoints.",
+    "repo": "https://github.com/brad2k/beeline",
+    "logo": {
+      "image": "../assets/projects/beeline-logo-600x450.png",
+      "alt": "The Beeline logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/beeline-home.png",
+        "alt": "Screenshot of the homepage of thebeeline.bike",
+        "caption": "The homepage contains a list of routes filterable by region."
+      },
+      {
+        "image": "../assets/projects/beeline-primer.png",
+        "alt": "Screenshot showing the primer guide to cycling in SF on The Beeline",
+        "caption": "A primer guide introduces San Francisco’s cycling culture to the uninitiated."
+      },
+      {
+        "image": "../assets/projects/beeline-route.png",
+        "alt": "Screenshot showing the detailed view for the Butterlap route on The Beeline",
+        "caption": "Detailed route views show more information, though it is currently limited. I plan to add photos and points of interest when time allows."
+      }
+    ]
+  },
+  "lindsay-flowers": {
+    "title": "Lindsay Flowers Oboe",
+    "url": "https://www.lindsayflowersoboe.com/",
+    "badges": ["Astro", "Keystatic"],
+    "summary": "A personal website for oboe musician Lindsay Flowers.",
+    "brief": "A web presence for University of Wisconsin–Madison oboe instructor Lindsay Flowers to drive student recruitment and promote professional services. Features a traditional, elegant aesthetic tailored for classical music audiences.",
+    "scope": "Full scope: Design, UX, style guide, content strategy, technical SEO → build → launch.",
+    "status": "Figma design complete; development in Astro is underway while Lindsay finalizes the site content.",
+    "logo": {
+      "image": "../assets/projects/lindsay-flowers-logo-600x450.png",
+      "alt": "Lindsay Flowers logo"
+    },
+    "images": [
+      {
+        "image": "../assets/projects/lindsay-flowers-home.png",
+        "alt": "Screenshot of the design for the homepage of lindsayflowersoboe.com/",
+        "caption": "The homepage introduces Lindsay and will feature a few cards highlighting key content."
+      },
+      {
+        "image": "../assets/projects/lindsay-flowers-bio.png",
+        "alt": "Screenshot of a design for Lindsay Flowers’s biography page",
+        "caption": "Biography page."
+      },
+      {
+        "image": "../assets/projects/lindsay-flowers-coaching.png",
+        "alt": "Screenshot of the design of Lindsay Flowers’s teaching and coaching page",
+        "caption": "Lindsay offers a variety of coaching and teaching services."
+      },
+      {
+        "image": "../assets/projects/lindsay-flowers-media.png",
+        "alt": "Screenshot of the design of Lindsay Flowers’s media page",
+        "caption": "The media page lists out the various media on which she has been featured."
+      }
+    ]
+  },
+
   "tails": {
     "title": "Tails",
     "url": "https://tails.bradazevedo.com/",
     "badges": ["Astro", "Keystatic"],
     "summary": "A digital library of my personal cocktail collection.",
-    "details": "A digital library of my personal cocktail collection. The site is intended to be viewed on a mobile device. Recipes are managed using Keystatic CMS.",
+    "brief": "A clean, ad-free mobile cocktail recipe catalog designed to keep focus on drink preparation rather than dismissing popups. I call it Tails, as in cocktails (hold for applause). There’s relatively little interactivity, so React — and by extension, Next.js — felt like overkill, so I built it in Astro instead.",
+    "scope": "Full scope: Design, content → build → launch.",
+    "status": "v1 is live. Planned enhancements: search functionality, favorites, and further mobile UI polish.",
     "repo": "https://github.com/brad2k/tails",
     "logo": {
       "image": "../assets/projects/tails-logo-600x450.png",
@@ -156,7 +169,7 @@
       },
       {
         "image": "../assets/projects/tails-drink.png",
-        "alt": "Screenshot of the 'Bubbles & Blooms' recipe page on Tails",
+        "alt": "Screenshot of the “Bubbles & Blooms” recipe page on Tails",
         "caption": "Recipe pages show ingredients and method."
       }
     ]

@@ -36,7 +36,9 @@ const projects = defineCollection({
       url: z.string().optional(),
       badges: z.array(z.string()),
       summary: z.string(),
-      details: z.string().optional(),
+      brief: z.string().optional(),
+      scope: z.string().optional(),
+      status: z.string().optional(),
       repo: z.string().optional(),
       logo: z.object({
         image: image(),

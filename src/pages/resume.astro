@@ -26,7 +26,7 @@ const projects = await getCollection("projects");
   pageDescription={`Resume for Brad Azevedo, front-end engineer and UI architect for more than ${timespan} years.`}
   class="resume"
 >
-  <Font cssVariable="--font-Fira" slot="head" />
+  <Font cssVariable="--font-Fira" preload slot="head" />
 
   <header class="flow">
     <h1><span class="visually-hidden">Resume of </span> Brad Azevedo</h1>
@@ -78,7 +78,7 @@ const projects = await getCollection("projects");
             href="https://docs.google.com/document/d/1hkDlGxA0yBoNzVlyHzfJIruPoFcHOgrlE4PBoy8zrMI/export?format=pdf"
             rel="external noopener"
             target="_blank">standard one-page resume</a
-        >, or this <a href="/brad-azevedo-resume.pdf" target="_blank" download
+          >, or this <a href="/brad-azevedo-resume.pdf" target="_blank" download
             >more informative, styled page</a
           > as a PDF.
         </p>
@@ -88,7 +88,9 @@ const projects = await getCollection("projects");
     <p class="summary">
       Front-end/design engineer with {timespan} years of experience on a journey spanning
       from IE6 to AI-assisted development. Specializing in the front of the front-end.
-      Think: responsive UI architecture &amp; development, design systems, and generally{' '}
+      Think: responsive UI architecture &amp; development, design systems, and generally{
+        " "
+      }
       <em>snazzy</em> UX. Also: I’m an instrument-rated private pilot.
     </p>
   </header>
@@ -104,9 +106,7 @@ const projects = await getCollection("projects");
               <div class="dt-block">
                 <dt>{job.company}</dt>
                 <dd>
-                  <time>
-                    {job.dates}
-                  </time>
+                  <time>{job.dates}</time>
                 </dd>
                 {job.title && <dd>{job.title}</dd>}
                 {job.city && <dd>{job.city}</dd>}
@@ -232,15 +232,17 @@ const projects = await getCollection("projects");
             <div class="ctas">
               <span>View:</span>
               {project.data.url && (
-                <a
-                  href={project.data.url}
-                  target="_blank"
-                  rel="external noopener"
-                >
-                  <SquareArrowOutUpRight />
-                  Project
-                </a>
-                <span>|</span>
+                <>
+                  <a
+                    href={project.data.url}
+                    target="_blank"
+                    rel="external noopener"
+                  >
+                    <SquareArrowOutUpRight />
+                    Project
+                  </a>
+                  <span>|</span>
+                </>
               )}
               <button
                 type="button"
@@ -264,7 +266,6 @@ const projects = await getCollection("projects");
       projects.map((project) => (
         <template id={`project-${project.id}`}>
           <h3>{project.data.title}</h3>
-          {<p>{project.data.details || project.data.summary}</p>}
           <div>
             <ul class="project-badges">
               {project.data.badges &&
@@ -289,6 +290,22 @@ const projects = await getCollection("projects");
           </div>
 
           <hr />
+
+          <h4>Project brief</h4>
+          <p>{project.data.brief || project.data.summary}</p>
+
+          {project.data.scope && (
+            <>
+              <h4>Project scope</h4>
+              <p>{project.data.scope}</p>
+            </>
+          )}
+          {project.data.status && (
+            <>
+              <h4>Project status</h4>
+              <p>{project.data.status}</p>
+            </>
+          )}
 
           <h4>Screenshots</h4>
           <ul class="project-gallery">
@@ -586,7 +603,8 @@ const projects = await getCollection("projects");
     gap: var(--space-l);
 
     figure {
-border-radius: var(--radius-tight);overflow: hidden;
+      border-radius: var(--radius-tight);
+      overflow: hidden;
     }
 
     figcaption {

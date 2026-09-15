@@ -35,11 +35,11 @@
         "Adopted AI-assisted development (Claude Code) as my copilot, but not on autopilot — I guide the architecture and review everything.",
         "Applying new web APIs (native <dialog>, CSS anchor positioning, the Popover API, etc.) to my recent projects."
       ],
-      "editorial": "<p>Late 2025, I dove into freelance work — partly to shake off the rust, and partly because people started asking. The first was a site for oboe musician James Button (live late 2025), followed by another oboist, Lindsay Flowers, currently in Figma with the build starting this week. I’m also in the early design planning phase with Hunny Pot Farms, building a web presence for their new brand. All three are new to the web, so I’m handling the whole thing myself: design, build, launch, content planning, and UX.</p>"
+      "editorial": "<p>Late 2025, I dove into freelance work — partly to shake off the dust, and partly because I noticed some opportunities to help some folks. The first was a site for James Button of the San Francisco Symphony (live late 2025), followed by another oboist, Lindsay Flowers, currently in development. I’m also in the early design planning phase with Hunny Pot Farms, building a web presence for their new brand. All three are new to the web, so I’m handling the whole thing myself: design, build, launch, content planning, and UX.</p>"
     },
     {
       "company": "Sabbatical",
-      "dates": "2022—2025",
+      "dates": "2022–2025",
       "bullets": [
         "Earned my private pilot certificate with an instrument rating as well as FAA ground instructor certification; commercial certificate in progress.",
         "Rode my bike from SF to LA; hiked the Dolomites; did a lot of thinking; lived life."
@@ -49,7 +49,7 @@
     {
       "company": "Gusto",
       "title": "Design Systems Engineer",
-      "dates": "2019—2022",
+      "dates": "2019–2022",
       "city": "San Francisco",
       "bullets": [
         "Founding engineer on a new Design Systems team and the first dedicated front-end engineer in an otherwise full-stack culture.",
@@ -61,7 +61,7 @@
     {
       "company": "Jawbone Health",
       "title": "Senior Front-end Engineer",
-      "dates": "2018—2019",
+      "dates": "2018–2019",
       "city": "San Francisco",
       "bullets": [
         "One of two engineers building the front end for a data-driven web dashboard for wearable device metrics (React, Gatsby, Styled Components, Redux)."
@@ -71,7 +71,7 @@
     {
       "company": "Jawbone",
       "title": "Senior Front-end Engineer",
-      "dates": "2012—2018",
+      "dates": "2012–2018",
       "city": "San Francisco",
       "bullets": [
         "Primary front-end engineer for jawbone.com; spearheaded the move to responsive, mobile-first design.",
@@ -82,7 +82,7 @@
     {
       "company": "CBS Interactive",
       "title": "Front-end Engineer",
-      "dates": "2006—2012",
+      "dates": "2006–2012",
       "city": "San Francisco",
       "bullets": [
         "Front-end engineer working on GameSpot, Metacritic, Giant Bomb, and GameFAQs — building templates fed by a CMS at editorial scale.",
