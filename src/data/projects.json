@@ -1,9 +1,11 @@
-{
-  "workbench": {
+[
+  {
+    "id": "workbench",
+    "order": 1,
     "title": "Workbench",
     "badges": ["React", "TypeScript", "Storybook"],
     "summary": "Gusto’s internal design system.",
-    "brief": "Workbench is Gusto’s internal design system — React components, colors, typography, patterns, and all the visual assets common to Gusto’s brand. I was part of the team of designers and engineers who planned and built it from scratch. I built and owned the documentation site itself — which was formerly public, though it’s now internal-only — as the source of truth for the system, with extensive documentation for Gusto’s ~500 designers and engineers, including a monthly newsletter.",
+    "brief": "Workbench is Gusto’s internal design system - React components, colors, typography, patterns, and all the visual assets common to Gusto’s brand. I was part of the team of designers and engineers who planned and built it from scratch. I built and owned the documentation site itself - which was formerly public, though it’s now internal-only - as the source of truth for the system, with extensive documentation for Gusto’s ~500 designers and engineers, including a monthly newsletter.",
     "scope": "System work: research > API design > accessibility > build. Documentation site: most of the design > content writing > build > deploy.",
     "status": "Live (internal only)",
     "logo": {
@@ -25,7 +27,7 @@
       {
         "image": "../assets/projects/workbench-anatomy.png",
         "alt": "Screenshot showing the anatomy of some Workbench form components",
-        "caption": "Documentation for each component — in this case, a collection of form components — included an anatomy graphic to help designers and engineers speak the same language."
+        "caption": "Documentation for each component - in this case, a collection of form components - included an anatomy graphic to help designers and engineers speak the same language."
       },
       {
         "image": "../assets/projects/workbench-accessibility.png",
@@ -44,13 +46,15 @@
       }
     ]
   },
-  "james-button": {
+  {
+    "id": "james-button",
+    "order": 2,
     "title": "James Button Oboe",
     "url": "https://jamesbuttonoboe.com/",
     "badges": ["Astro", "Sanity CMS"],
     "summary": "A personal website for a classical oboe musician.",
     "brief": "A web presence for San Francisco Symphony’s Associate Principal Oboist to establish a brand and to promote audition coaching and guest performance work. The color palette is largely drawn from sampling the hero image and features high-legibility typography, an integrated event calendar, and a custom audio player for his excerpts.",
-    "scope": "Full scope: Design, UX, content strategy, technical SEO → build → launch.",
+    "scope": "Full scope: Design, UX, content strategy, technical SEO -> build -> launch.",
     "status": "Live and actively driving client referrals.",
     "repo": "https://github.com/brad2k/buttonjams",
     "logo": {
@@ -80,14 +84,15 @@
       }
     ]
   },
-
-  "beeline": {
+  {
+    "id": "beeline",
+    "order": 3,
     "title": "The Beeline",
     "url": "https://thebeeline.bike/",
     "badges": ["Next.js", "React", "Sanity CMS"],
     "summary": "A showcase of road biking routes in San Francisco.",
-    "brief": "A streamlined, app-style cycling dashboard built for SF-based riders to filter and explore favorite routes without marketing clutter or unnecessary link-drilling. The name Beeline was inspired by the winding trail a bee leaves looping through the air — similar to the way bike routes weave around the Bay Area. The bold, playful design references the colors of a bee.",
-    "scope": "Full scope: Design, content → build → launch.",
+    "brief": "A streamlined, app-style cycling dashboard built for SF-based riders to filter and explore favorite routes without marketing clutter or unnecessary link-drilling. The name Beeline was inspired by the winding trail a bee leaves looping through the air - similar to the way bike routes weave around the Bay Area. The bold, playful design references the colors of a bee.",
+    "scope": "Full scope: Design, content -> build -> launch.",
     "status": "v1 is live. Next phase: re-riding routes to catalog explicit points of interest like water stops, lunch spots, and viewpoints.",
     "repo": "https://github.com/brad2k/beeline",
     "logo": {
@@ -112,13 +117,15 @@
       }
     ]
   },
-  "lindsay-flowers": {
+  {
+    "id": "lindsay-flowers",
+    "order": 4,
     "title": "Lindsay Flowers Oboe",
     "url": "https://www.lindsayflowersoboe.com/",
     "badges": ["Astro", "Keystatic"],
     "summary": "A personal website for oboe musician Lindsay Flowers.",
-    "brief": "A web presence for University of Wisconsin–Madison oboe instructor Lindsay Flowers to drive student recruitment and promote professional services. Features a traditional, elegant aesthetic tailored for classical music audiences.",
-    "scope": "Full scope: Design, UX, style guide, content strategy, technical SEO → build → launch.",
+    "brief": "A web presence for University of Wisconsin-Madison oboe instructor Lindsay Flowers to drive student recruitment and promote professional services. Features a traditional, elegant aesthetic tailored for classical music audiences.",
+    "scope": "Full scope: Design, UX, style guide, content strategy, technical SEO -> build -> launch.",
     "status": "Figma design complete; development in Astro is underway while Lindsay finalizes the site content.",
     "logo": {
       "image": "../assets/projects/lindsay-flowers-logo-600x450.png",
@@ -147,14 +154,15 @@
       }
     ]
   },
-
-  "tails": {
+  {
+    "id": "tails",
+    "order": 5,
     "title": "Tails",
     "url": "https://tails.bradazevedo.com/",
     "badges": ["Astro", "Keystatic"],
     "summary": "A digital library of my personal cocktail collection.",
-    "brief": "A clean, ad-free mobile cocktail recipe catalog designed to keep focus on drink preparation rather than dismissing popups. I call it Tails, as in cocktails (hold for applause). There’s relatively little interactivity, so React — and by extension, Next.js — felt like overkill, so I built it in Astro instead.",
-    "scope": "Full scope: Design, content → build → launch.",
+    "brief": "A clean, ad-free mobile cocktail recipe catalog designed to keep focus on drink preparation rather than dismissing popups. I call it Tails, as in cocktails (hold for applause). There’s relatively little interactivity, so React - and by extension, Next.js - felt like overkill, so I built it in Astro instead.",
+    "scope": "Full scope: Design, content -> build -> launch.",
     "status": "v1 is live. Planned enhancements: search functionality, favorites, and further mobile UI polish.",
     "repo": "https://github.com/brad2k/tails",
     "logo": {
@@ -174,4 +182,4 @@
       }
     ]
   }
-}
+]

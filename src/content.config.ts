@@ -32,6 +32,8 @@ const projects = defineCollection({
   loader: file("src/data/projects.json"),
   schema: ({ image }) =>
     z.object({
+      id: z.string(),
+      order: z.number(),
       title: z.string(),
       url: z.string().optional(),
       badges: z.array(z.string()),
