@@ -30,6 +30,7 @@
     {
       "company": "Freelance Design Engineer",
       "dates": "2025—present",
+      "city": "San Francisco",
       "bullets": [
         "Full-cycle freelance work — design, build, and launch — in Astro, Next.js, React, TypeScript, and Sanity CMS.",
         "Adopted AI-assisted development (Claude Code) as my copilot, but not on autopilot — I guide the architecture and review everything.",
