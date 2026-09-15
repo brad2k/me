@@ -3,7 +3,7 @@
     "title": "Workbench",
     "badges": ["React", "TypeScript", "Storybook"],
     "summary": "Gusto’s internal design system.",
-    "brief": "Workbench is Gusto's internal design system—React components, colors, typography, patterns, and all the visual assets common to Gusto's brand. I was part of the team of designers and engineers who planned and built it from scratch. I built and owned the documentation site itself — which was formerly public, though it's now internal-only — as the source of truth for the system, with extensive documentation for Gusto's ~500 designers and engineers, including a monthly newsletter.",
+    "brief": "Workbench is Gusto’s internal design system — React components, colors, typography, patterns, and all the visual assets common to Gusto’s brand. I was part of the team of designers and engineers who planned and built it from scratch. I built and owned the documentation site itself — which was formerly public, though it’s now internal-only — as the source of truth for the system, with extensive documentation for Gusto’s ~500 designers and engineers, including a monthly newsletter.",
     "scope": "System work: research > API design > accessibility > build. Documentation site: most of the design > content writing > build > deploy.",
     "status": "Live (internal only)",
     "logo": {
@@ -133,17 +133,17 @@
       },
       {
         "image": "../assets/projects/lindsay-flowers-bio.png",
-        "alt": "Screenshot of a design for Lindsay Flowers's biography page",
+        "alt": "Screenshot of a design for Lindsay Flowers’s biography page",
         "caption": "Biography page."
       },
       {
         "image": "../assets/projects/lindsay-flowers-coaching.png",
-        "alt": "Screenshot of the design of Lindsay Flowers's teaching and coaching page",
+        "alt": "Screenshot of the design of Lindsay Flowers’s teaching and coaching page",
         "caption": "Lindsay offers a variety of coaching and teaching services."
       },
       {
         "image": "../assets/projects/lindsay-flowers-media.png",
-        "alt": "Screenshot of the design of Lindsay Flowers's media page",
+        "alt": "Screenshot of the design of Lindsay Flowers’s media page",
         "caption": "The media page lists out the various media on which she has been featured."
       }
     ]
@@ -154,7 +154,7 @@
     "url": "https://tails.bradazevedo.com/",
     "badges": ["Astro", "Keystatic"],
     "summary": "A digital library of my personal cocktail collection.",
-    "brief": "A clean, ad-free mobile cocktail recipe catalog designed to keep focus on drink preparation rather than dismissing popups. I call it Tails, as in cocktails (hold for applause). There's relatively little interactivity, so React—and by extension, Next.js—felt like overkill, so I built it in Astro instead.",
+    "brief": "A clean, ad-free mobile cocktail recipe catalog designed to keep focus on drink preparation rather than dismissing popups. I call it Tails, as in cocktails (hold for applause). There’s relatively little interactivity, so React—and by extension, Next.js—felt like overkill, so I built it in Astro instead.",
     "scope": "Full scope: Design, content → build → launch).",
     "status": "v1 is live. Planned enhancements: search functionality, favorites, and further mobile UI polish.",
     "repo": "https://github.com/brad2k/tails",
@@ -170,7 +170,7 @@
       },
       {
         "image": "../assets/projects/tails-drink.png",
-        "alt": "Screenshot of the 'Bubbles & Blooms' recipe page on Tails",
+        "alt": "Screenshot of the “Bubbles & Blooms” recipe page on Tails",
         "caption": "Recipe pages show ingredients and method."
       }
     ]
