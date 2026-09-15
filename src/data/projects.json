@@ -44,7 +44,6 @@
       }
     ]
   },
-
   "james-button": {
     "title": "James Button Oboe",
     "url": "https://jamesbuttonoboe.com/",
@@ -88,7 +87,7 @@
     "badges": ["Next.js", "React", "Sanity CMS"],
     "summary": "A showcase of road biking routes in San Francisco.",
     "brief": "A streamlined, app-style cycling dashboard built for SF-based riders to filter and explore favorite routes without marketing clutter or unnecessary link-drilling. The name Beeline was inspired by the winding trail a bee leaves looping through the air — similar to the way bike routes weave around the Bay Area. The bold, playful design references the colors of a bee.",
-    "scope": "Full scope: Design, content → build → launch).",
+    "scope": "Full scope: Design, content → build → launch.",
     "status": "v1 is live. Next phase: re-riding routes to catalog explicit points of interest like water stops, lunch spots, and viewpoints.",
     "repo": "https://github.com/brad2k/beeline",
     "logo": {
@@ -155,7 +154,7 @@
     "badges": ["Astro", "Keystatic"],
     "summary": "A digital library of my personal cocktail collection.",
     "brief": "A clean, ad-free mobile cocktail recipe catalog designed to keep focus on drink preparation rather than dismissing popups. I call it Tails, as in cocktails (hold for applause). There’s relatively little interactivity, so React — and by extension, Next.js — felt like overkill, so I built it in Astro instead.",
-    "scope": "Full scope: Design, content → build → launch).",
+    "scope": "Full scope: Design, content → build → launch.",
     "status": "v1 is live. Planned enhancements: search functionality, favorites, and further mobile UI polish.",
     "repo": "https://github.com/brad2k/tails",
     "logo": {
