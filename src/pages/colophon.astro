@@ -70,60 +70,87 @@ import Card from "../components/ui/Card.astro";
 
   <ul class="people">
     <li>
-      <a href="https://nerdy.dev/" rel="external noopener">Adam Argyle</a>
-    </li>
-    <li>
-      <a href="https://addyosmani.com/" rel="external noopener">Addy Osmani</a>
-    </li>
-    <li>
-      <a href="https://chriscoyier.net/" rel="external noopener">Chris Coyier</a
+      <a href="https://nerdy.dev/" rel="external noopener" target="_blank"
+        >Adam Argyle</a
       >
     </li>
     <li>
-      <a href="https://daverupert.com/" rel="external noopener">Dave Rupert</a>
-    </li>
-    <li>
-      <a href="https://www.joshwcomeau.com/" rel="external noopener"
-        >Josh Comeau</a
+      <a href="https://addyosmani.com/" rel="external noopener" target="_blank"
+        >Addy Osmani</a
       >
     </li>
     <li>
-      <a href="https://www.kevinpowell.co/" rel="external noopener"
-        >Kevin Powell</a
+      <a href="https://chriscoyier.net/" rel="external noopener" target="_blank"
+        >Chris Coyier</a
       >
     </li>
     <li>
-      <a href="https://courses.webdevsimplified.com/" rel="external noopener"
-        >Kyle Cook</a
+      <a href="https://daverupert.com/" rel="external noopener" target="_blank"
+        >Dave Rupert</a
       >
     </li>
     <li>
-      <a href="https://verou.me/" rel="external noopener">Lea Verou</a>
-    </li>
-    <li>
-      <a href="https://www.oddbird.net/authors/miriam/" rel="external noopener"
-        >Miriam Suzanne</a
+      <a
+        href="https://www.joshwcomeau.com/"
+        rel="external noopener"
+        target="_blank">Josh Comeau</a
       >
     </li>
     <li>
-      <a href="https://piccalil.li/" rel="external noopener">Piccalilli</a>
-    </li>
-    <li>
-      <a href="https://ryanmulligan.dev/" rel="external noopener"
-        >Ryan Mulligan</a
+      <a
+        href="https://www.kevinpowell.co/"
+        rel="external noopener"
+        target="_blank">Kevin Powell</a
       >
     </li>
     <li>
-      <a href="https://www.sarasoueidan.com/" rel="external noopener"
-        >Sara Soueidan</a
+      <a
+        href="https://courses.webdevsimplified.com/"
+        rel="external noopener"
+        target="_blank">Kyle Cook</a
       >
     </li>
     <li>
-      <a href="https://wesbos.com/" rel="external noopener">Wes Bos</a>
+      <a href="https://verou.me/" rel="external noopener" target="_blank"
+        >Lea Verou</a
+      >
     </li>
     <li>
-      <a href="https://www.zachleat.com/" rel="external noopener"
-        >Zach Leatherman</a
+      <a
+        href="https://www.oddbird.net/authors/miriam/"
+        rel="external noopener"
+        target="_blank">Miriam Suzanne</a
+      >
+    </li>
+    <li>
+      <a href="https://piccalil.li/" rel="external noopener" target="_blank"
+        >Piccalilli</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://ryanmulligan.dev/"
+        rel="external noopener"
+        target="_blank">Ryan Mulligan</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.sarasoueidan.com/"
+        rel="external noopener"
+        target="_blank">Sara Soueidan</a
+      >
+    </li>
+    <li>
+      <a href="https://wesbos.com/" rel="external noopener" target="_blank"
+        >Wes Bos</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.zachleat.com/"
+        rel="external noopener"
+        target="_blank">Zach Leatherman</a
       >
     </li>
   </ul>
@@ -140,6 +167,7 @@ import Card from "../components/ui/Card.astro";
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-m);
+    font-size: var(--font-size-subtle);
 
     li {
       padding: var(--space-xs) var(--space-s);
