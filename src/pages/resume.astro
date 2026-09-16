@@ -5,6 +5,7 @@ import {
   Info,
   Mail,
   SquareArrowOutUpRight,
+  X,
 } from "@lucide/astro";
 import { Font, Image } from "astro:assets";
 import { getCollection } from "astro:content";
@@ -50,16 +51,23 @@ const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
           <a
             href="https://www.linkedin.com/in/bradazevedo"
             rel="external noopener"
+            target="_blank"
           >
             <span class="contact--label">LinkedIn</span>
             <span class="contact--content">/in/bradazevedo</span>
+            <span class="visually-hidden">, opens in new tab</span>
           </a>
         </li>
         <li>
           <GitHub />
-          <a href="https://github.com/brad2k" rel="external noopener">
+          <a
+            href="https://github.com/brad2k"
+            rel="external noopener"
+            target="_blank"
+          >
             <span class="contact--label">GitHub</span>
             <span class="contact--content">/brad2k</span>
+            <span class="visually-hidden">, opens in new tab</span>
           </a>
         </li>
         <li class="contact--download">
@@ -201,7 +209,13 @@ const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
       class="project-dialog"
       aria-labelledby="project-dialog-heading"
     >
-      <div id="project-dialog-content" class="flow"></div>
+      <header class="project-dialog-header">
+        <form method="dialog">
+          <button><X /><span class="visually-hidden">Close</span></button>
+        </form>
+      </header>
+      <div id="project-dialog-content" class="project-dialog-content flow">
+      </div>
       <p id="project-dialog-status" class="visually-hidden" role="status"></p>
       <nav aria-label="Project navigation" class="project-dialog-nav">
         <button id="project-dialog-prev" disabled>Prev</button>
@@ -231,10 +245,13 @@ const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
                     href={project.data.repo}
                     target="_blank"
                     rel="external noopener"
-                    title="View repo"
+                    title="View GitHub repo"
                     class="repo-link"
                   >
                     <GitHub />
+                    <span class="visually-hidden">
+                      View GitHub repo, opens in new tab
+                    </span>
                   </a>
                 </li>
               )}
@@ -653,7 +670,7 @@ const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
   .project-dialog {
     --flow-space: 1em;
     margin: auto;
-    padding: var(--space-l);
+    padding: 0;
     max-width: 50rem;
     max-height: calc(100dvh - (var(--space-m) * 2));
     border: 1px solid var(--color-border);
@@ -668,14 +685,47 @@ const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
     }
   }
 
+  .project-dialog-content {
+    padding: 0 var(--space-l);
+  }
+
+  .project-dialog-header,
   .project-dialog-nav {
+    padding-inline: var(--space-l);
+    padding-block: var(--space-s);
+    background-color: var(--color-bg);
+  }
+
+  .project-dialog-header {
+    position: sticky;
+    top: 0;
+    line-height: 1;
+    text-align: right;
+
+    button {
+      display: inline-block;
+
+      &:hover {
+        color: var(--color-link-active);
+      }
+
+      &:active {
+        outline: 2px solid var(--focus-color, currentColor);
+      }
+    }
+  }
+
+  .project-dialog-nav {
+    position: sticky;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
     gap: var(--space-m);
     margin-top: 2em;
+    border-top: 1px solid var(--color-border);
 
     button {
-      &:hover {
+      &:hover:not([disabled]) {
         color: var(--color-link-active);
       }
     }
