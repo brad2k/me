@@ -6,43 +6,42 @@
     "badges": ["React", "TypeScript", "Storybook"],
     "summary": "Gusto’s internal design system.",
     "brief": "Workbench is Gusto’s internal design system — React components, colors, typography, patterns, and all the visual assets common to Gusto’s brand. I was part of the team of designers and engineers who planned and built it from scratch. I built and owned the documentation site itself — which was formerly public, though it’s now internal-only — as the source of truth for the system, with extensive documentation for Gusto’s ~500 designers and engineers, including a monthly newsletter.",
-    "scope": "System work: research > API design > accessibility > build. Documentation site: most of the design > content writing > build > deploy.",
+    "scope": "System work: research → API design → accessibility → build. Documentation site: most of the design → content writing → build → deploy.",
     "status": "Live (internal only)",
     "logo": {
       "image": "../assets/projects/workbench-logo-600x450.png",
-      "alt": "Workbench logo",
-      "caption": "Logo"
+      "alt": "Workbench logo"
     },
     "images": [
       {
         "image": "../assets/projects/workbench-getting-started.png",
-        "alt": "Screenshot of the Workbench getting started page for designers",
-        "caption": "“Getting Started” pages introduce users to the system, tailored to either designers (Figma-based) or engineers (code-based), aided by Loom videos."
+        "alt": "Workbench “Getting Started” page for designers",
+        "caption": "Introduces the system through tailored onboarding for designers (Figma) and engineers (code), supported by Loom video walkthroughs."
       },
       {
         "image": "../assets/projects/workbench-components.png",
-        "alt": "Screenshot of the Workbench components landing page",
-        "caption": "An extensive collection of React components was available, all thoroughly considered by both design and engineering to ensure they were fit for purpose, accessible, responsive, and performant."
+        "alt": "Workbench components landing page",
+        "caption": "An extensive library of React components was built collaboratively by design and engineering to ensure accessibility, responsiveness, and performance."
       },
       {
         "image": "../assets/projects/workbench-anatomy.png",
-        "alt": "Screenshot showing the anatomy of some Workbench form components",
-        "caption": "Documentation for each component — in this case, a collection of form components — included an anatomy graphic to help designers and engineers speak the same language."
+        "alt": "Anatomy diagram of Workbench form components",
+        "caption": "Component documentation includes anatomy graphics — form fields, in this example — to establish a shared design and engineering vocabulary."
       },
       {
         "image": "../assets/projects/workbench-accessibility.png",
-        "alt": "Screenshot of accessibility notes written for the Workbench Timeline component",
-        "caption": "Each component went through extensive consideration for accessibility; those decisions were thoroughly explained in documentation to educate designers and engineers on the thought process behind the decisions and instructions on how to properly implement the component."
+        "alt": "Accessibility guidelines for the Workbench Timeline component",
+        "caption": "Detailed accessibility notes explain the rationale behind design choices and provide clear implementation steps."
       },
       {
         "image": "../assets/projects/workbench-timeline.png",
-        "alt": "Screenshot of the Workbench Timeline component documentation page",
-        "caption": "Each component has a tabbed interface aimed at different purposes: the “Usage” tab explains the why/what/how behind the component, and the “Implementation” tab explains how to use it, including code samples, prop tables, accessibility guidelines, and testing suggestions."
+        "alt": "Workbench Timeline component documentation page",
+        "caption": "A tabbed interface separates design rationale (“Usage”) from technical specs (“Implementation”), including code samples, prop tables, and testing suggestions."
       },
       {
         "image": "../assets/projects/workbench-components.webp",
-        "alt": "A collage showcasing various Workbench components",
-        "caption": "A collage showcasing various components."
+        "alt": "Collage showcasing various Workbench components",
+        "caption": "Collage showcasing various UI components from the Workbench design system."
       }
     ]
   },
@@ -64,23 +63,23 @@
     "images": [
       {
         "image": "../assets/projects/jamesbutton-home.png",
-        "alt": "Screenshot of the homepage of jamesbuttonoboe.com",
+        "alt": "Homepage of jamesbuttonoboe.com",
         "caption": "Homepage"
       },
       {
         "image": "../assets/projects/jamesbutton-about.png",
-        "alt": "Screenshot of James Button Oboe about page",
+        "alt": "James Button Oboe about page",
         "caption": "About page"
       },
       {
         "image": "../assets/projects/jamesbutton-audio.png",
-        "alt": "Screenshot of James Button Oboe audio clips page",
-        "caption": "A lightweight custom audio player is used to play audio excerpts."
+        "alt": "Audio excerpts page with custom audio player",
+        "caption": "A custom, lightweight audio player built for playing performance excerpts."
       },
       {
         "image": "../assets/projects/jamesbutton-events.png",
-        "alt": "Screenshot of James Button Oboe events page",
-        "caption": "An events page lists out special concerts, powered by Sanity CMS."
+        "alt": "Events calendar page for James Button Oboe",
+        "caption": "Upcoming special event listings are powered dynamically by Sanity CMS."
       }
     ]
   },
@@ -102,18 +101,18 @@
     "images": [
       {
         "image": "../assets/projects/beeline-home.png",
-        "alt": "Screenshot of the homepage of thebeeline.bike",
-        "caption": "The homepage contains a list of routes filterable by region."
+        "alt": "Homepage of The Beeline showing route directory",
+        "caption": "Route directory featuring regional filtering."
       },
       {
         "image": "../assets/projects/beeline-primer.png",
-        "alt": "Screenshot showing the primer guide to cycling in SF on The Beeline",
-        "caption": "A primer guide introduces San Francisco’s cycling culture to the uninitiated."
+        "alt": "San Francisco cycling primer guide on The Beeline",
+        "caption": "A primer guide introduces San Francisco’s cycling culture and norms."
       },
       {
         "image": "../assets/projects/beeline-route.png",
-        "alt": "Screenshot showing the detailed view for the Butterlap route on The Beeline",
-        "caption": "Detailed route views show more information, though it is currently limited. I plan to add photos and points of interest when time allows."
+        "alt": "Butterlap route detail page on The Beeline",
+        "caption": "Detailed route overview (future updates will add photos and points of interest)."
       }
     ]
   },
@@ -124,7 +123,7 @@
     "url": "https://www.lindsayflowersoboe.com/",
     "badges": ["Astro", "Keystatic"],
     "summary": "A personal website for oboe musician Lindsay Flowers.",
-    "brief": "A web presence for University of Wisconsin-Madison oboe instructor Lindsay Flowers to drive student recruitment and promote professional services. Features a traditional, elegant aesthetic tailored for classical music audiences.",
+    "brief": "A web presence for University of Wisconsin–Madison oboe instructor Lindsay Flowers to drive student recruitment and promote professional services. Features a traditional, elegant aesthetic tailored for classical music audiences.",
     "scope": "Full scope: Design, UX, style guide, content strategy, technical SEO → build → launch.",
     "status": "Figma design complete; development in Astro is underway while Lindsay finalizes the site content.",
     "logo": {
@@ -134,23 +133,23 @@
     "images": [
       {
         "image": "../assets/projects/lindsay-flowers-home.png",
-        "alt": "Screenshot of the design for the homepage of lindsayflowersoboe.com/",
-        "caption": "The homepage introduces Lindsay and will feature a few cards highlighting key content."
+        "alt": "Homepage design for Lindsay Flowers Oboe",
+        "caption": "Homepage preview featuring bio highlights and core service cards."
       },
       {
         "image": "../assets/projects/lindsay-flowers-bio.png",
-        "alt": "Screenshot of a design for Lindsay Flowers’s biography page",
+        "alt": "Lindsay Flowers’s biography page design",
         "caption": "Biography page."
       },
       {
         "image": "../assets/projects/lindsay-flowers-coaching.png",
-        "alt": "Screenshot of the design of Lindsay Flowers’s teaching and coaching page",
-        "caption": "Lindsay offers a variety of coaching and teaching services."
+        "alt": "Teaching and coaching services page design",
+        "caption": "Overview of available coaching, masterclasses, and private instruction."
       },
       {
         "image": "../assets/projects/lindsay-flowers-media.png",
-        "alt": "Screenshot of the design of Lindsay Flowers’s media page",
-        "caption": "The media page lists out the various media on which she has been featured."
+        "alt": "Media and press coverage page design",
+        "caption": "Featured recordings, media appearances, and performance press."
       }
     ]
   },
@@ -172,13 +171,13 @@
     "images": [
       {
         "image": "../assets/projects/tails-home.png",
-        "alt": "Screenshot of the homepage of tails.bradazevedo.com",
-        "caption": "The homepage contains a list of recipes filterable by the base liquor."
+        "alt": "Homepage of tails.bradazevedo.com",
+        "caption": "Cocktail directory with quick filtering by base spirit."
       },
       {
         "image": "../assets/projects/tails-drink.png",
-        "alt": "Screenshot of the “Bubbles & Blooms” recipe page on Tails",
-        "caption": "Recipe pages show ingredients and method."
+        "alt": "“Bubbles & Blooms” cocktail recipe page on Tails",
+        "caption": "Recipe view displaying ingredients, proportions, and method."
       }
     ]
   }
