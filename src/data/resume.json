@@ -41,7 +41,7 @@
     },
     {
       "company": "Sabbatical",
-      "dates": "2022–2025",
+      "dates": "2023–2025",
       "bullets": [
         "Earned my private pilot certificate with an instrument rating as well as FAA ground instructor certification; commercial certificate in progress.",
         "Rode my bike from SF to LA; hiked the Dolomites; did a lot of thinking; lived life."
@@ -95,13 +95,11 @@
   ],
   "skills": {
     "expert": [
-      "React 16+",
+      "React",
       "JavaScript (ES6)",
-
       "CSS",
       "HTML",
       "Design systems",
-
       "Next.js",
       "Astro",
       "Web performance",
@@ -116,11 +114,10 @@
       "Technical writing",
       "Figma",
       "UX planning",
-      "AI-assisted dev"
-    ],
-    "familiar": [
-      "Tailwind",
+      "AI-assisted development (Claude Code)",
+      "UI design",
       "<abbr title=\"Technical project management\">TPM</abbr>"
-    ]
+    ],
+    "familiar": ["Tailwind"]
   }
 }
