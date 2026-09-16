@@ -5,6 +5,7 @@ import {
   Info,
   Mail,
   SquareArrowOutUpRight,
+  X,
 } from "@lucide/astro";
 import { Font, Image } from "astro:assets";
 import { getCollection } from "astro:content";
@@ -18,7 +19,8 @@ import resume from "../data/resume.json";
 const year = new Date().getFullYear();
 const timespan = year - 2006;
 
-const projects = await getCollection("projects");
+const projectsUnsorted = await getCollection("projects");
+const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Page
@@ -49,16 +51,23 @@ const projects = await getCollection("projects");
           <a
             href="https://www.linkedin.com/in/bradazevedo"
             rel="external noopener"
+            target="_blank"
           >
             <span class="contact--label">LinkedIn</span>
             <span class="contact--content">/in/bradazevedo</span>
+            <span class="visually-hidden">, opens in new tab</span>
           </a>
         </li>
         <li>
           <GitHub />
-          <a href="https://github.com/brad2k" rel="external noopener">
+          <a
+            href="https://github.com/brad2k"
+            rel="external noopener"
+            target="_blank"
+          >
             <span class="contact--label">GitHub</span>
             <span class="contact--content">/brad2k</span>
+            <span class="visually-hidden">, opens in new tab</span>
           </a>
         </li>
         <li class="contact--download">
@@ -200,12 +209,27 @@ const projects = await getCollection("projects");
       class="project-dialog"
       aria-labelledby="project-dialog-heading"
     >
-      <div id="project-dialog-content" class="flow"></div>
+      <header class="project-dialog-header">
+        <form method="dialog">
+          <button><X /><span class="visually-hidden">Close</span></button>
+        </form>
+      </header>
+      <div id="project-dialog-content" class="project-dialog-content flow">
+      </div>
+      <p id="project-dialog-status" class="visually-hidden" role="status"></p>
+      <nav aria-label="Project navigation" class="project-dialog-nav">
+        <button id="project-dialog-prev" disabled>Prev</button>
+        <button id="project-dialog-next" disabled>Next</button>
+      </nav>
     </dialog>
 
     {
-      projects.map((project) => (
-        <template id={`project-${project.id}`}>
+      projects.map((project, index) => (
+        <template
+          id={`project-${project.id}`}
+          data-prev={projects[index - 1] && projects[index - 1].id}
+          data-next={projects[index + 1] && projects[index + 1].id}
+        >
           <h3 id="project-dialog-heading">{project.data.title}</h3>
           <div>
             <ul class="project-badges">
@@ -221,9 +245,13 @@ const projects = await getCollection("projects");
                     href={project.data.repo}
                     target="_blank"
                     rel="external noopener"
-                    title="View repo"
+                    title="View GitHub repo"
+                    class="repo-link"
                   >
                     <GitHub />
+                    <span class="visually-hidden">
+                      View GitHub repo, opens in new tab
+                    </span>
                   </a>
                 </li>
               )}
@@ -266,21 +294,72 @@ const projects = await getCollection("projects");
     <script>
       const dialog =
         document.querySelector<HTMLDialogElement>("#project-dialog");
-      const dialogContent = document.querySelector("#project-dialog-content");
+      const dialogContent = document.querySelector<HTMLDivElement>(
+        "#project-dialog-content",
+      );
+      const navNext = document.querySelector<HTMLButtonElement>(
+        "#project-dialog-next",
+      );
+      const navPrev = document.querySelector<HTMLButtonElement>(
+        "#project-dialog-prev",
+      );
+      const statusRegion = document.querySelector<HTMLElement>(
+        "#project-dialog-status",
+      );
+
+      function injectProject(e: MouseEvent) {
+        const trigger = e.currentTarget as HTMLButtonElement;
+        const template = document.querySelector<HTMLTemplateElement>(
+          `#project-${trigger.dataset.project}`,
+        );
+
+        // Bail if we're missing some components
+        if (!dialog || !dialogContent || !template || !navNext || !navPrev)
+          return;
+
+        // Is the user opening the dialog from the page or the internal nav?
+        const isNavigating = dialog.open;
+
+        dialogContent.replaceChildren(template.content.cloneNode(true));
+
+        // Add/update next/prev projects as data attributes
+        const prev = template.dataset.prev;
+        if (prev) {
+          navPrev.dataset.project = prev;
+          navPrev.removeAttribute("disabled");
+          navPrev.addEventListener("click", injectProject);
+        } else {
+          navPrev.setAttribute("disabled", "disabled");
+          delete navPrev.dataset.project;
+        }
+
+        const next = template.dataset.next;
+        if (next) {
+          navNext.dataset.project = next;
+          navNext.removeAttribute("disabled");
+          navNext.addEventListener("click", injectProject);
+        } else {
+          navNext.setAttribute("disabled", "disabled");
+          delete navNext.dataset.project;
+        }
+
+        // Updating the hidden status for aria-live region for accessibility
+        if (isNavigating && statusRegion) {
+          const heading = dialogContent.querySelector<HTMLHeadElement>(
+            "#project-dialog-heading",
+          )?.textContent;
+          if (heading) statusRegion.textContent = `Showing project: ${heading}`;
+        }
+
+        dialog.showModal();
+        dialog.scrollTop = 0;
+        document.documentElement.classList.add("modal-open");
+      }
 
       document
         .querySelectorAll<HTMLButtonElement>("[data-project]")
         .forEach((trigger) => {
-          trigger.addEventListener("click", () => {
-            const template = document.querySelector<HTMLTemplateElement>(
-              `#project-${trigger.dataset.project}`,
-            );
-            if (!dialog || !dialogContent || !template) return;
-
-            dialogContent.replaceChildren(template.content.cloneNode(true));
-            dialog.showModal();
-            document.documentElement.classList.add("modal-open");
-          });
+          trigger.addEventListener("click", injectProject);
         });
 
       dialog?.addEventListener("click", (event) => {
@@ -289,6 +368,8 @@ const projects = await getCollection("projects");
 
       dialog?.addEventListener("close", () => {
         document.documentElement.classList.remove("modal-open");
+        navPrev?.removeEventListener("click", injectProject);
+        navNext?.removeEventListener("click", injectProject);
       });
     </script>
   </section>
@@ -589,7 +670,7 @@ const projects = await getCollection("projects");
   .project-dialog {
     --flow-space: 1em;
     margin: auto;
-    padding: var(--space-l);
+    padding: 0;
     max-width: 50rem;
     max-height: calc(100dvh - (var(--space-m) * 2));
     border: 1px solid var(--color-border);
@@ -601,6 +682,60 @@ const projects = await getCollection("projects");
     &::backdrop {
       backdrop-filter: blur(1px);
       background-color: rgb(0 0 0 / 25%);
+    }
+  }
+
+  .project-dialog-content {
+    padding: 0 var(--space-l);
+  }
+
+  .project-dialog-header,
+  .project-dialog-nav {
+    padding-inline: var(--space-l);
+    padding-block: var(--space-s);
+    background-color: var(--color-bg);
+  }
+
+  .project-dialog-header {
+    position: sticky;
+    top: 0;
+    line-height: 1;
+    text-align: right;
+
+    button {
+      display: inline-block;
+      transform: scale(1);
+      transition: transform var(--transition-snappy);
+
+      &:hover {
+        color: var(--color-link-active);
+      }
+
+      &:active {
+        outline: 2px solid var(--focus-color, currentColor);
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  .project-dialog-nav {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-m);
+    margin-top: 2em;
+    border-top: 1px solid var(--color-border);
+
+    button {
+      &:hover:not([disabled]) {
+        color: var(--color-link-active);
+      }
+    }
+
+    [disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   }
 
