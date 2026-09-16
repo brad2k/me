@@ -704,6 +704,8 @@ const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
 
     button {
       display: inline-block;
+      transform: scale(1);
+      transition: transform var(--transition-base);
 
       &:hover {
         color: var(--color-link-active);
@@ -711,6 +713,7 @@ const projects = projectsUnsorted.sort((a, b) => a.data.order - b.data.order);
 
       &:active {
         outline: 2px solid var(--focus-color, currentColor);
+        transform: scale(0.95);
       }
     }
   }
