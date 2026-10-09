@@ -70,7 +70,7 @@
 
   /* Typography */
   --font-display: var(--font-Fraunces);
-  --font-body: var(--font-Epilogue);
+  --font-body: var(--font-Fira);
   --font-code: var(--font-Fira);
 
   --font-weight-regular: 400;
@@ -82,7 +82,7 @@
   --font-size-extra-small: var(--text-size-step-000);
   --font-size-small: var(--text-size-step-00);
   --font-size-subtle: var(--text-size-step-0);
-  --font-size-base: var(--text-size-step-1);
+  --font-size-base: var(--text-size-step-0);
   --font-size-h1: var(--text-size-step-6);
   --font-size-h2: var(--text-size-step-4);
   --font-size-h3: var(--text-size-step-3);
