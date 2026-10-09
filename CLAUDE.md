@@ -64,10 +64,10 @@ utilities.css         — .content-grid, .flow, .prose, .visually-hidden, .subtl
 
 ### Fonts
 
-Fonts are configured in `astro.config.mjs` via Astro's built-in `fontProviders.google()` and injected in `Head.astro` using `<Font cssVariable="--font-Fraunces" />` / `<Font cssVariable="--font-Epilogue" />`.
+Fonts are configured in `astro.config.mjs` via Astro's built-in `fontProviders.google()` and injected in `Head.astro` using `<Font cssVariable="--font-Fraunces" />` / `<Font cssVariable="--font-Fira" />`.
 
 - **Fraunces** (`var(--font-display)`) — display text only: hero headline, headings, the logo mark
-- **Epilogue** (`var(--font-body)`) — everything else: body copy, nav, labels, captions
+- **Fira Mono** (`var(--font-body)`) — everything else: body copy, nav, labels, captions
 
 Never add manual `<link>` Google Fonts tags — Astro's Font component handles loading and optimization.
 

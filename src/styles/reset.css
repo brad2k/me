@@ -27,11 +27,6 @@
     @media (prefers-reduced-motion: no-preference) {
       interpolate-size: allow-keywords;
     }
-
-    /* @supports (scrollbar-gutter: stable) {
-      overflow-y: auto;
-      scrollbar-gutter: stable;
-    } */
   }
 
   /* Set core body defaults */
